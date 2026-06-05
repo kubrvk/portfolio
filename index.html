@@ -1,514 +1,1154 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luminary — Intelligent Workflow Platform</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="templatemo-621-luminary-style.css">
-<!--
-TemplateMo 621 Luminary
-https://templatemo.com/tm-621-luminary
--->
+<title>Kubrik — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0b0d12;
+  --panel:#111418;
+  --panel2:#161b24;
+  --border:#1e2535;
+  --border-bright:#2a3550;
+  --blue:#4a9eff;
+  --orange:#ff8c42;
+  --green:#4ddb87;
+  --purple:#c084fc;
+  --yellow:#ffd166;
+  --red:#ff5f5f;
+  --text:#ccd6f0;
+  --text-dim:#5a6a88;
+  --text-mid:#8a9ab8;
+  --mono:'Share Tech Mono',monospace;
+  --head:'Orbitron',sans-serif;
+  --body:'Rajdhani',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden}
+
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,13,18,.88);border-bottom:1px solid var(--border);backdrop-filter:blur(14px);padding:0 40px;height:56px;display:flex;align-items:center}
+.nav-logo{font-family:var(--head);font-size:14px;font-weight:900;color:#fff;letter-spacing:2px;margin-right:auto;display:flex;align-items:center;gap:8px}
+.nav-logo-bracket{color:var(--blue);font-size:18px}
+.nav-links{display:flex;gap:4px}
+.nav-link{font-family:var(--mono);font-size:11px;color:var(--text-dim);padding:6px 14px;border-radius:3px;text-decoration:none;letter-spacing:1px;transition:color .2s,background .2s;border:1px solid transparent}
+.nav-link:hover{color:var(--blue);background:rgba(74,158,255,.07);border-color:rgba(74,158,255,.2)}
+.nav-link.active{color:var(--blue);border-color:rgba(74,158,255,.3)}
+.nav-status{display:flex;align-items:center;gap:6px;margin-left:24px;font-family:var(--mono);font-size:10px;color:var(--text-dim)}
+.nav-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+main{position:relative;z-index:1;padding-top:56px}
+section{padding:80px 0}
+.container{max-width:1100px;margin:0 auto;padding:0 40px}
+
+.section-label{display:flex;align-items:center;gap:16px;margin-bottom:40px}
+.section-label-line{flex:1;height:1px;background:linear-gradient(90deg,var(--border-bright),transparent)}
+.section-label-text{font-family:var(--mono);font-size:11px;color:var(--text-dim);letter-spacing:3px;white-space:nowrap}
+.section-label-num{font-family:var(--mono);font-size:11px;color:var(--blue);letter-spacing:1px}
+
+/* HERO */
+#hero{min-height:calc(100vh - 56px);display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%}
+.hero-left{position:relative}
+.hero-eyebrow{font-family:var(--mono);font-size:11px;color:var(--blue);letter-spacing:3px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--blue)}
+.hero-name{font-family:var(--head);font-size:clamp(32px,4vw,52px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:2px;margin-bottom:8px}
+.hero-name span{color:var(--blue)}
+.hero-roles{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 24px}
+.hero-role{font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:3px;border:1px solid;letter-spacing:1px}
+.role-blue{color:var(--blue);border-color:rgba(74,158,255,.35);background:rgba(74,158,255,.07)}
+.role-orange{color:var(--orange);border-color:rgba(255,140,66,.35);background:rgba(255,140,66,.07)}
+.role-green{color:var(--green);border-color:rgba(77,219,135,.35);background:rgba(77,219,135,.07)}
+.role-purple{color:var(--purple);border-color:rgba(192,132,252,.35);background:rgba(192,132,252,.07)}
+.hero-desc{font-size:15px;color:var(--text-mid);line-height:1.7;max-width:480px;margin-bottom:32px}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:12px;padding:10px 24px;border-radius:4px;text-decoration:none;letter-spacing:1px;transition:all .2s;cursor:pointer;display:inline-flex;align-items:center;gap:8px;border:1px solid}
+.btn-primary{background:rgba(74,158,255,.12);border-color:var(--blue);color:var(--blue)}
+.btn-primary:hover{background:rgba(74,158,255,.22);box-shadow:0 0 20px rgba(74,158,255,.2)}
+.btn-ghost{background:transparent;border-color:var(--border-bright);color:var(--text-mid)}
+.btn-ghost:hover{border-color:var(--text-mid);color:var(--text)}
+
+.hero-node-wrap{display:flex;justify-content:center;align-items:center;position:relative}
+.hero-big-node{background:var(--panel);border:1px solid var(--blue);border-radius:8px;width:100%;max-width:420px;box-shadow:0 0 40px rgba(74,158,255,.12),inset 0 0 30px rgba(74,158,255,.03);overflow:hidden}
+.hbn-header{background:linear-gradient(90deg,rgba(74,158,255,.15),rgba(74,158,255,.05));border-bottom:1px solid rgba(74,158,255,.3);padding:10px 16px;display:flex;align-items:center;gap:10px}
+.hbn-icon{width:28px;height:28px;border-radius:4px;background:rgba(74,158,255,.15);border:1px solid rgba(74,158,255,.3);display:flex;align-items:center;justify-content:center;font-size:14px}
+.hbn-title{font-family:var(--head);font-size:14px;font-weight:700;color:#fff;letter-spacing:1px}
+.hbn-sub{font-family:var(--mono);font-size:10px;color:var(--blue);margin-left:auto}
+.hbn-body{padding:16px}
+.hbn-pin-section{margin-bottom:12px}
+.hbn-pin-title{font-family:var(--mono);font-size:10px;color:var(--text-dim);letter-spacing:2px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.hbn-pin-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.pin-row{display:flex;align-items:center;gap:8px;padding:3px 0}
+.pin{width:12px;height:12px;border-radius:50%;border:2px solid;flex-shrink:0;position:relative}
+.pin.exec{width:14px;height:14px;border-radius:0;clip-path:polygon(0 0,65% 0,100% 50%,65% 100%,0 100%);border:none}
+.pin.out{margin-left:auto}
+.pin.exec.out{transform:scaleX(-1)}
+.pin-label{font-family:var(--mono);font-size:11px;color:var(--text-dim);flex:1}
+.pin-type{font-family:var(--mono);font-size:10px;padding:1px 6px;border-radius:2px;margin-left:auto}
+.hbn-divider{height:1px;background:var(--border);margin:8px 0}
+.hbn-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.hbn-stat{background:rgba(0,0,0,.3);border-radius:4px;padding:8px;text-align:center;border:1px solid var(--border)}
+.hbn-stat-val{font-family:var(--head);font-size:18px;font-weight:900;color:var(--blue);display:block}
+.hbn-stat-label{font-family:var(--mono);font-size:9px;color:var(--text-dim);letter-spacing:1px}
+
+/* ABOUT */
+#about{background:rgba(0,0,0,.2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about-text p{color:var(--text-mid);font-size:15px;line-height:1.8;margin-bottom:16px}
+.about-text p span{color:var(--text)}
+.about-info-list{margin-top:24px;display:flex;flex-direction:column;gap:8px}
+.about-info-row{display:flex;align-items:center;gap:12px;padding:8px 12px;background:var(--panel);border:1px solid var(--border);border-radius:4px;border-left:3px solid var(--blue)}
+.about-info-key{font-family:var(--mono);font-size:11px;color:var(--text-dim);min-width:90px}
+.about-info-val{font-size:14px;color:var(--text)}
+.about-right{display:flex;flex-direction:column;gap:16px}
+.tool-category{background:var(--panel);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.tool-cat-header{background:rgba(0,0,0,.3);border-bottom:1px solid var(--border);padding:8px 14px;display:flex;align-items:center;gap:8px}
+.tool-cat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.tool-cat-name{font-family:var(--mono);font-size:11px;letter-spacing:1px}
+.tool-chips{padding:12px 14px;display:flex;flex-wrap:wrap;gap:6px}
+.tool-chip{font-family:var(--mono);font-size:10px;padding:3px 8px;border-radius:3px;background:rgba(255,255,255,.04);border:1px solid var(--border-bright);color:var(--text-mid);letter-spacing:.5px;transition:border-color .2s,color .2s}
+.tool-chip:hover{border-color:var(--text-mid);color:var(--text)}
+
+/* SKILLS */
+#skills .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skill-node{background:var(--panel);border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .2s;position:relative}
+.skill-node:hover{transform:translateY(-3px)}
+.skill-node.blue:hover{border-color:var(--blue);box-shadow:0 4px 24px rgba(74,158,255,.15)}
+.skill-node.orange:hover{border-color:var(--orange);box-shadow:0 4px 24px rgba(255,140,66,.15)}
+.skill-node.green:hover{border-color:var(--green);box-shadow:0 4px 24px rgba(77,219,135,.15)}
+.skill-node.purple:hover{border-color:var(--purple);box-shadow:0 4px 24px rgba(192,132,252,.15)}
+.skill-node.yellow:hover{border-color:var(--yellow);box-shadow:0 4px 24px rgba(255,209,102,.15)}
+.skill-node.red:hover{border-color:var(--red);box-shadow:0 4px 24px rgba(255,95,95,.15)}
+.sn-head{padding:10px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.sn-bar{width:3px;height:22px;border-radius:2px;flex-shrink:0}
+.sn-title{font-family:var(--head);font-size:12px;font-weight:700;letter-spacing:1px}
+.sn-badge{margin-left:auto;font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:3px;border:1px solid;opacity:.6}
+.sn-pins{padding:10px 12px;display:flex;flex-direction:column;gap:5px}
+.sn-pin{display:flex;align-items:center;gap:7px}
+.sn-pin-dot{width:9px;height:9px;border-radius:50%;border:1.5px solid;flex-shrink:0}
+.sn-pin-dot.out{margin-left:auto;margin-right:-5px}
+.sn-pin-label{font-family:var(--mono);font-size:10px;color:var(--text-dim);flex:1}
+.sn-divider{height:1px;background:var(--border);margin:2px 0}
+.sn-bar-wrap{padding:6px 12px 12px}
+.sn-bar-top{display:flex;justify-content:space-between;margin-bottom:5px}
+.sn-bar-top span{font-family:var(--mono);font-size:10px;color:var(--text-dim)}
+.sn-bar-bg{height:3px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
+.sn-bar-fill{height:100%;border-radius:2px;width:0;transition:width 1.4s cubic-bezier(.4,0,.2,1)}
+
+/* GALLERY */
+#gallery{background:rgba(0,0,0,.15)}
+.gallery-tabs{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap}
+.gtab{font-family:var(--mono);font-size:11px;padding:6px 16px;border-radius:3px;border:1px solid var(--border-bright);color:var(--text-dim);cursor:pointer;transition:all .2s;background:transparent;letter-spacing:1px}
+.gtab:hover{color:var(--text);border-color:var(--text-mid)}
+.gtab.active{color:var(--blue);border-color:var(--blue);background:rgba(74,158,255,.08)}
+.gallery-grid{columns:3;gap:12px}
+.gallery-item{break-inside:avoid;margin-bottom:12px;position:relative;overflow:hidden;border-radius:6px;border:1px solid var(--border);cursor:pointer;transition:border-color .3s,transform .2s}
+.gallery-item:hover{border-color:var(--blue);transform:translateY(-2px)}
+.gallery-item img{width:100%;display:block;transition:transform .4s}
+.gallery-item:hover img{transform:scale(1.04)}
+.gallery-placeholder{width:100%;background:var(--panel2);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;position:relative;overflow:hidden}
+.gallery-placeholder .gp-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:20px 20px}
+.gallery-placeholder .gp-icon{font-size:36px;position:relative;z-index:1}
+.gallery-placeholder .gp-label{font-family:var(--mono);font-size:10px;color:var(--text-dim);letter-spacing:1px;position:relative;z-index:1}
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,13,18,.95) 0%,rgba(11,13,18,.4) 50%,transparent 100%);opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.go-title{font-family:var(--head);font-size:12px;font-weight:700;color:#fff;letter-spacing:1px;margin-bottom:4px}
+.go-tags{display:flex;gap:5px;flex-wrap:wrap}
+.go-tag{font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:2px;border:1px solid;letter-spacing:.5px}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(5,7,11,.95);z-index:999;display:none;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
+.lightbox.open{display:flex}
+.lb-inner{position:relative;max-width:900px;width:90%;max-height:85vh}
+.lb-inner img{width:100%;max-height:80vh;object-fit:contain;border-radius:6px;border:1px solid var(--border-bright)}
+.lb-close{position:absolute;top:-36px;right:0;font-family:var(--mono);font-size:13px;color:var(--text-dim);cursor:pointer;letter-spacing:1px;transition:color .2s}
+.lb-close:hover{color:var(--blue)}
+.lb-info{margin-top:12px;display:flex;gap:12px;align-items:center}
+.lb-title{font-family:var(--head);font-size:13px;color:#fff;flex:1}
+.lb-tags{display:flex;gap:6px}
+
+/* PROJECTS */
+#projects{background:rgba(0,0,0,.15)}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.project-node{background:var(--panel);border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .2s;display:flex;flex-direction:column}
+.project-node:hover{transform:translateY(-3px)}
+.pn-thumb{height:120px;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.4);border-bottom:1px solid var(--border);position:relative;overflow:hidden;font-size:44px}
+.pn-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:24px 24px}
+.pn-icon{position:relative;z-index:1}
+.pn-corner{position:absolute;width:24px;height:24px;border-color:currentColor;border-style:solid;opacity:.3}
+.pn-corner.tl{top:8px;left:8px;border-width:2px 0 0 2px}
+.pn-corner.br{bottom:8px;right:8px;border-width:0 2px 2px 0}
+.pn-body{padding:14px;flex:1;display:flex;flex-direction:column}
+.pn-type{font-family:var(--mono);font-size:10px;padding:2px 8px;border-radius:3px;display:inline-block;margin-bottom:8px;border:1px solid;letter-spacing:1px}
+.pn-title{font-family:var(--head);font-size:14px;font-weight:700;color:#fff;letter-spacing:1px;margin-bottom:6px}
+.pn-desc{font-size:12px;color:var(--text-dim);line-height:1.6;flex:1}
+.pn-footer{display:flex;align-items:center;gap:8px;margin-top:12px;padding-top:10px;border-top:1px solid var(--border)}
+.pn-techs{display:flex;flex-wrap:wrap;gap:5px;flex:1}
+.pn-tech{font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:2px;background:rgba(255,255,255,.04);border:1px solid var(--border-bright);color:var(--text-dim)}
+.pn-link{font-family:var(--mono);font-size:10px;color:var(--text-dim);text-decoration:none;padding:4px 8px;border:1px solid var(--border-bright);border-radius:3px;letter-spacing:.5px;transition:color .2s,border-color .2s;white-space:nowrap}
+.pn-link:hover{color:var(--blue);border-color:var(--blue)}
+
+/* CONTACT */
+#contact{background:rgba(0,0,0,.2)}
+.contact-inner{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+.contact-node{background:var(--panel);border:1px solid var(--purple);border-radius:6px;overflow:hidden;box-shadow:0 0 40px rgba(192,132,252,.08)}
+.cn-header{background:linear-gradient(90deg,rgba(192,132,252,.12),rgba(192,132,252,.04));border-bottom:1px solid rgba(192,132,252,.25);padding:10px 16px;display:flex;align-items:center;gap:10px}
+.cn-title{font-family:var(--head);font-size:15px;font-weight:700;color:#fff;letter-spacing:1px}
+.cn-sub{font-family:var(--mono);font-size:10px;color:var(--purple);margin-left:auto}
+.cn-body{padding:20px}
+.cn-desc{font-size:14px;color:var(--text-dim);margin-bottom:20px;line-height:1.6}
+.cn-links{display:flex;flex-direction:column;gap:8px}
+.cn-link{display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:5px;text-decoration:none;transition:border-color .2s,background .2s}
+.cn-link:hover{border-color:var(--purple);background:rgba(192,132,252,.05)}
+.cn-link-icon{width:32px;height:32px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;background:rgba(255,255,255,.04);border:1px solid var(--border-bright)}
+.cn-link-label{font-family:var(--mono);font-size:11px;color:var(--text-dim);flex:1;letter-spacing:.5px}
+.cn-link-val{font-family:var(--mono);font-size:12px}
+.cn-link-arrow{font-size:16px;color:var(--text-dim)}
+
+footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.footer-copy{font-family:var(--mono);font-size:10px;color:var(--text-dim);letter-spacing:1px}
+.footer-ver{font-family:var(--mono);font-size:10px;color:var(--text-dim);letter-spacing:1px}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.reveal.revealed{opacity:1;transform:none}
+
+.cursor{position:fixed;width:20px;height:20px;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s,opacity .15s}
+.cursor-ring{position:absolute;inset:0;border:1px solid rgba(74,158,255,.6);border-radius:50%;transition:all .08s}
+.cursor-dot{position:absolute;top:50%;left:50%;width:4px;height:4px;background:var(--blue);border-radius:50%;transform:translate(-50%,-50%)}
+
+@media(max-width:860px){
+  nav{padding:0 20px}
+  .nav-links .nav-link:nth-child(n+5){display:none}
+  .container{padding:0 20px}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-node-wrap{display:none}
+  #skills .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .projects-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .gallery-grid{columns:2}
+  footer{flex-direction:column;gap:8px;text-align:center}
+}
+@media(max-width:520px){
+  #skills .skills-grid{grid-template-columns:1fr}
+  .gallery-grid{columns:1}
+}
+</style>
 </head>
 <body>
 
-<svg class="grain" width="100%" height="100%">
-  <filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="5" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
-  <rect width="100%" height="100%" filter="url(#n)"/>
-</svg>
-<div class="atmosphere"></div>
+<div class="cursor" id="cursor"><div class="cursor-ring"></div><div class="cursor-dot"></div></div>
+<canvas id="bg-canvas"></canvas>
 
-<!-- Nav -->
-<nav class="top-nav" id="topNav">
-  <a href="#" class="nav-brand">Luminary<span>Platform</span></a>
-  <ul class="nav-links">
-    <li><a href="#features">Features</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#testimonials">Testimonials</a></li>
-    <li><a href="#integrations">Integrations</a></li>
-    <li><a href="#faq">FAQ</a></li>
-  </ul>
-  <a href="#pricing" class="nav-cta">Get Started</a>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <span class="toggle-bar"></span><span class="toggle-bar"></span>
-  </button>
+<nav>
+  <div class="nav-logo">
+    <span class="nav-logo-bracket">{</span>KUBRIK<span class="nav-logo-bracket">}</span>
+  </div>
+  <div class="nav-links">
+    <a href="#hero"     class="nav-link active">// hero</a>
+    <a href="#about"    class="nav-link">// about</a>
+    <a href="#skills"   class="nav-link">// skills</a>
+    <a href="#gallery"  class="nav-link">// gallery</a>
+    <a href="#projects" class="nav-link">// projects</a>
+    <a href="#contact"  class="nav-link">// contact</a>
+  </div>
+  <div class="nav-status"><div class="nav-dot"></div><span>ONLINE</span></div>
 </nav>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-inner">
-    <div class="mobile-menu-links">
-      <a href="#" class="mobile-menu-link" data-index="01">Home</a>
-      <a href="#features" class="mobile-menu-link" data-index="02">Features</a>
-      <a href="#pricing" class="mobile-menu-link" data-index="03">Pricing</a>
-      <a href="#testimonials" class="mobile-menu-link" data-index="04">Testimonials</a>
-      <a href="#integrations" class="mobile-menu-link" data-index="05">Integrations</a>
-      <a href="#faq" class="mobile-menu-link" data-index="06">FAQ</a>
-      <a href="#cta" class="mobile-menu-link" data-index="07">Get Started</a>
+<main>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left reveal">
+        <div class="hero-eyebrow">Event_BeginPlay()</div>
+        <h1 class="hero-name">KUBRIK<br><span>PORTFOLIO</span></h1>
+        <div class="hero-roles">
+          <span class="hero-role role-blue">Game Developer</span>
+          <span class="hero-role role-orange">Full-Stack Dev</span>
+          <span class="hero-role role-green">3D Artist</span>
+          <span class="hero-role role-purple">Graphic Designer</span>
+        </div>
+        <p class="hero-desc">
+          Developer and 3D artist with 9 years of web experience, 7 years in 3D art, and 5 years in Unreal C++.
+          Shipped multiple games. Handles creative and technical tasks in the same pipeline.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary"><span>▶</span> View Projects</a>
+          <a href="https://kubrvk.github.io/portfolio" target="_blank" class="btn btn-ghost"><span>◈</span> Portfolio</a>
+          <a href="#contact" class="btn btn-ghost"><span>⌥</span> Contact</a>
+        </div>
+      </div>
+
+      <div class="hero-node-wrap reveal">
+        <div class="hero-big-node">
+          <div class="hbn-header">
+            <div class="hbn-icon">⬡</div>
+            <div><div class="hbn-title">CHARACTER_DATA</div></div>
+            <span class="hbn-sub">// class Blueprint</span>
+          </div>
+          <div class="hbn-body">
+            <div class="pin-row" style="margin-bottom:8px">
+              <div class="pin exec" style="background:#fff"></div>
+              <span style="font-family:var(--mono);font-size:11px;color:#aab4cc;margin-left:6px">EXECUTE</span>
+              <span style="font-family:var(--mono);font-size:11px;color:#aab4cc;margin-left:auto;margin-right:6px">THEN</span>
+              <div class="pin exec out" style="background:#fff"></div>
+            </div>
+            <div class="hbn-divider"></div>
+            <div class="hbn-pin-section">
+              <div class="hbn-pin-title">INPUTS</div>
+              <div class="pin-row">
+                <div class="pin" style="border-color:var(--blue);background:rgba(74,158,255,.2)"></div>
+                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-left:6px">Name</span>
+                <span class="pin-type" style="background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-family:var(--mono);font-size:9px;padding:1px 6px;border-radius:2px">Kubrik</span>
+              </div>
+              <div class="pin-row" style="margin-top:4px">
+                <div class="pin" style="border-color:var(--orange);background:rgba(255,140,66,.2)"></div>
+                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-left:6px">Experience</span>
+                <span class="pin-type" style="background:rgba(255,140,66,.1);border:1px solid rgba(255,140,66,.3);color:var(--orange);font-family:var(--mono);font-size:9px;padding:1px 6px;border-radius:2px">9yr</span>
+              </div>
+              <div class="pin-row" style="margin-top:4px">
+                <div class="pin" style="border-color:var(--green);background:rgba(77,219,135,.2)"></div>
+                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-left:6px">Skills[]</span>
+                <span class="pin-type" style="background:rgba(77,219,135,.1);border:1px solid rgba(77,219,135,.3);color:var(--green);font-family:var(--mono);font-size:9px;padding:1px 6px;border-radius:2px">array</span>
+              </div>
+              <div class="pin-row" style="margin-top:4px">
+                <div class="pin" style="border-color:var(--purple);background:rgba(192,132,252,.2)"></div>
+                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-left:6px">Shipped</span>
+                <span class="pin-type" style="background:rgba(192,132,252,.1);border:1px solid rgba(192,132,252,.3);color:var(--purple);font-family:var(--mono);font-size:9px;padding:1px 6px;border-radius:2px">9 games</span>
+              </div>
+            </div>
+            <div class="hbn-pin-section">
+              <div class="hbn-pin-title">OUTPUTS</div>
+              <div class="pin-row">
+                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-right:6px">GameProject</span>
+                <div class="pin out" style="border-color:var(--blue);background:rgba(74,158,255,.2)"></div>
+              </div>
+              <div class="pin-row" style="margin-top:4px">
+                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-right:6px">WebApp</span>
+                <div class="pin out" style="border-color:var(--orange);background:rgba(255,140,66,.2)"></div>
+              </div>
+              <div class="pin-row" style="margin-top:4px">
+                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-right:6px">3D_Asset</span>
+                <div class="pin out" style="border-color:var(--green);background:rgba(77,219,135,.2)"></div>
+              </div>
+            </div>
+            <div class="hbn-divider"></div>
+            <div class="hbn-stat-row">
+              <div class="hbn-stat">
+                <span class="hbn-stat-val" style="color:var(--blue)" id="stat-projects">0</span>
+                <span class="hbn-stat-label">PROJECTS</span>
+              </div>
+              <div class="hbn-stat">
+                <span class="hbn-stat-val" style="color:var(--orange)" id="stat-years">0</span>
+                <span class="hbn-stat-label">YEARS</span>
+              </div>
+              <div class="hbn-stat">
+                <span class="hbn-stat-val" style="color:var(--green)" id="stat-skills">0</span>
+                <span class="hbn-stat-label">SKILLS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="mobile-menu-footer">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Contact</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-label reveal">
+      <span class="section-label-num">01</span>
+      <div class="section-label-line"></div>
+      <span class="section-label-text">// about_node</span>
+      <div class="section-label-line" style="max-width:60px"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Developer and <span>3D artist</span> with 9 years of web development experience, 7 years in 3D art, and 5 years working with <span>Unreal Engine C++</span>.</p>
+        <p>I have shipped multiple games and delivered work across game development, 3D art, and web applications. My background combines <span>programming, technical art, and production work</span>, which allows me to handle both creative and technical tasks in the same project.</p>
+        <p>Open to studio roles, contract work, and long-term collaboration in <span>Unreal Engine, C++, 3D, and web development</span>. Every project is a node graph — inputs, outputs, and the logic in between.</p>
+        <div class="about-info-list">
+          <div class="about-info-row">
+            <span class="about-info-key">// status</span>
+            <span class="about-info-val" style="color:var(--green)">Open to Work ✓</span>
+          </div>
+          <div class="about-info-row">
+            <span class="about-info-key">// portfolio</span>
+            <span class="about-info-val"><a href="https://kubrvk.github.io/portfolio" target="_blank" style="color:var(--blue);text-decoration:none">kubrvk.github.io/portfolio</a></span>
+          </div>
+          <div class="about-info-row">
+            <span class="about-info-key">// artstation</span>
+            <span class="about-info-val"><a href="https://www.artstation.com/kubrik" target="_blank" style="color:var(--orange);text-decoration:none">artstation.com/kubrik</a></span>
+          </div>
+          <div class="about-info-row">
+            <span class="about-info-key">// github</span>
+            <span class="about-info-val"><a href="https://github.com/kubrvk" target="_blank" style="color:var(--green);text-decoration:none">github.com/kubrvk</a></span>
+          </div>
+          <div class="about-info-row">
+            <span class="about-info-key">// languages</span>
+            <span class="about-info-val">TR / EN</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right reveal">
+        <div class="tool-category">
+          <div class="tool-cat-header">
+            <div class="tool-cat-dot" style="background:var(--blue)"></div>
+            <span class="tool-cat-name" style="color:var(--blue)">GAME_ENGINE</span>
+          </div>
+          <div class="tool-chips">
+            <span class="tool-chip">Unreal Engine 5</span>
+            <span class="tool-chip">C++</span>
+            <span class="tool-chip">Blueprint</span>
+            <span class="tool-chip">GAS</span>
+            <span class="tool-chip">Niagara VFX</span>
+            <span class="tool-chip">Cascadeur</span>
+            <span class="tool-chip">Steam SDK</span>
+            <span class="tool-chip">EOS</span>
+          </div>
+        </div>
+        <div class="tool-category">
+          <div class="tool-cat-header">
+            <div class="tool-cat-dot" style="background:var(--orange)"></div>
+            <span class="tool-cat-name" style="color:var(--orange)">WEB_STACK</span>
+          </div>
+          <div class="tool-chips">
+            <span class="tool-chip">React</span>
+            <span class="tool-chip">Node.js</span>
+            <span class="tool-chip">REST API</span>
+            <span class="tool-chip">Firebase</span>
+            <span class="tool-chip">MySQL</span>
+            <span class="tool-chip">MSSQL</span>
+            <span class="tool-chip">Kotlin</span>
+            <span class="tool-chip">React Native</span>
+            <span class="tool-chip">WordPress</span>
+            <span class="tool-chip">WooCommerce</span>
+          </div>
+        </div>
+        <div class="tool-category">
+          <div class="tool-cat-header">
+            <div class="tool-cat-dot" style="background:var(--green)"></div>
+            <span class="tool-cat-name" style="color:var(--green)">3D_PIPELINE</span>
+          </div>
+          <div class="tool-chips">
+            <span class="tool-chip">ZBrush</span>
+            <span class="tool-chip">Substance Painter</span>
+            <span class="tool-chip">Marvelous Designer</span>
+            <span class="tool-chip">PBR Texturing</span>
+            <span class="tool-chip">Retopology</span>
+            <span class="tool-chip">LOD Optimization</span>
+          </div>
+        </div>
+        <div class="tool-category">
+          <div class="tool-cat-header">
+            <div class="tool-cat-dot" style="background:var(--purple)"></div>
+            <span class="tool-cat-name" style="color:var(--purple)">DESIGN_TOOLS</span>
+          </div>
+          <div class="tool-chips">
+            <span class="tool-chip">Photoshop</span>
+            <span class="tool-chip">Illustrator</span>
+            <span class="tool-chip">After Effects</span>
+            <span class="tool-chip">Premiere Pro</span>
+            <span class="tool-chip">HTML5 Banners</span>
+            <span class="tool-chip">Motion Graphics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label reveal">
+      <span class="section-label-num">02</span>
+      <div class="section-label-line"></div>
+      <span class="section-label-text">// skill_nodes</span>
+      <div class="section-label-line" style="max-width:60px"></div>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-node blue reveal">
+        <div class="sn-head">
+          <div class="sn-bar" style="background:var(--blue)"></div>
+          <span class="sn-title" style="color:var(--text)">GAME DEV</span>
+          <span class="sn-badge" style="color:var(--blue);border-color:rgba(74,158,255,.35)">UE5 C++</span>
+        </div>
+        <div class="sn-pins">
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--blue)"></div><span class="sn-pin-label">Combat &amp; Movement Systems</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--blue)"></div><span class="sn-pin-label">AI / Behavior Trees</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--blue)"></div><span class="sn-pin-label">Multiplayer / EOS</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--blue)"></div><span class="sn-pin-label">GAS / RPG Systems</span></div>
+          <div class="sn-divider"></div>
+          <div class="sn-pin"><span class="sn-pin-label" style="text-align:right">Shipped Games</span><div class="sn-pin-dot out" style="border-color:var(--blue)"></div></div>
+        </div>
+        <div class="sn-bar-wrap">
+          <div class="sn-bar-top"><span>Proficiency</span><span style="color:var(--blue)">92%</span></div>
+          <div class="sn-bar-bg"><div class="sn-bar-fill" data-w="92%" style="background:var(--blue)"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-node orange reveal">
+        <div class="sn-head">
+          <div class="sn-bar" style="background:var(--orange)"></div>
+          <span class="sn-title" style="color:var(--text)">FULLSTACK WEB</span>
+          <span class="sn-badge" style="color:var(--orange);border-color:rgba(255,140,66,.35)">REACT</span>
+        </div>
+        <div class="sn-pins">
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--orange)"></div><span class="sn-pin-label">React / Node.js / REST API</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--orange)"></div><span class="sn-pin-label">Firebase / MySQL / MSSQL</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--orange)"></div><span class="sn-pin-label">WordPress / WooCommerce</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--orange)"></div><span class="sn-pin-label">Kotlin / React Native</span></div>
+          <div class="sn-divider"></div>
+          <div class="sn-pin"><span class="sn-pin-label" style="text-align:right">App Output</span><div class="sn-pin-dot out" style="border-color:var(--orange)"></div></div>
+        </div>
+        <div class="sn-bar-wrap">
+          <div class="sn-bar-top"><span>Proficiency</span><span style="color:var(--orange)">90%</span></div>
+          <div class="sn-bar-bg"><div class="sn-bar-fill" data-w="90%" style="background:var(--orange)"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-node green reveal">
+        <div class="sn-head">
+          <div class="sn-bar" style="background:var(--green)"></div>
+          <span class="sn-title" style="color:var(--text)">3D ARTIST</span>
+          <span class="sn-badge" style="color:var(--green);border-color:rgba(77,219,135,.35)">7 YRS</span>
+        </div>
+        <div class="sn-pins">
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--green)"></div><span class="sn-pin-label">High-poly Sculpt / Retopo</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--green)"></div><span class="sn-pin-label">PBR Texturing / Baking</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--green)"></div><span class="sn-pin-label">Rigging &amp; Animation</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--green)"></div><span class="sn-pin-label">Marvelous Designer Cloth</span></div>
+          <div class="sn-divider"></div>
+          <div class="sn-pin"><span class="sn-pin-label" style="text-align:right">Engine-Ready Assets</span><div class="sn-pin-dot out" style="border-color:var(--green)"></div></div>
+        </div>
+        <div class="sn-bar-wrap">
+          <div class="sn-bar-top"><span>Proficiency</span><span style="color:var(--green)">88%</span></div>
+          <div class="sn-bar-bg"><div class="sn-bar-fill" data-w="88%" style="background:var(--green)"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-node purple reveal">
+        <div class="sn-head">
+          <div class="sn-bar" style="background:var(--purple)"></div>
+          <span class="sn-title" style="color:var(--text)">GRAPHIC DESIGN</span>
+          <span class="sn-badge" style="color:var(--purple);border-color:rgba(192,132,252,.35)">ADOBE</span>
+        </div>
+        <div class="sn-pins">
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--purple)"></div><span class="sn-pin-label">Logo &amp; Brand Identity</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--purple)"></div><span class="sn-pin-label">Motion Graphics / After Effects</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--purple)"></div><span class="sn-pin-label">Social Media / Ad Content</span></div>
+          <div class="sn-divider"></div>
+          <div class="sn-pin"><span class="sn-pin-label" style="text-align:right">Visual Output</span><div class="sn-pin-dot out" style="border-color:var(--purple)"></div></div>
+        </div>
+        <div class="sn-bar-wrap">
+          <div class="sn-bar-top"><span>Proficiency</span><span style="color:var(--purple)">85%</span></div>
+          <div class="sn-bar-bg"><div class="sn-bar-fill" data-w="85%" style="background:var(--purple)"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-node yellow reveal">
+        <div class="sn-head">
+          <div class="sn-bar" style="background:var(--yellow)"></div>
+          <span class="sn-title" style="color:var(--text)">TECH ART / VFX</span>
+          <span class="sn-badge" style="color:var(--yellow);border-color:rgba(255,209,102,.35)">NIAGARA</span>
+        </div>
+        <div class="sn-pins">
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--yellow)"></div><span class="sn-pin-label">Shader / Material Graph</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--yellow)"></div><span class="sn-pin-label">Niagara Particle Systems</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--yellow)"></div><span class="sn-pin-label">LOD &amp; Performance Budgets</span></div>
+          <div class="sn-divider"></div>
+          <div class="sn-pin"><span class="sn-pin-label" style="text-align:right">Visual FX</span><div class="sn-pin-dot out" style="border-color:var(--yellow)"></div></div>
+        </div>
+        <div class="sn-bar-wrap">
+          <div class="sn-bar-top"><span>Proficiency</span><span style="color:var(--yellow)">82%</span></div>
+          <div class="sn-bar-bg"><div class="sn-bar-fill" data-w="82%" style="background:var(--yellow)"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-node red reveal">
+        <div class="sn-head">
+          <div class="sn-bar" style="background:var(--red)"></div>
+          <span class="sn-title" style="color:var(--text)">AI / AUTOMATION</span>
+          <span class="sn-badge" style="color:var(--red);border-color:rgba(255,95,95,.35)">PYTHON</span>
+        </div>
+        <div class="sn-pins">
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--red)"></div><span class="sn-pin-label">AI API Integration</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--red)"></div><span class="sn-pin-label">Structured JSON Workflows</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--red)"></div><span class="sn-pin-label">Automation Pipelines</span></div>
+          <div class="sn-divider"></div>
+          <div class="sn-pin"><span class="sn-pin-label" style="text-align:right">Smart Features</span><div class="sn-pin-dot out" style="border-color:var(--red)"></div></div>
+        </div>
+        <div class="sn-bar-wrap">
+          <div class="sn-bar-top"><span>Proficiency</span><span style="color:var(--red)">76%</span></div>
+          <div class="sn-bar-bg"><div class="sn-bar-fill" data-w="76%" style="background:var(--red)"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-label reveal">
+      <span class="section-label-num">03</span>
+      <div class="section-label-line"></div>
+      <span class="section-label-text">// gallery_node</span>
+      <div class="section-label-line" style="max-width:60px"></div>
+    </div>
+
+    <div class="gallery-tabs reveal">
+      <button class="gtab active" data-filter="all">// all</button>
+      <button class="gtab" data-filter="game">// game_dev</button>
+      <button class="gtab" data-filter="3d">// 3d_art</button>
+      <button class="gtab" data-filter="web">// web_app</button>
+      <button class="gtab" data-filter="design">// graphic_design</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+
+      <!-- Game Dev items -->
+      <div class="gallery-item reveal" data-cat="game" data-title="TIME SOUL — Combat System" data-tags="UE5,C++,Action">
+        <div class="gallery-placeholder" style="height:220px">
+          <div class="pn-grid-bg"></div>
+          <span class="gp-icon">🎮</span>
+          <span class="gp-label">TIME SOUL</span>
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-title">TIME SOUL — Souls-like Combat</div>
+          <div class="go-tags">
+            <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+            <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">C++</span>
+            <span class="go-tag" style="color:var(--green);border-color:rgba(77,219,135,.4)">Steam</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-cat="game" data-title="Olympus of the Heavens — Co-op ARPG" data-tags="UE5,Networking,Procedural">
+        <div class="gallery-placeholder" style="height:180px">
+          <div class="pn-grid-bg"></div>
+          <span class="gp-icon">⚡</span>
+          <span class="gp-label">OLYMPUS OF THE HEAVENS</span>
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-title">Olympus of the Heavens</div>
+          <div class="go-tags">
+            <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">Co-op</span>
+            <span class="go-tag" style="color:var(--purple);border-color:rgba(192,132,252,.4)">ARPG</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-cat="3d" data-title="3D Character — High Poly Sculpt" data-tags="ZBrush,PBR,Character">
+        <div class="gallery-placeholder" style="height:260px">
+          <div class="pn-grid-bg"></div>
+          <span class="gp-icon">⬡</span>
+          <span class="gp-label">CHARACTER ART</span>
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-title">Character — High Poly Sculpt</div>
+          <div class="go-tags">
+            <span class="go-tag" style="color:var(--green);border-color:rgba(77,219,135,.4)">ZBrush</span>
+            <span class="go-tag" style="color:var(--yellow);border-color:rgba(255,209,102,.4)">PBR</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-cat="game" data-title="U.N Owen Was Her — Boss AI" data-tags="UE5,BehaviorTree,Horror">
+        <div class="gallery-placeholder" style="height:200px">
+          <div class="pn-grid-bg"></div>
+          <span class="gp-icon">👁</span>
+          <span class="gp-label">U.N OWEN WAS HER</span>
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-title">U.N Owen Was Her — Boss AI</div>
+          <div class="go-tags">
+            <span class="go-tag" style="color:var(--red);border-color:rgba(255,95,95,.4)">Horror</span>
+            <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">Boss AI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-cat="web" data-title="Web Dashboard — React + Node.js" data-tags="React,Firebase,Dashboard">
+        <div class="gallery-placeholder" style="height:170px">
+          <div class="pn-grid-bg"></div>
+          <span class="gp-icon">🌐</span>
+          <span class="gp-label">WEB DASHBOARD</span>
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-title">Admin Dashboard — React</div>
+          <div class="go-tags">
+            <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">React</span>
+            <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">Firebase</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-cat="3d" data-title="Environment — Modular Kit" data-tags="UE5,Environment,Lighting">
+        <div class="gallery-placeholder" style="height:190px">
+          <div class="pn-grid-bg"></div>
+          <span class="gp-icon">🏛</span>
+          <span class="gp-label">ENVIRONMENT ART</span>
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-title">Modular Environment Kit</div>
+          <div class="go-tags">
+            <span class="go-tag" style="color:var(--green);border-color:rgba(77,219,135,.4)">UE5</span>
+            <span class="go-tag" style="color:var(--yellow);border-color:rgba(255,209,102,.4)">Lighting</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-cat="design" data-title="Brand Identity Design" data-tags="Illustrator,Branding,Logo">
+        <div class="gallery-placeholder" style="height:210px">
+          <div class="pn-grid-bg"></div>
+          <span class="gp-icon">✦</span>
+          <span class="gp-label">BRAND IDENTITY</span>
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-title">Brand Identity System</div>
+          <div class="go-tags">
+            <span class="go-tag" style="color:var(--purple);border-color:rgba(192,132,252,.4)">Illustrator</span>
+            <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">Branding</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-cat="game" data-title="Blood Garden — Souls Prototype" data-tags="UE5,Combat,DarkFantasy">
+        <div class="gallery-placeholder" style="height:175px">
+          <div class="pn-grid-bg"></div>
+          <span class="gp-icon">⚔</span>
+          <span class="gp-label">BLOOD GARDEN</span>
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-title">Blood Garden — Dark Fantasy</div>
+          <div class="go-tags">
+            <span class="go-tag" style="color:var(--red);border-color:rgba(255,95,95,.4)">Souls-like</span>
+            <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">Combat</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-cat="3d" data-title="Creature — Stylized Character" data-tags="ZBrush,Stylized,Creature">
+        <div class="gallery-placeholder" style="height:230px">
+          <div class="pn-grid-bg"></div>
+          <span class="gp-icon">🐉</span>
+          <span class="gp-label">CREATURE ART</span>
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-title">Stylized Creature</div>
+          <div class="go-tags">
+            <span class="go-tag" style="color:var(--green);border-color:rgba(77,219,135,.4)">Creature</span>
+            <span class="go-tag" style="color:var(--yellow);border-color:rgba(255,209,102,.4)">Stylized</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-cat="web" data-title="Mobile App — Android Kotlin" data-tags="Kotlin,Android,Jetpack">
+        <div class="gallery-placeholder" style="height:185px">
+          <div class="pn-grid-bg"></div>
+          <span class="gp-icon">📱</span>
+          <span class="gp-label">MOBILE APP</span>
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-title">Mobile App — Android Kotlin</div>
+          <div class="go-tags">
+            <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Kotlin</span>
+            <span class="go-tag" style="color:var(--green);border-color:rgba(77,219,135,.4)">Jetpack</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-cat="design" data-title="Motion Graphics — Game Trailer" data-tags="AfterEffects,Trailer,Video">
+        <div class="gallery-placeholder" style="height:200px">
+          <div class="pn-grid-bg"></div>
+          <span class="gp-icon">🎬</span>
+          <span class="gp-label">MOTION GRAPHICS</span>
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-title">Game Trailer — Motion Graphics</div>
+          <div class="go-tags">
+            <span class="go-tag" style="color:var(--purple);border-color:rgba(192,132,252,.4)">After Effects</span>
+            <span class="go-tag" style="color:var(--red);border-color:rgba(255,95,95,.4)">Video</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-cat="game" data-title="Skysmith Dragons — Open World" data-tags="UE5,OpenWorld,Dragons">
+        <div class="gallery-placeholder" style="height:220px">
+          <div class="pn-grid-bg"></div>
+          <span class="gp-icon">🐲</span>
+          <span class="gp-label">SKYSMITH DRAGONS</span>
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-title">Skysmith Dragons — Open World</div>
+          <div class="go-tags">
+            <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">Open World</span>
+            <span class="go-tag" style="color:var(--yellow);border-color:rgba(255,209,102,.4)">Survival</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label reveal">
+      <span class="section-label-num">04</span>
+      <div class="section-label-line"></div>
+      <span class="section-label-text">// project_graph</span>
+      <div class="section-label-line" style="max-width:60px"></div>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-node reveal" style="border-color:rgba(74,158,255,.25)">
+        <div class="pn-thumb" style="color:var(--blue)">
+          <div class="pn-grid-bg"></div><div class="pn-corner tl"></div><div class="pn-corner br"></div>
+          <span class="pn-icon">⚔</span>
+        </div>
+        <div class="pn-body">
+          <span class="pn-type" style="color:var(--blue);border-color:rgba(74,158,255,.35);background:rgba(74,158,255,.07)">STEAM GAME</span>
+          <div class="pn-title">TIME SOUL</div>
+          <div class="pn-desc">Action combat with souls-like mechanics and parkour. Built movement, lock-on targeting, air combos, and character customization.</div>
+          <div class="pn-footer">
+            <div class="pn-techs"><span class="pn-tech">Unreal 5</span><span class="pn-tech">C++</span><span class="pn-tech">Blueprint</span><span class="pn-tech">GAS</span></div>
+            <a href="https://store.steampowered.com/app/2928270/TIME_SOUL" target="_blank" class="pn-link">→ Steam</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-node reveal" style="border-color:rgba(192,132,252,.25)">
+        <div class="pn-thumb" style="color:var(--purple)">
+          <div class="pn-grid-bg"></div><div class="pn-corner tl"></div><div class="pn-corner br"></div>
+          <span class="pn-icon">👁</span>
+        </div>
+        <div class="pn-body">
+          <span class="pn-type" style="color:var(--purple);border-color:rgba(192,132,252,.35);background:rgba(192,132,252,.07)">STEAM GAME</span>
+          <div class="pn-title">U.N OWEN WAS HER</div>
+          <div class="pn-desc">Third-person action shooter with atmospheric horror. Worked on boss AI, bullet-hell patterns, and the save system.</div>
+          <div class="pn-footer">
+            <div class="pn-techs"><span class="pn-tech">Unreal 5</span><span class="pn-tech">AI / BT</span><span class="pn-tech">C++</span></div>
+            <a href="https://store.steampowered.com/app/3420540/UN_Owen_Was_Her" target="_blank" class="pn-link">→ Steam</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-node reveal" style="border-color:rgba(255,209,102,.25)">
+        <div class="pn-thumb" style="color:var(--yellow)">
+          <div class="pn-grid-bg"></div><div class="pn-corner tl"></div><div class="pn-corner br"></div>
+          <span class="pn-icon">⚡</span>
+        </div>
+        <div class="pn-body">
+          <span class="pn-type" style="color:var(--yellow);border-color:rgba(255,209,102,.35);background:rgba(255,209,102,.07)">STEAM GAME</span>
+          <div class="pn-title">OLYMPUS OF THE HEAVENS</div>
+          <div class="pn-desc">Isometric co-op ARPG with boss rush gameplay. Built equipment, crafting, procedural gen, co-op networking, and random seed systems.</div>
+          <div class="pn-footer">
+            <div class="pn-techs"><span class="pn-tech">UE5</span><span class="pn-tech">Multiplayer</span><span class="pn-tech">Procedural</span></div>
+            <a href="https://store.steampowered.com/app/3358020/Olympus_of_the_Heavens" target="_blank" class="pn-link">→ Steam</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-node reveal" style="border-color:rgba(77,219,135,.25)">
+        <div class="pn-thumb" style="color:var(--green)">
+          <div class="pn-grid-bg"></div><div class="pn-corner tl"></div><div class="pn-corner br"></div>
+          <span class="pn-icon">🐱</span>
+        </div>
+        <div class="pn-body">
+          <span class="pn-type" style="color:var(--green);border-color:rgba(77,219,135,.35);background:rgba(77,219,135,.07)">MOBILE GAME</span>
+          <div class="pn-title">REAL CAT RUNNER</div>
+          <div class="pn-desc">Stylized endless runner with runtime procedural level streaming, object pooling, and dynamic difficulty scaling. Play Store.</div>
+          <div class="pn-footer">
+            <div class="pn-techs"><span class="pn-tech">Kotlin</span><span class="pn-tech">Procedural</span><span class="pn-tech">Android</span></div>
+            <a href="https://play.google.com/store/apps/details?id=com.Kubrick.RealCatRunner" target="_blank" class="pn-link">→ Play Store</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-node reveal" style="border-color:rgba(255,140,66,.25)">
+        <div class="pn-thumb" style="color:var(--orange)">
+          <div class="pn-grid-bg"></div><div class="pn-corner tl"></div><div class="pn-corner br"></div>
+          <span class="pn-icon">🌐</span>
+        </div>
+        <div class="pn-body">
+          <span class="pn-type" style="color:var(--orange);border-color:rgba(255,140,66,.35);background:rgba(255,140,66,.07)">WEB / MOBILE</span>
+          <div class="pn-title">FULL-STACK PROJECTS</div>
+          <div class="pn-desc">React dashboards, WooCommerce stores, Firebase integrations, REST APIs, and Android Kotlin apps delivered across 9 years.</div>
+          <div class="pn-footer">
+            <div class="pn-techs"><span class="pn-tech">React</span><span class="pn-tech">Node.js</span><span class="pn-tech">Firebase</span><span class="pn-tech">MySQL</span></div>
+            <a href="https://github.com/kubrvk" target="_blank" class="pn-link">→ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-node reveal" style="border-color:rgba(77,219,135,.25)">
+        <div class="pn-thumb" style="color:var(--green)">
+          <div class="pn-grid-bg"></div><div class="pn-corner tl"></div><div class="pn-corner br"></div>
+          <span class="pn-icon">⬡</span>
+        </div>
+        <div class="pn-body">
+          <span class="pn-type" style="color:var(--green);border-color:rgba(77,219,135,.35);background:rgba(77,219,135,.07)">3D ART</span>
+          <div class="pn-title">ARTSTATION PORTFOLIO</div>
+          <div class="pn-desc">3D assets — high/low-poly characters, creatures, hard-surface props, environment kits. Full pipeline from sculpt to engine integration.</div>
+          <div class="pn-footer">
+            <div class="pn-techs"><span class="pn-tech">ZBrush</span><span class="pn-tech">Substance</span><span class="pn-tech">Marvelous</span></div>
+            <a href="https://www.artstation.com/kubrik" target="_blank" class="pn-link">→ ArtStation</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label reveal">
+      <span class="section-label-num">05</span>
+      <div class="section-label-line"></div>
+      <span class="section-label-text">// output_pins</span>
+      <div class="section-label-line" style="max-width:60px"></div>
+    </div>
+    <div class="contact-inner">
+      <div class="contact-node reveal">
+        <div class="cn-header">
+          <span style="color:var(--purple);font-family:var(--mono);font-size:14px">▶</span>
+          <span class="cn-title">CONTACT_NODE</span>
+          <span class="cn-sub">// open for work</span>
+        </div>
+        <div class="cn-body">
+          <p class="cn-desc">Open to studio roles, contract work, and long-term collaboration in Unreal Engine, C++, 3D art, and web development. Every message is an input pin — connect below.</p>
+          <div class="cn-links">
+            <a href="https://kubrvk.github.io/portfolio" target="_blank" class="cn-link">
+              <div class="cn-link-icon" style="color:var(--blue)">◈</div>
+              <span class="cn-link-label">// portfolio</span>
+              <span class="cn-link-val" style="color:var(--blue)">kubrvk.github.io/portfolio</span>
+              <span class="cn-link-arrow">›</span>
+            </a>
+            <a href="https://github.com/kubrvk" target="_blank" class="cn-link">
+              <div class="cn-link-icon" style="color:var(--orange)">⌥</div>
+              <span class="cn-link-label">// github</span>
+              <span class="cn-link-val" style="color:var(--orange)">github.com/kubrvk</span>
+              <span class="cn-link-arrow">›</span>
+            </a>
+            <a href="https://www.artstation.com/kubrik" target="_blank" class="cn-link">
+              <div class="cn-link-icon" style="color:var(--green)">⬡</div>
+              <span class="cn-link-label">// artstation</span>
+              <span class="cn-link-val" style="color:var(--green)">artstation.com/kubrik</span>
+              <span class="cn-link-arrow">›</span>
+            </a>
+            <a href="https://kubrik.itch.io" target="_blank" class="cn-link">
+              <div class="cn-link-icon" style="color:var(--red)">⚔</div>
+              <span class="cn-link-label">// itch.io</span>
+              <span class="cn-link-val" style="color:var(--red)">kubrik.itch.io</span>
+              <span class="cn-link-arrow">›</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span class="footer-copy">// KUBRIK PORTFOLIO — 2025</span>
+  <span class="footer-ver">v2.0.0 — blueprint_theme</span>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-inner">
+    <div class="lb-close" id="lbClose">[ ESC ] CLOSE_NODE</div>
+    <div id="lbContent"></div>
+    <div class="lb-info">
+      <div class="lb-title" id="lbTitle"></div>
+      <div class="lb-tags" id="lbTags"></div>
     </div>
   </div>
 </div>
 
-<!-- Side Panels -->
-<nav class="side-panel left" aria-label="Scroll indicators">
-  <span class="side-label">Scroll</span>
-  <div class="side-track"><div class="side-track-fill" id="leftTrack"></div></div>
-  <div class="side-dot active"></div>
-  <div class="side-dot"></div>
-  <div class="side-dot"></div>
-  <div class="side-dot"></div>
-  <div class="side-dot"></div>
-  <div class="side-dot"></div>
-  <div class="side-readout" id="scrollPct">00</div>
-</nav>
+<script>
+/* CURSOR */
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => { cursor.style.left=e.clientX+'px'; cursor.style.top=e.clientY+'px'; });
+document.addEventListener('mouseenter',()=>cursor.style.opacity='1');
+document.addEventListener('mouseleave',()=>cursor.style.opacity='0');
+document.querySelectorAll('a,button,.skill-node,.project-node,.gallery-item').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.width='32px';cursor.style.height='32px';});
+  el.addEventListener('mouseleave',()=>{cursor.style.width='20px';cursor.style.height='20px';});
+});
 
-<nav class="side-panel right" aria-label="Status indicators">
-  <span class="side-label">Status</span>
-  <div class="side-track"><div class="side-track-fill" id="rightTrack"></div></div>
-  <div class="side-dot"></div>
-  <div class="side-dot"></div>
-  <div class="side-dot active"></div>
-  <div class="side-dot"></div>
-  <div class="side-dot"></div>
-  <div class="side-dot"></div>
-  <div class="side-readout">LMN</div>
-</nav>
+/* BACKGROUND CANVAS — Blueprint dot + cross grid */
+const bgCanvas = document.getElementById('bg-canvas');
+const bgCtx = bgCanvas.getContext('2d');
+let W, H;
+function resizeBg(){W=bgCanvas.width=window.innerWidth;H=bgCanvas.height=window.innerHeight;}
+function drawBg(){
+  bgCtx.clearRect(0,0,W,H);
+  const step=36;
+  for(let x=0;x<W;x+=step){
+    for(let y=0;y<H;y+=step){
+      /* cross node points */
+      bgCtx.fillStyle='rgba(74,158,255,0.11)';
+      bgCtx.fillRect(x-1,y,2,0.7);
+      bgCtx.fillRect(x,y-1,0.7,2);
+      /* dot at intersection */
+      bgCtx.beginPath();
+      bgCtx.arc(x,y,1.2,0,Math.PI*2);
+      bgCtx.fillStyle='rgba(74,158,255,0.07)';
+      bgCtx.fill();
+    }
+  }
+  /* subtle squares at every 3rd intersection */
+  bgCtx.strokeStyle='rgba(74,158,255,0.04)';
+  bgCtx.lineWidth=0.5;
+  const big=step*3;
+  for(let x=0;x<W;x+=big){
+    for(let y=0;y<H;y+=big){
+      bgCtx.strokeRect(x-big/2,y-big/2,big,big);
+    }
+  }
+}
+window.addEventListener('resize',()=>{resizeBg();drawBg();});
+resizeBg();drawBg();
 
-<main class="main">
+/* ANIMATED WIRE CONNECTORS */
+const wireCanvas=document.createElement('canvas');
+wireCanvas.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0';
+document.body.insertBefore(wireCanvas,document.body.firstChild);
+const wCtx=wireCanvas.getContext('2d');
+function resizeWire(){wireCanvas.width=window.innerWidth;wireCanvas.height=window.innerHeight;}
+window.addEventListener('resize',resizeWire);resizeWire();
+const WIRE_COLORS=['#4a9eff','#ff8c42','#4ddb87','#c084fc','#ffd166'];
+const wires=[];
+function makeWire(){
+  const x1=Math.random()*window.innerWidth;
+  const y1=Math.random()*window.innerHeight;
+  const dx=(Math.random()-.5)*500;
+  const dy=(Math.random()-.5)*350;
+  return{x1,y1,x2:x1+dx,y2:y1+dy,color:WIRE_COLORS[Math.floor(Math.random()*WIRE_COLORS.length)],progress:Math.random(),speed:.0015+Math.random()*.003,alpha:.04+Math.random()*.06,lw:.5+Math.random()*.7};
+}
+for(let i=0;i<24;i++)wires.push(makeWire());
+function drawWire(c,x1,y1,x2,y2,p,color,alpha,lw){
+  const mx=(x1+x2)/2;const steps=50;const pts=[];
+  for(let i=0;i<=steps;i++){const t=i/steps;pts.push({x:(1-t)*(1-t)*x1+2*(1-t)*t*mx+t*t*x2,y:(1-t)*(1-t)*y1+2*(1-t)*t*y1+t*t*y2});}
+  const end=Math.max(1,Math.floor(p*steps));
+  c.save();c.globalAlpha=alpha;c.strokeStyle=color;c.lineWidth=lw;
+  c.beginPath();c.moveTo(pts[0].x,pts[0].y);
+  for(let i=1;i<=end;i++)c.lineTo(pts[i].x,pts[i].y);
+  c.stroke();
+  const h=pts[end];c.beginPath();c.arc(h.x,h.y,2,0,Math.PI*2);
+  c.fillStyle=color;c.globalAlpha=alpha*2.5;c.fill();c.restore();
+}
+function animWires(){
+  wCtx.clearRect(0,0,wireCanvas.width,wireCanvas.height);
+  wires.forEach(w=>{
+    w.progress+=w.speed;
+    if(w.progress>1.4)Object.assign(w,makeWire(),{progress:0});
+    drawWire(wCtx,w.x1,w.y1,w.x2,w.y2,Math.min(w.progress,1),w.color,w.alpha,w.lw);
+  });
+  requestAnimationFrame(animWires);
+}
+animWires();
 
-  <!-- ═══ HERO ═══ -->
-  <section class="hero" id="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-badge">
-      <div class="hero-badge-dot"></div>
-      <span>Now in Public Beta</span>
-    </div>
-    <h1>Workflows that<br><em>think ahead</em></h1>
-    <p class="hero-sub">
-      Luminary connects your tools, automates the repetitive, and surfaces insights
-      before you know to ask. Built for teams that refuse to settle.
-    </p>
-    <div class="hero-ctas">
-      <a href="#pricing" class="btn-primary">Start Free Trial</a>
-      <a href="#features" class="btn-secondary">See How It Works</a>
-    </div>
-    <div class="hero-metrics">
-      <div class="metric">
-        <div class="metric-value"><span class="counter" data-target="99.9" data-decimals="1">0.0</span><span>%</span></div>
-        <div class="metric-label">Uptime SLA</div>
-      </div>
-      <div class="metric">
-        <div class="metric-value"><span class="counter" data-target="4200" data-decimals="0">0</span><span>+</span></div>
-        <div class="metric-label">Teams Active</div>
-      </div>
-      <div class="metric">
-        <div class="metric-value"><span class="counter" data-target="12" data-decimals="0">0</span><span>ms</span></div>
-        <div class="metric-label">Avg Latency</div>
-      </div>
-    </div>
-  </section>
+/* SCROLL REVEAL */
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    e.target.classList.add('revealed');
+    e.target.querySelectorAll('.sn-bar-fill').forEach(bar=>{bar.style.width=bar.dataset.w;});
+  });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  <!-- ═══ LOGO TICKER ═══ -->
-  <div class="logo-ticker reveal">
-    <div class="logo-ticker-label">Trusted by forward-thinking teams</div>
-    <div class="ticker-track" id="tickerTrack">
-      <span class="ticker-item">Meridian Labs</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Vertex Capital</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Arcline Systems</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Nova Engineering</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Prism Analytics</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Helix Health</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Stratos AI</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Cobalt Finance</span><span class="ticker-dot"></span>
-      <!-- Duplicated for seamless loop -->
-      <span class="ticker-item">Meridian Labs</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Vertex Capital</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Arcline Systems</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Nova Engineering</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Prism Analytics</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Helix Health</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Stratos AI</span><span class="ticker-dot"></span>
-      <span class="ticker-item">Cobalt Finance</span><span class="ticker-dot"></span>
-    </div>
-  </div>
+/* COUNTER */
+function countUp(el,target,dur=1400){
+  const start=performance.now();
+  function tick(now){const p=Math.min((now-start)/dur,1);const ep=1-Math.pow(1-p,3);el.textContent=Math.round(ep*target);if(p<1)requestAnimationFrame(tick);}
+  requestAnimationFrame(tick);
+}
+const heroIO=new IntersectionObserver(entries=>{
+  if(!entries[0].isIntersecting)return;
+  setTimeout(()=>countUp(document.getElementById('stat-projects'),9),200);
+  setTimeout(()=>countUp(document.getElementById('stat-years'),9),400);
+  setTimeout(()=>countUp(document.getElementById('stat-skills'),20),600);
+  heroIO.disconnect();
+},{threshold:0.3});
+const heroSection=document.getElementById('hero');
+if(heroSection)heroIO.observe(heroSection);
 
-  <!-- ═══ FEATURES ═══ -->
-  <section class="section" id="features">
+/* ACTIVE NAV */
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.nav-link');
+const scrollIO=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    navLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id);});
+  });
+},{threshold:0.35});
+sections.forEach(s=>scrollIO.observe(s));
 
-    <div class="feature reveal">
-      <div class="feature-visual">
-        <img src="images/tm-luminary-01.jpg" alt="Intelligent automation dashboard">
-      </div>
-      <div class="feature-content">
-        <div class="feature-number">01</div>
-        <p class="section-tag">Intelligent Automation</p>
-        <h2 class="section-title">Build workflows in <strong>minutes, not months</strong></h2>
-        <p class="section-body">
-          Visual pipeline builder with conditional logic, branching, and AI-assisted step suggestions.
-          Connect any data source and let Luminary handle the orchestration.
-        </p>
-      </div>
-    </div>
+/* GALLERY FILTER */
+const tabs=document.querySelectorAll('.gtab');
+const items=document.querySelectorAll('.gallery-item');
+tabs.forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    tabs.forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    const filter=tab.dataset.filter;
+    items.forEach(item=>{
+      if(filter==='all'||item.dataset.cat===filter){
+        item.style.display='';
+        setTimeout(()=>{item.style.opacity='1';item.style.transform='';},10);
+      } else {
+        item.style.opacity='0';
+        item.style.display='none';
+      }
+    });
+  });
+});
 
-    <div class="feature reverse reveal">
-      <div class="feature-visual">
-        <img src="images/tm-luminary-02.jpg" alt="Predictive analytics visualization">
-      </div>
-      <div class="feature-content">
-        <div class="feature-number">02</div>
-        <p class="section-tag">Predictive Insights</p>
-        <h2 class="section-title">See what's coming <strong>before it arrives</strong></h2>
-        <p class="section-body">
-          Pattern detection across your entire operation. Luminary identifies bottlenecks,
-          forecasts demand spikes, and recommends preemptive action — automatically.
-        </p>
-      </div>
-    </div>
-
-    <div class="feature reveal">
-      <div class="feature-visual">
-        <img src="images/tm-luminary-03.jpg" alt="Unified team workspace">
-      </div>
-      <div class="feature-content">
-        <div class="feature-number">03</div>
-        <p class="section-tag">Unified Workspace</p>
-        <h2 class="section-title">One surface for <strong>everything that matters</strong></h2>
-        <p class="section-body">
-          Dashboards, docs, and decisions in a single plane. No more toggling between twelve tabs.
-          Your entire team's context, always within reach.
-        </p>
-      </div>
-    </div>
-
-  </section>
-
-  <div class="silk-divider reveal"></div>
-
-  <!-- ═══ PRICING ═══ -->
-  <section class="section section-center" id="pricing">
-    <p class="section-tag reveal">Simple Pricing</p>
-    <h2 class="section-title reveal reveal-d1">Choose the plan that <strong>fits your scale</strong></h2>
-    <p class="section-body reveal reveal-d2">Start free. Upgrade when you're ready. No surprises, no hidden fees.</p>
-
-    <div class="pricing-toggle reveal reveal-d3">
-      <span class="pricing-toggle-label active" id="monthlyLabel">Monthly</span>
-      <div class="toggle-switch" id="pricingToggle" role="switch" aria-checked="false" tabindex="0"></div>
-      <span class="pricing-toggle-label" id="annualLabel">Annual</span>
-      <span class="save-badge" id="saveBadge">Save 30%</span>
-    </div>
-
-    <div class="pricing-grid">
-      <div class="pricing-card reveal reveal-d1">
-        <div class="pricing-badge">Popular</div>
-        <div class="pricing-tier">Starter</div>
-        <div class="pricing-prices">
-          <div class="price-option monthly active">
-            <div>
-              <div class="price-label">Monthly</div>
-              <div class="price-option-left">
-                <span class="price-currency">$</span>
-                <span class="price-amount">36</span>
-                <span class="price-period">/mo</span>
-              </div>
-            </div>
-            <div class="price-yearly">$432 /yr</div>
-          </div>
-          <div class="price-option annual">
-            <div>
-              <div class="price-label">Annual</div>
-              <div class="price-option-left">
-                <span class="price-currency">$</span>
-                <span class="price-amount">25</span>
-                <span class="price-period">/mo</span>
-              </div>
-            </div>
-            <div class="price-yearly">$300 /yr</div>
-          </div>
-        </div>
-        <p class="pricing-desc">For small teams getting started with workflow automation.</p>
-        <ul class="pricing-features">
-          <li>Up to 10 team members</li>
-          <li>50 automated workflows</li>
-          <li>Basic analytics dashboard</li>
-          <li>Email support</li>
-          <li>5 integrations</li>
-        </ul>
-        <a href="#" class="btn-secondary">Start Free Trial</a>
-      </div>
-
-      <div class="pricing-card featured reveal reveal-d2">
-        <div class="pricing-badge">Popular</div>
-        <div class="pricing-tier">Professional</div>
-        <div class="pricing-prices">
-          <div class="price-option monthly active">
-            <div>
-              <div class="price-label">Monthly</div>
-              <div class="price-option-left">
-                <span class="price-currency">$</span>
-                <span class="price-amount">80</span>
-                <span class="price-period">/mo</span>
-              </div>
-            </div>
-            <div class="price-yearly">$960 /yr</div>
-          </div>
-          <div class="price-option annual">
-            <div>
-              <div class="price-label">Annual</div>
-              <div class="price-option-left">
-                <span class="price-currency">$</span>
-                <span class="price-amount">56</span>
-                <span class="price-period">/mo</span>
-              </div>
-            </div>
-            <div class="price-yearly">$672 /yr</div>
-          </div>
-        </div>
-        <p class="pricing-desc">For growing teams that need predictive intelligence and advanced automation.</p>
-        <ul class="pricing-features">
-          <li>Unlimited team members</li>
-          <li>Unlimited workflows</li>
-          <li>Predictive insights engine</li>
-          <li>Priority support + Slack</li>
-          <li>Unlimited integrations</li>
-          <li>Custom dashboards</li>
-        </ul>
-        <a href="#" class="btn-primary">Start Free Trial</a>
-      </div>
-
-      <div class="pricing-card reveal reveal-d3">
-        <div class="pricing-badge">Popular</div>
-        <div class="pricing-tier">Enterprise</div>
-        <div class="pricing-prices">
-          <div class="price-option monthly active">
-            <div>
-              <div class="price-label">Monthly</div>
-              <div class="price-option-left">
-                <span class="price-currency">$</span>
-                <span class="price-amount">160</span>
-                <span class="price-period">/mo</span>
-              </div>
-            </div>
-            <div class="price-yearly">$1,920 /yr</div>
-          </div>
-          <div class="price-option annual">
-            <div>
-              <div class="price-label">Annual</div>
-              <div class="price-option-left">
-                <span class="price-currency">$</span>
-                <span class="price-amount">112</span>
-                <span class="price-period">/mo</span>
-              </div>
-            </div>
-            <div class="price-yearly">$1,344 /yr</div>
-          </div>
-        </div>
-        <p class="pricing-desc">For organizations requiring dedicated infrastructure and compliance controls.</p>
-        <ul class="pricing-features">
-          <li>Everything in Professional</li>
-          <li>Dedicated instance</li>
-          <li>SSO + SAML</li>
-          <li>Audit logs + compliance</li>
-          <li>Dedicated success manager</li>
-          <li>Custom SLA</li>
-          <li>On-premise deployment option</li>
-        </ul>
-        <a href="#" class="btn-secondary">Contact Sales</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="silk-divider reveal"></div>
-
-  <!-- ═══ TESTIMONIALS ═══ -->
-  <section class="section section-center" id="testimonials">
-    <p class="section-tag reveal">What Teams Say</p>
-    <h2 class="section-title reveal reveal-d1">Trusted by teams who <strong>ship faster</strong></h2>
-
-    <div class="testimonials-grid">
-      <div class="testimonial-card reveal reveal-d1">
-        <p class="testimonial-quote">"Luminary replaced three tools we were paying for separately. The workflow builder alone saved our ops team 20 hours a week."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">AK</div>
-          <div>
-            <div class="testimonial-name">Anna Kim</div>
-            <div class="testimonial-role">VP Operations, Arcline Systems</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card reveal reveal-d2">
-        <p class="testimonial-quote">"The predictive insights caught a supply chain disruption 72 hours before it would have hit us. That's not incremental — that's transformational."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">MR</div>
-          <div>
-            <div class="testimonial-name">Marcus Reeves</div>
-            <div class="testimonial-role">CTO, Nova Engineering</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card reveal reveal-d3">
-        <p class="testimonial-quote">"We evaluated six platforms. Luminary was the only one our engineers didn't complain about. Clean API, real documentation, zero bloat."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">SL</div>
-          <div>
-            <div class="testimonial-name">Sarah Lin</div>
-            <div class="testimonial-role">Head of Engineering, Prism Analytics</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="silk-divider reveal"></div>
-
-  <!-- ═══ INTEGRATIONS ═══ -->
-  <section class="section section-center" id="integrations">
-    <p class="section-tag reveal">Integrations</p>
-    <h2 class="section-title reveal reveal-d1">Connects to <strong>everything you use</strong></h2>
-    <p class="section-body reveal reveal-d2">Native integrations with the tools your team already depends on. No middleware required.</p>
-
-    <div class="integrations-grid reveal reveal-d3">
-      <div class="integration-item">
-        <div class="integration-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-        </div>
-        <div class="integration-name">GitHub</div>
-      </div>
-      <div class="integration-item">
-        <div class="integration-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6"/></svg>
-        </div>
-        <div class="integration-name">Notion</div>
-      </div>
-      <div class="integration-item">
-        <div class="integration-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="m22 5-10 7L2 5"/></svg>
-        </div>
-        <div class="integration-name">Gmail</div>
-      </div>
-      <div class="integration-item">
-        <div class="integration-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <div class="integration-name">Slack</div>
-      </div>
-      <div class="integration-item">
-        <div class="integration-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <div class="integration-name">Stripe</div>
-      </div>
-      <div class="integration-item">
-        <div class="integration-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        </div>
-        <div class="integration-name">Jira</div>
-      </div>
-      <div class="integration-item">
-        <div class="integration-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 3v18"/></svg>
-        </div>
-        <div class="integration-name">Airtable</div>
-      </div>
-      <div class="integration-item">
-        <div class="integration-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
-        </div>
-        <div class="integration-name">Outlook</div>
-      </div>
-      <div class="integration-item">
-        <div class="integration-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        </div>
-        <div class="integration-name">Datadog</div>
-      </div>
-      <div class="integration-item">
-        <div class="integration-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/></svg>
-        </div>
-        <div class="integration-name">AWS</div>
-      </div>
-      <div class="integration-item">
-        <div class="integration-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        </div>
-        <div class="integration-name">Tableau</div>
-      </div>
-      <div class="integration-item">
-        <div class="integration-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="integration-name">Okta</div>
-      </div>
-    </div>
-  </section>
-
-  <div class="silk-divider reveal"></div>
-
-  <!-- ═══ FAQ ═══ -->
-  <section class="section section-center" id="faq">
-    <p class="section-tag reveal">Frequently Asked</p>
-    <h2 class="section-title reveal reveal-d1">Questions we hear <strong>most often</strong></h2>
-
-    <div class="faq-list reveal reveal-d2">
-      <div class="faq-controls">
-        <button class="faq-toggle-all" id="faqToggleAll">Expand All</button>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">How long does onboarding take?<span class="faq-icon"></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Most teams are fully operational within 48 hours. Our onboarding wizard walks you through connecting your tools, importing existing workflows, and inviting team members. Enterprise customers receive a dedicated onboarding specialist.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Can I migrate from my current platform?<span class="faq-icon"></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Yes. We provide migration tools for Zapier, Make, and n8n workflows. Our team handles the heavy lifting for enterprise migrations — most are completed within one week with zero downtime.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">What happens when I exceed my plan limits?<span class="faq-icon"></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">We never cut you off mid-workflow. You'll receive a notification at 80% and 100% of your limit. Overages are billed at a transparent per-unit rate, or you can upgrade your plan at any time.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Is my data encrypted?<span class="faq-icon"></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">All data is encrypted at rest (AES-256) and in transit (TLS 1.3). Enterprise plans include dedicated encryption keys, SOC 2 Type II compliance, and optional data residency controls for EU and APAC regions.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Do you offer a free trial?<span class="faq-icon"></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Every plan includes a 14-day free trial with full feature access. No credit card required. At the end of the trial, you choose your plan — or your workspace converts to a limited free tier automatically.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ FOOTER CTA ═══ -->
-  <section class="footer-cta" id="cta">
-    <p class="section-tag reveal">Ready to Start</p>
-    <h2 class="section-title reveal reveal-d1">Your team's best work<br><strong>starts here</strong></h2>
-    <p class="section-body reveal reveal-d2" style="margin: 0 auto;">14-day free trial. No credit card. Cancel anytime.</p>
-    <div class="footer-ctas reveal reveal-d3">
-      <a href="#" class="btn-primary">Start Free Trial</a>
-      <a href="#" class="btn-secondary">Talk to Sales</a>
-    </div>
-
-    <div class="footer-bar reveal reveal-d4" style="margin-top: 80px;">
-      <div class="footer-brand">Luminary &mdash; 2026</div>
-      <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Status</a>
-        <span class="footer-credit">Design: <a href="https://templatemo.com" target="_blank" rel="nofollow">TemplateMo</a></span>
-        <span class="footer-credit">Images: <a href="https://unsplash.com" target="_blank" rel="nofollow">Unsplash</a></span>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<script src="templatemo-621-luminary-script.js"></script>
+/* LIGHTBOX */
+const lightbox=document.getElementById('lightbox');
+const lbClose=document.getElementById('lbClose');
+const lbTitle=document.getElementById('lbTitle');
+const lbContent=document.getElementById('lbContent');
+items.forEach(item=>{
+  item.addEventListener('click',()=>{
+    lbTitle.textContent=item.dataset.title||'';
+    const inner=item.querySelector('.gallery-placeholder').cloneNode(true);
+    inner.style.height='400px';inner.style.borderRadius='4px';
+    lbContent.innerHTML='';lbContent.appendChild(inner);
+    lightbox.classList.add('open');
+  });
+});
+lbClose.addEventListener('click',()=>lightbox.classList.remove('open'));
+lightbox.addEventListener('click',e=>{if(e.target===lightbox)lightbox.classList.remove('open');});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lightbox.classList.remove('open');});
+</script>
 </body>
 </html>
+
+
+
+
+
