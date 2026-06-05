@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kubrik — Portfolio</title>
+<title>Kubrick — Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -19,7 +19,7 @@
   --orange:#ff8c42;
   --green:#4ddb87;
   --purple:#c084fc;
-  --yellow:#ff6666;
+  --yellow:#ffd166;
   --red:#ff5f5f;
   --text:#ccd6f0;
   --text-dim:#5a6a88;
@@ -37,10 +37,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,13,18,.88
 .nav-logo{font-family:var(--head);font-size:14px;font-weight:900;color:#fff;letter-spacing:2px;margin-right:auto;display:flex;align-items:center;gap:8px}
 .nav-logo-bracket{color:var(--blue);font-size:18px}
 .nav-links{display:flex;gap:4px}
-.nav-link{font-family:var(--mono);font-size:11px;color:var(--text-dim);padding:6px 14px;border-radius:3px;text-decoration:none;letter-spacing:1px;transition:color .2s,background .2s;border:1px solid transparent}
+.nav-link{font-family:var(--mono);font-size:12px;color:var(--text-dim);padding:6px 14px;border-radius:3px;text-decoration:none;letter-spacing:1px;transition:color .2s,background .2s;border:1px solid transparent}
 .nav-link:hover{color:var(--blue);background:rgba(74,158,255,.07);border-color:rgba(74,158,255,.2)}
 .nav-link.active{color:var(--blue);border-color:rgba(74,158,255,.3)}
-.nav-status{display:flex;align-items:center;gap:6px;margin-left:24px;font-family:var(--mono);font-size:10px;color:var(--text-dim)}
+.nav-status{display:flex;align-items:center;gap:6px;margin-left:24px;font-family:var(--mono);font-size:12px;color:var(--text-dim)}
 .nav-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 
@@ -50,19 +50,19 @@ section{padding:80px 0}
 
 .section-label{display:flex;align-items:center;gap:16px;margin-bottom:40px}
 .section-label-line{flex:1;height:1px;background:linear-gradient(90deg,var(--border-bright),transparent)}
-.section-label-text{font-family:var(--mono);font-size:11px;color:var(--text-dim);letter-spacing:3px;white-space:nowrap}
-.section-label-num{font-family:var(--mono);font-size:11px;color:var(--blue);letter-spacing:1px}
+.section-label-text{font-family:var(--mono);font-size:12px;color:var(--text-dim);letter-spacing:3px;white-space:nowrap}
+.section-label-num{font-family:var(--mono);font-size:12px;color:var(--blue);letter-spacing:1px}
 
 /* HERO */
 #hero{min-height:calc(100vh - 56px);display:flex;align-items:center;position:relative;overflow:hidden}
 .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%}
 .hero-left{position:relative}
-.hero-eyebrow{font-family:var(--mono);font-size:11px;color:var(--blue);letter-spacing:3px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.hero-eyebrow{font-family:var(--mono);font-size:12px;color:var(--blue);letter-spacing:3px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
 .hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--blue)}
 .hero-name{font-family:var(--head);font-size:clamp(32px,4vw,52px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:2px;margin-bottom:8px}
 .hero-name span{color:var(--blue)}
 .hero-roles{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 24px}
-.hero-role{font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:3px;border:1px solid;letter-spacing:1px}
+.hero-role{font-family:var(--mono);font-size:12px;padding:5px 12px;border-radius:3px;border:1px solid;letter-spacing:1px}
 .role-blue{color:var(--blue);border-color:rgba(74,158,255,.35);background:rgba(74,158,255,.07)}
 .role-orange{color:var(--orange);border-color:rgba(255,140,66,.35);background:rgba(255,140,66,.07)}
 .role-green{color:var(--green);border-color:rgba(77,219,135,.35);background:rgba(77,219,135,.07)}
@@ -80,23 +80,23 @@ section{padding:80px 0}
 .hbn-header{background:linear-gradient(90deg,rgba(74,158,255,.15),rgba(74,158,255,.05));border-bottom:1px solid rgba(74,158,255,.3);padding:10px 16px;display:flex;align-items:center;gap:10px}
 .hbn-icon{width:28px;height:28px;border-radius:4px;background:rgba(74,158,255,.15);border:1px solid rgba(74,158,255,.3);display:flex;align-items:center;justify-content:center;font-size:14px}
 .hbn-title{font-family:var(--head);font-size:14px;font-weight:700;color:#fff;letter-spacing:1px}
-.hbn-sub{font-family:var(--mono);font-size:10px;color:var(--blue);margin-left:auto}
+.hbn-sub{font-family:var(--mono);font-size:12px;color:var(--blue);margin-left:auto}
 .hbn-body{padding:16px}
 .hbn-pin-section{margin-bottom:12px}
-.hbn-pin-title{font-family:var(--mono);font-size:10px;color:var(--text-dim);letter-spacing:2px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.hbn-pin-title{font-family:var(--mono);font-size:12px;color:var(--text-dim);letter-spacing:2px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
 .hbn-pin-title::after{content:'';flex:1;height:1px;background:var(--border)}
 .pin-row{display:flex;align-items:center;gap:8px;padding:3px 0}
 .pin{width:12px;height:12px;border-radius:50%;border:2px solid;flex-shrink:0;position:relative}
 .pin.exec{width:14px;height:14px;border-radius:0;clip-path:polygon(0 0,65% 0,100% 50%,65% 100%,0 100%);border:none}
 .pin.out{margin-left:auto}
 .pin.exec.out{transform:scaleX(-1)}
-.pin-label{font-family:var(--mono);font-size:11px;color:var(--text-dim);flex:1}
-.pin-type{font-family:var(--mono);font-size:10px;padding:1px 6px;border-radius:2px;margin-left:auto}
+.pin-label{font-family:var(--mono);font-size:12px;color:var(--text-dim);flex:1}
+.pin-type{font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:2px;margin-left:auto}
 .hbn-divider{height:1px;background:var(--border);margin:8px 0}
 .hbn-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
 .hbn-stat{background:rgba(0,0,0,.3);border-radius:4px;padding:8px;text-align:center;border:1px solid var(--border)}
 .hbn-stat-val{font-family:var(--head);font-size:18px;font-weight:900;color:var(--blue);display:block}
-.hbn-stat-label{font-family:var(--mono);font-size:9px;color:var(--text-dim);letter-spacing:1px}
+.hbn-stat-label{font-family:var(--mono);font-size:12px;color:var(--text-dim);letter-spacing:1px}
 
 /* ABOUT */
 #about{background:rgba(0,0,0,.2)}
@@ -105,15 +105,15 @@ section{padding:80px 0}
 .about-text p span{color:var(--text)}
 .about-info-list{margin-top:24px;display:flex;flex-direction:column;gap:8px}
 .about-info-row{display:flex;align-items:center;gap:12px;padding:8px 12px;background:var(--panel);border:1px solid var(--border);border-radius:4px;border-left:3px solid var(--blue)}
-.about-info-key{font-family:var(--mono);font-size:11px;color:var(--text-dim);min-width:90px}
+.about-info-key{font-family:var(--mono);font-size:12px;color:var(--text-dim);min-width:90px}
 .about-info-val{font-size:14px;color:var(--text)}
 .about-right{display:flex;flex-direction:column;gap:16px}
 .tool-category{background:var(--panel);border:1px solid var(--border);border-radius:6px;overflow:hidden}
 .tool-cat-header{background:rgba(0,0,0,.3);border-bottom:1px solid var(--border);padding:8px 14px;display:flex;align-items:center;gap:8px}
 .tool-cat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.tool-cat-name{font-family:var(--mono);font-size:11px;letter-spacing:1px}
+.tool-cat-name{font-family:var(--mono);font-size:12px;letter-spacing:1px}
 .tool-chips{padding:12px 14px;display:flex;flex-wrap:wrap;gap:6px}
-.tool-chip{font-family:var(--mono);font-size:10px;padding:3px 8px;border-radius:3px;background:rgba(255,255,255,.04);border:1px solid var(--border-bright);color:var(--text-mid);letter-spacing:.5px;transition:border-color .2s,color .2s}
+.tool-chip{font-family:var(--mono);font-size:12px;padding:3px 8px;border-radius:3px;background:rgba(255,255,255,.04);border:1px solid var(--border-bright);color:var(--text-mid);letter-spacing:.5px;transition:border-color .2s,color .2s}
 .tool-chip:hover{border-color:var(--text-mid);color:var(--text)}
 
 /* SKILLS */
@@ -129,23 +129,23 @@ section{padding:80px 0}
 .sn-head{padding:10px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
 .sn-bar{width:3px;height:22px;border-radius:2px;flex-shrink:0}
 .sn-title{font-family:var(--head);font-size:12px;font-weight:700;letter-spacing:1px}
-.sn-badge{margin-left:auto;font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:3px;border:1px solid;opacity:.6}
+.sn-badge{margin-left:auto;font-family:var(--mono);font-size:12px;padding:2px 6px;border-radius:3px;border:1px solid;opacity:.6}
 .sn-pins{padding:10px 12px;display:flex;flex-direction:column;gap:5px}
 .sn-pin{display:flex;align-items:center;gap:7px}
 .sn-pin-dot{width:9px;height:9px;border-radius:50%;border:1.5px solid;flex-shrink:0}
 .sn-pin-dot.out{margin-left:auto;margin-right:-5px}
-.sn-pin-label{font-family:var(--mono);font-size:10px;color:var(--text-dim);flex:1}
+.sn-pin-label{font-family:var(--mono);font-size:12px;color:var(--text-dim);flex:1}
 .sn-divider{height:1px;background:var(--border);margin:2px 0}
 .sn-bar-wrap{padding:6px 12px 12px}
 .sn-bar-top{display:flex;justify-content:space-between;margin-bottom:5px}
-.sn-bar-top span{font-family:var(--mono);font-size:10px;color:var(--text-dim)}
+.sn-bar-top span{font-family:var(--mono);font-size:12px;color:var(--text-dim)}
 .sn-bar-bg{height:3px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
 .sn-bar-fill{height:100%;border-radius:2px;width:0;transition:width 1.4s cubic-bezier(.4,0,.2,1)}
 
 /* GALLERY */
 #gallery{background:rgba(0,0,0,.15)}
 .gallery-tabs{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap}
-.gtab{font-family:var(--mono);font-size:11px;padding:6px 16px;border-radius:3px;border:1px solid var(--border-bright);color:var(--text-dim);cursor:pointer;transition:all .2s;background:transparent;letter-spacing:1px}
+.gtab{font-family:var(--mono);font-size:12px;padding:6px 16px;border-radius:3px;border:1px solid var(--border-bright);color:var(--text-dim);cursor:pointer;transition:all .2s;background:transparent;letter-spacing:1px}
 .gtab:hover{color:var(--text);border-color:var(--text-mid)}
 .gtab.active{color:var(--blue);border-color:var(--blue);background:rgba(74,158,255,.08)}
 .gallery-grid{columns:3;gap:12px}
@@ -156,12 +156,12 @@ section{padding:80px 0}
 .gallery-placeholder{width:100%;background:var(--panel2);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;position:relative;overflow:hidden}
 .gallery-placeholder .gp-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:20px 20px}
 .gallery-placeholder .gp-icon{font-size:36px;position:relative;z-index:1}
-.gallery-placeholder .gp-label{font-family:var(--mono);font-size:10px;color:var(--text-dim);letter-spacing:1px;position:relative;z-index:1}
+.gallery-placeholder .gp-label{font-family:var(--mono);font-size:12px;color:var(--text-dim);letter-spacing:1px;position:relative;z-index:1}
 .gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,13,18,.95) 0%,rgba(11,13,18,.4) 50%,transparent 100%);opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
 .gallery-item:hover .gallery-overlay{opacity:1}
 .go-title{font-family:var(--head);font-size:12px;font-weight:700;color:#fff;letter-spacing:1px;margin-bottom:4px}
 .go-tags{display:flex;gap:5px;flex-wrap:wrap}
-.go-tag{font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:2px;border:1px solid;letter-spacing:.5px}
+.go-tag{font-family:var(--mono);font-size:12px;padding:2px 6px;border-radius:2px;border:1px solid;letter-spacing:.5px}
 
 /* LIGHTBOX */
 .lightbox{position:fixed;inset:0;background:rgba(5,7,11,.95);z-index:999;display:none;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
@@ -186,13 +186,13 @@ section{padding:80px 0}
 .pn-corner.tl{top:8px;left:8px;border-width:2px 0 0 2px}
 .pn-corner.br{bottom:8px;right:8px;border-width:0 2px 2px 0}
 .pn-body{padding:14px;flex:1;display:flex;flex-direction:column}
-.pn-type{font-family:var(--mono);font-size:10px;padding:2px 8px;border-radius:3px;display:inline-block;margin-bottom:8px;border:1px solid;letter-spacing:1px}
+.pn-type{font-family:var(--mono);font-size:12px;padding:2px 8px;border-radius:3px;display:inline-block;margin-bottom:8px;border:1px solid;letter-spacing:1px}
 .pn-title{font-family:var(--head);font-size:14px;font-weight:700;color:#fff;letter-spacing:1px;margin-bottom:6px}
-.pn-desc{font-size:12px;color:var(--text-dim);line-height:1.6;flex:1}
+.pn-desc{font-size:14px;color:var(--text-dim);line-height:1.6;flex:1}
 .pn-footer{display:flex;align-items:center;gap:8px;margin-top:12px;padding-top:10px;border-top:1px solid var(--border)}
 .pn-techs{display:flex;flex-wrap:wrap;gap:5px;flex:1}
-.pn-tech{font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:2px;background:rgba(255,255,255,.04);border:1px solid var(--border-bright);color:var(--text-dim)}
-.pn-link{font-family:var(--mono);font-size:10px;color:var(--text-dim);text-decoration:none;padding:4px 8px;border:1px solid var(--border-bright);border-radius:3px;letter-spacing:.5px;transition:color .2s,border-color .2s;white-space:nowrap}
+.pn-tech{font-family:var(--mono);font-size:12px;padding:2px 6px;border-radius:2px;background:rgba(255,255,255,.04);border:1px solid var(--border-bright);color:var(--text-dim)}
+.pn-link{font-family:var(--mono);font-size:12px;color:var(--text-dim);text-decoration:none;padding:4px 8px;border:1px solid var(--border-bright);border-radius:3px;letter-spacing:.5px;transition:color .2s,border-color .2s;white-space:nowrap}
 .pn-link:hover{color:var(--blue);border-color:var(--blue)}
 
 /* CONTACT */
@@ -201,20 +201,20 @@ section{padding:80px 0}
 .contact-node{background:var(--panel);border:1px solid var(--purple);border-radius:6px;overflow:hidden;box-shadow:0 0 40px rgba(192,132,252,.08)}
 .cn-header{background:linear-gradient(90deg,rgba(192,132,252,.12),rgba(192,132,252,.04));border-bottom:1px solid rgba(192,132,252,.25);padding:10px 16px;display:flex;align-items:center;gap:10px}
 .cn-title{font-family:var(--head);font-size:15px;font-weight:700;color:#fff;letter-spacing:1px}
-.cn-sub{font-family:var(--mono);font-size:10px;color:var(--purple);margin-left:auto}
+.cn-sub{font-family:var(--mono);font-size:12px;color:var(--purple);margin-left:auto}
 .cn-body{padding:20px}
 .cn-desc{font-size:14px;color:var(--text-dim);margin-bottom:20px;line-height:1.6}
 .cn-links{display:flex;flex-direction:column;gap:8px}
 .cn-link{display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:5px;text-decoration:none;transition:border-color .2s,background .2s}
 .cn-link:hover{border-color:var(--purple);background:rgba(192,132,252,.05)}
 .cn-link-icon{width:32px;height:32px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;background:rgba(255,255,255,.04);border:1px solid var(--border-bright)}
-.cn-link-label{font-family:var(--mono);font-size:11px;color:var(--text-dim);flex:1;letter-spacing:.5px}
+.cn-link-label{font-family:var(--mono);font-size:12px;color:var(--text-dim);flex:1;letter-spacing:.5px}
 .cn-link-val{font-family:var(--mono);font-size:12px}
 .cn-link-arrow{font-size:16px;color:var(--text-dim)}
 
 footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
-.footer-copy{font-family:var(--mono);font-size:10px;color:var(--text-dim);letter-spacing:1px}
-.footer-ver{font-family:var(--mono);font-size:10px;color:var(--text-dim);letter-spacing:1px}
+.footer-copy{font-family:var(--mono);font-size:12px;color:var(--text-dim);letter-spacing:1px}
+.footer-ver{font-family:var(--mono);font-size:12px;color:var(--text-dim);letter-spacing:1px}
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
 .reveal.revealed{opacity:1;transform:none}
@@ -282,7 +282,7 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
         </p>
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary"><span>▶</span> View Projects</a>
-          <a href="https://www.artstation.com/kubrik" target="_blank" class="btn btn-ghost"><span>◈</span> Art Portfolio</a>
+          <a href="https://www.artstation.com/Kubrick" target="_blank" class="btn btn-ghost"><span>◈</span> Art Portfolio</a>
           <a href="#contact" class="btn btn-ghost"><span>⌥</span> Contact</a>
         </div>
       </div>
@@ -297,8 +297,8 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
           <div class="hbn-body">
             <div class="pin-row" style="margin-bottom:8px">
               <div class="pin exec" style="background:#fff"></div>
-              <span style="font-family:var(--mono);font-size:11px;color:#aab4cc;margin-left:6px">EXECUTE</span>
-              <span style="font-family:var(--mono);font-size:11px;color:#aab4cc;margin-left:auto;margin-right:6px">THEN</span>
+              <span style="font-family:var(--mono);font-size:12px;color:#aab4cc;margin-left:6px">EXECUTE</span>
+              <span style="font-family:var(--mono);font-size:12px;color:#aab4cc;margin-left:auto;margin-right:-250px">OUTPUT</span>
               <div class="pin exec out" style="background:#fff"></div>
             </div>
             <div class="hbn-divider"></div>
@@ -306,37 +306,37 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
               <div class="hbn-pin-title">INPUTS</div>
               <div class="pin-row">
                 <div class="pin" style="border-color:var(--blue);background:rgba(74,158,255,.2)"></div>
-                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-left:6px">Name</span>
-                <span class="pin-type" style="background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-family:var(--mono);font-size:9px;padding:1px 6px;border-radius:2px">Kubrik</span>
+                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:6px">Name</span>
+                <span class="pin-type" style="background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:2px">Kubrick</span>
               </div>
               <div class="pin-row" style="margin-top:4px">
                 <div class="pin" style="border-color:var(--orange);background:rgba(255,140,66,.2)"></div>
-                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-left:6px">Experience</span>
-                <span class="pin-type" style="background:rgba(255,140,66,.1);border:1px solid rgba(255,140,66,.3);color:var(--orange);font-family:var(--mono);font-size:9px;padding:1px 6px;border-radius:2px">9yr</span>
+                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:6px">Experience</span>
+                <span class="pin-type" style="background:rgba(255,140,66,.1);border:1px solid rgba(255,140,66,.3);color:var(--orange);font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:2px">9yr</span>
               </div>
               <div class="pin-row" style="margin-top:4px">
                 <div class="pin" style="border-color:var(--green);background:rgba(77,219,135,.2)"></div>
-                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-left:6px">Skills[]</span>
-                <span class="pin-type" style="background:rgba(77,219,135,.1);border:1px solid rgba(77,219,135,.3);color:var(--green);font-family:var(--mono);font-size:9px;padding:1px 6px;border-radius:2px">array</span>
+                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:6px">Jobs</span>
+                <span class="pin-type" style="background:rgba(77,219,135,.1);border:1px solid rgba(77,219,135,.3);color:var(--green);font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:2px">100+</span>
               </div>
               <div class="pin-row" style="margin-top:4px">
                 <div class="pin" style="border-color:var(--purple);background:rgba(192,132,252,.2)"></div>
-                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-left:6px">Shipped</span>
-                <span class="pin-type" style="background:rgba(192,132,252,.1);border:1px solid rgba(192,132,252,.3);color:var(--purple);font-family:var(--mono);font-size:9px;padding:1px 6px;border-radius:2px">9 games</span>
+                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:6px">Shipped</span>
+                <span class="pin-type" style="background:rgba(192,132,252,.1);border:1px solid rgba(192,132,252,.3);color:var(--purple);font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:2px">9 games</span>
               </div>
             </div>
             <div class="hbn-pin-section">
               <div class="hbn-pin-title">OUTPUTS</div>
               <div class="pin-row">
-                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-right:6px">GameProject</span>
+                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-right:6px">GameProject</span>
                 <div class="pin out" style="border-color:var(--blue);background:rgba(74,158,255,.2)"></div>
               </div>
               <div class="pin-row" style="margin-top:4px">
-                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-right:6px">WebApp</span>
+                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-right:6px">WebApp</span>
                 <div class="pin out" style="border-color:var(--orange);background:rgba(255,140,66,.2)"></div>
               </div>
               <div class="pin-row" style="margin-top:4px">
-                <span class="pin-label" style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-right:6px">3D_Asset</span>
+                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-right:6px">3D_Asset</span>
                 <div class="pin out" style="border-color:var(--green);background:rgba(77,219,135,.2)"></div>
               </div>
             </div>
@@ -387,7 +387,7 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
           </div>
           <div class="about-info-row">
             <span class="about-info-key">// artstation</span>
-            <span class="about-info-val"><a href="https://www.artstation.com/kubrik" target="_blank" style="color:var(--orange);text-decoration:none">artstation.com/kubrik</a></span>
+            <span class="about-info-val"><a href="https://www.artstation.com/Kubrick" target="_blank" style="color:var(--orange);text-decoration:none">artstation.com/Kubrick</a></span>
           </div>
           <div class="about-info-row">
             <span class="about-info-key">// github</span>
@@ -908,7 +908,7 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
           <div class="pn-desc">3D assets — high/low-poly characters, creatures, hard-surface props, environment kits. Full pipeline from sculpt to engine integration.</div>
           <div class="pn-footer">
             <div class="pn-techs"><span class="pn-tech">ZBrush</span><span class="pn-tech">Substance</span><span class="pn-tech">Marvelous</span></div>
-            <a href="https://www.artstation.com/kubrik" target="_blank" class="pn-link">→ ArtStation</a>
+            <a href="https://www.artstation.com/Kubrick" target="_blank" class="pn-link">→ ArtStation</a>
           </div>
         </div>
       </div>
@@ -948,16 +948,16 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
               <span class="cn-link-val" style="color:var(--orange)">github.com/kubrvk</span>
               <span class="cn-link-arrow">›</span>
             </a>
-            <a href="https://www.artstation.com/kubrik" target="_blank" class="cn-link">
+            <a href="https://www.artstation.com/Kubrick" target="_blank" class="cn-link">
               <div class="cn-link-icon" style="color:var(--green)">⬡</div>
               <span class="cn-link-label">// artstation</span>
-              <span class="cn-link-val" style="color:var(--green)">artstation.com/kubrik</span>
+              <span class="cn-link-val" style="color:var(--green)">artstation.com/Kubrick</span>
               <span class="cn-link-arrow">›</span>
             </a>
-            <a href="https://kubrik.itch.io" target="_blank" class="cn-link">
+            <a href="https://Kubrick.itch.io" target="_blank" class="cn-link">
               <div class="cn-link-icon" style="color:var(--red)">⚔</div>
               <span class="cn-link-label">// itch.io</span>
-              <span class="cn-link-val" style="color:var(--red)">kubrik.itch.io</span>
+              <span class="cn-link-val" style="color:var(--red)">Kubrick.itch.io</span>
               <span class="cn-link-arrow">›</span>
             </a>
           </div>
@@ -970,7 +970,7 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
 </main>
 
 <footer>
-  <span class="footer-copy">// KUBRIK PORTFOLIO — 2026</span>
+  <span class="footer-copy">// Kubrick PORTFOLIO — 2026</span>
   <span class="footer-ver">v5.7.4 — Unreal Engine</span>
 </footer>
 
