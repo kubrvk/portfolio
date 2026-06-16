@@ -1,0 +1,1481 @@
+<!-- GALLERY -->
+<section id="gallery">
+  
+  <div class="container">
+
+    <div class="section-label reveal">
+      <span class="section-label-num">03</span>
+      <div class="section-label-line"></div>
+      <span class="section-label-text">// gallery_node</span>
+      <div class="section-label-line" style="max-width:60px"></div>
+    </div>
+
+    <div class="gallery-tabs reveal">
+      <button class="gtab active" data-filter="all">// all</button>
+      <button class="gtab" data-filter="game">// 3D Character</button>
+      <button class="gtab" data-filter="3d">// 3D Environment</button>
+      <button class="gtab" data-filter="web">// web_app</button>
+      <button class="gtab" data-filter="design">// graphic_design</button>
+
+      <a href="https://www.artstation.com/kubrik" target="_blank" class=" cn-link1">
+        <div class="cn-link1-icon" style="color:rgb(125, 88, 218)"><i class="bi bi-brush"></i></div>
+        <span class="cn-link1-val" style="color:rgb(112, 88, 218)">artstation.com/Kubrik</span>
+        <span class="cn-link1-arrow">›</span>
+      </a>
+
+    </div>
+    
+ 
+    <div class="gallery-grid" id="mainGalleryGrid">
+ 
+
+<!--vvvv 3D Characters vvvv-->
+
+
+
+<div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+<div class="gallery-placeholder" >
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg" >
+<img class="contain"  src="img/galeri/game/artstation_11699996_44717727_Eldritch Queen.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">ss</div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+<span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+   <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+</div></div></div>
+
+<div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fill" src="img/galeri/game/artstation_10074018_37910461_Red Warrior Liu.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+<span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+   <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+</div></div></div>
+
+
+
+
+  
+<div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+  <div class="gallery-placeholder">
+  <div class="pn-grid-bg"></div>
+  <div class="pn-grid-bg">
+  <img class="contain"  src="img/galeri/game/artstation_10074131_37868344_Enterprise _ Azur Lane.jpg"/></div></div>
+  <div class="gallery-overlay">
+  <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+  <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+     <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+  </div></div></div>
+ 
+ 
+
+  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="contain"  src="img/galeri/game/artstation_10074329_37869036_Elizabeth Báthory _ Fate_Grand Order.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+    </div></div></div>
+
+
+
+
+
+
+      <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+        <div class="gallery-placeholder">
+        <div class="pn-grid-bg"></div>
+        <div class="pn-grid-bg">
+        <img class="fit"  src="img/galeri/game/artstation_10074771_37870696_Assassin.jpg"/></div></div>
+        <div class="gallery-overlay">
+        <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+        <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+           <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+        </div></div></div>
+    
+
+
+
+
+        <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+          <div class="gallery-placeholder">
+          <div class="pn-grid-bg"></div>
+          <div class="pn-grid-bg">
+          <img class="fit"  src="img/galeri/game/artstation_21714724_95245670_UN Owen - Flandre.jpg"/></div></div>
+          <div class="gallery-overlay">
+          <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+          <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+             <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+          </div></div></div>
+      
+          <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+            <div class="gallery-placeholder">
+            <div class="pn-grid-bg"></div>
+            <div class="pn-grid-bg">
+            <img class="contain"  src="img/galeri/game/artstation_12687786_48916844_Dressed Raccoon.jpg"/></div></div>
+            <div class="gallery-overlay">
+            <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+            <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+               <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+            </div></div></div>
+
+          <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+            <div class="gallery-placeholder">
+            <div class="pn-grid-bg"></div>
+            <div class="pn-grid-bg">
+            <img class="fit"  src="img/galeri/game/artstation_21690703_95103426_U.N. Owen - Monster Forms.jpg"/></div></div>
+            <div class="gallery-overlay">
+            <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+            <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+               <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+            </div></div></div>
+
+            
+
+          <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+            <div class="gallery-placeholder">
+            <div class="pn-grid-bg"></div>
+            <div class="pn-grid-bg">
+            <img class="fit"  src="img/galeri/game/artstation_21686414_95077935_U.N. Owen - Koakuma.jpg"/></div></div>
+            <div class="gallery-overlay">
+            <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+            <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+               <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+            </div></div></div>
+
+            
+
+          <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+            <div class="gallery-placeholder">
+            <div class="pn-grid-bg"></div>
+            <div class="pn-grid-bg">
+            <img class="fit"  src="img/galeri/game/artstation_21690703_95103426_U.N. Owen - Monster Forms.jpg"/></div></div>
+            <div class="gallery-overlay">
+            <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+            <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+               <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+            </div></div></div>
+
+            <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+              <div class="gallery-placeholder">
+              <div class="pn-grid-bg"></div>
+              <div class="pn-grid-bg">
+              <img class="fit"  src="img/galeri/game/artstation_21686441_95078135_U.N. Owen - Maid Sakuya.jpg"/></div></div>
+              <div class="gallery-overlay">
+              <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+              <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                 <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+              </div></div></div>
+        
+
+              <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                <div class="gallery-placeholder">
+                <div class="pn-grid-bg"></div>
+                <div class="pn-grid-bg">
+                <img class="fit"  src="img/galeri/game/artstation_11896356_45548396_Crocodile Sport.jpg"/></div></div>
+                <div class="gallery-overlay">
+                <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                   <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                </div></div></div>
+
+                <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                  <div class="gallery-placeholder">
+                  <div class="pn-grid-bg"></div>
+                  <div class="pn-grid-bg">
+                  <img class="fit"  src="img/galeri/game/artstation_11741808_44888801_Archangel.jpg"/></div></div>
+                  <div class="gallery-overlay">
+                  <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                  <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                     <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                  </div></div></div>
+
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="contain"  src="img/galeri/game/artstation_10075697_37875413_Coin Bull.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+                
+                <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                  <div class="gallery-placeholder">
+                  <div class="pn-grid-bg"></div>
+                  <div class="pn-grid-bg">
+                  <img class="fit"  src="img/galeri/game/artstation_11720270_44797268_Fox Witch.jpg"/></div></div>
+                  <div class="gallery-overlay">
+                  <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                  <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                     <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                  </div></div></div>
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_12687761_48916797_Hoverboard Baby.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+                    
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_12688659_53639537_Cyberpunk Warriors.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_12687848_48917015_Mihawk One Piece Figure.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+                    
+                    
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_12687899_48917217_Futuristic Assassin.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+                    
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_14602165_57437854_Showman.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+                    
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_11278321_42909114_Houshou Marine.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+                    
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_11278241_42908760_Uruha Rushia.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+
+
+                    
+                    
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_10074679_37870352_Alien.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+                    
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_10074729_37870577_Hunter.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+                    
+                    
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_10074884_37871397_Demon Warrior.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+                    
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_10077011_37880781_Cyber Girl.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+                    
+                    
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_10077110_37881258_Succubus.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+                    
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_10077178_37883816_Ice Maiden.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+                    
+                    
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_10077429_37882819_Twins.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+                    
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_10077685_37911527_Warlord.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+
+                      
+                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  src="img/galeri/game/artstation_10074929_37911900_Librarian.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
+                  
+       
+                      
+                  
+                    <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                      <div class="gallery-placeholder">
+                      <div class="pn-grid-bg"></div>
+                      <div class="pn-grid-bg">
+                      <img class="fit"  src="img/galeri/game/artstation_21685821_95074194_U.N. Owen - Resolver .jpg"/></div></div>
+                      <div class="gallery-overlay">
+                      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                      <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                         <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                      </div></div></div>
+
+
+                      <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                        <div class="gallery-placeholder">
+                        <div class="pn-grid-bg"></div>
+                        <div class="pn-grid-bg">
+                        <img class="fit"  src="img/galeri/game/artstation_12688577_53639690_CyberSteampunk.jpg"/></div></div>
+                        <div class="gallery-overlay">
+                        <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                        <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                           <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                        </div></div></div>
+  
+                  
+                    <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                      <div class="gallery-placeholder">
+                      <div class="pn-grid-bg"></div>
+                      <div class="pn-grid-bg">
+                      <img class="fit"  src="img/galeri/game/artstation_21686229_95076540_U.N. Owen - Rifle.jpg"/></div></div>
+                      <div class="gallery-overlay">
+                      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                      <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                         <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                      </div></div></div>
+
+
+                      
+                  
+                    <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                      <div class="gallery-placeholder">
+                      <div class="pn-grid-bg"></div>
+                      <div class="pn-grid-bg">
+                      <img class="fit"  src="img/galeri/game/artstation_21686310_95077245_U.N. Owen - Sniper.jpg"/></div></div>
+                      <div class="gallery-overlay">
+                      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                      <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                         <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                      </div></div></div>
+
+
+                      
+                  
+                    <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                      <div class="gallery-placeholder">
+                      <div class="pn-grid-bg"></div>
+                      <div class="pn-grid-bg">
+                      <img class="fit"  src="img/galeri/game/artstation_19344598_81534806_TIME SOUL - Light Armor.jpg"/></div></div>
+                      <div class="gallery-overlay">
+                      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                      <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                         <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                      </div></div></div>
+
+                      
+                      
+                  
+                    <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                      <div class="gallery-placeholder">
+                      <div class="pn-grid-bg"></div>
+                      <div class="pn-grid-bg">
+                      <img class="fit"  src="img/galeri/game/artstation_19348041_81557624_TIME SOUL - Angel Wing.jpg"/></div></div>
+                      <div class="gallery-overlay">
+                      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                      <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                         <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                      </div></div></div>
+
+                      
+                      
+                  
+                    <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                      <div class="gallery-placeholder">
+                      <div class="pn-grid-bg"></div>
+                      <div class="pn-grid-bg">
+                      <img class="fit"  src="img/galeri/game/artstation_19348044_81555434_TIME SOUL - Clockworks Collection.jpg"/></div></div>
+                      <div class="gallery-overlay">
+                      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                      <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                         <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                      </div></div></div>
+
+                      
+                  
+                      <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                        <div class="gallery-placeholder">
+                        <div class="pn-grid-bg"></div>
+                        <div class="pn-grid-bg">
+                        <img class="fit"  src="img/galeri/game/artstation_19333703_81534466_Weapons.jpg"/></div></div>
+                        <div class="gallery-overlay">
+                        <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                        <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                           <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                        </div></div></div>
+
+                        
+                      
+                  
+                    <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                      <div class="gallery-placeholder">
+                      <div class="pn-grid-bg"></div>
+                      <div class="pn-grid-bg">
+                      <img class="fit"  src="img/galeri/game/artstation_19344545_81534511_TIME SOUL - Hammer & Axes.jpg"/></div></div>
+                      <div class="gallery-overlay">
+                      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                      <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                         <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                      </div></div></div>
+
+                      
+                      
+                  
+                    <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                      <div class="gallery-placeholder">
+                      <div class="pn-grid-bg"></div>
+                      <div class="pn-grid-bg">
+                      <img class="fit"  src="img/galeri/game/artstation_19344562_81534539_TIME SOUL - Shields.jpg"/></div></div>
+                      <div class="gallery-overlay">
+                      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                      <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                         <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                      </div></div></div>
+                      
+                  
+                      <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                        <div class="gallery-placeholder">
+                        <div class="pn-grid-bg"></div>
+                        <div class="pn-grid-bg">
+                        <img class="fit"  src="img/galeri/game/artstation_11896423_45548589_Magma Planet Animation.jpg"/></div></div>
+                        <div class="gallery-overlay">
+                        <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                        <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                           <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                        </div></div></div>
+                      
+                  
+                        <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                          <div class="gallery-placeholder">
+                          <div class="pn-grid-bg"></div>
+                          <div class="pn-grid-bg">
+                          <img class="fit"  src="img/galeri/game/artstation_11823740_45240336_CatGirl Unity.jpg"/></div></div>
+                          <div class="gallery-overlay">
+                          <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                          <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                             <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                          </div></div></div>
+
+                          
+                        <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                          <div class="gallery-placeholder">
+                          <div class="pn-grid-bg"></div>
+                          <div class="pn-grid-bg">
+                          <img class="fit"  src="img/galeri/game/artstation_11823756_45240434_Gangsta Crocodile.jpg"/></div></div>
+                          <div class="gallery-overlay">
+                          <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                          <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                             <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                          </div></div></div>
+
+                          
+
+                          
+                        <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                          <div class="gallery-placeholder">
+                          <div class="pn-grid-bg"></div>
+                          <div class="pn-grid-bg">
+                          <img class="fit"  src="img/galeri/game/artstation_11979479_45901216_Gravity Engine.jpg"/></div></div>
+                          <div class="gallery-overlay">
+                          <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                          <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                             <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                          </div></div></div>
+
+                          
+                          
+                        <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                          <div class="gallery-placeholder">
+                          <div class="pn-grid-bg"></div>
+                          <div class="pn-grid-bg">
+                          <img class="fit"  src="img/galeri/game/artstation_11404242_43432748_Amama.jpg"/></div></div>
+                          <div class="gallery-overlay">
+                          <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                          <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                             <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                          </div></div></div>
+  
+  
+                          
+                          <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                            <div class="gallery-placeholder">
+                            <div class="pn-grid-bg"></div>
+                            <div class="pn-grid-bg">
+                            <img class="fit"  src="img/galeri/game/artstation_11382461_43340848_Cyber Cop.jpg"/></div></div>
+                            <div class="gallery-overlay">
+                            <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                            <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                               <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                            </div></div></div>
+
+                            
+                          
+
+
+
+
+
+                          <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                            <div class="gallery-placeholder">
+                            <div class="pn-grid-bg"></div>
+                            <div class="pn-grid-bg">
+                            <img class="fit"  src="img/galeri/game/artstation_10077082_37881115_Red Miko.jpg"/></div></div>
+                            <div class="gallery-overlay">
+                            <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                            <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                               <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                            </div></div></div>
+
+                            
+                          
+                          <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                            <div class="gallery-placeholder">
+                            <div class="pn-grid-bg"></div>
+                            <div class="pn-grid-bg">
+                            <img class="fit"  src="img/galeri/game/artstation_10077057_37880986_Shrine Maiden Nia.jpg"/></div></div>
+                            <div class="gallery-overlay">
+                            <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                            <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                               <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                            </div></div></div>
+
+                            
+                          
+                          <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                            <div class="gallery-placeholder">
+                            <div class="pn-grid-bg"></div>
+                            <div class="pn-grid-bg">
+                            <img class="fit"  src="img/galeri/game/artstation_10134176_38203633_Vampire Animation.jpg"/></div></div>
+                            <div class="gallery-overlay">
+                            <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                            <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                               <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                            </div></div></div>
+
+                            <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                              <div class="gallery-placeholder">
+                              <div class="pn-grid-bg"></div>
+                              <div class="pn-grid-bg">
+                              <img class="fit"  src="img/galeri/game/artstation_11382443_43340661_Hangar Mech.jpg"/></div></div>
+                              <div class="gallery-overlay">
+                              <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                              <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                                 <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                              </div></div></div>
+  
+                              
+                            
+                            <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                              <div class="gallery-placeholder">
+                              <div class="pn-grid-bg"></div>
+                              <div class="pn-grid-bg">
+                              <img class="fit"  src="img/galeri/game/artstation_10076959_37880554_Armored Warrior.jpg"/></div></div>
+                              <div class="gallery-overlay">
+                              <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                              <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                                 <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                              </div></div></div>
+  
+                              
+                            
+                            <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                              <div class="gallery-placeholder">
+                              <div class="pn-grid-bg"></div>
+                              <div class="pn-grid-bg">
+                              <img class="fit"  src="img/galeri/game/artstation_10075238_37873064_Machinist.jpg"/></div></div>
+                              <div class="gallery-overlay">
+                              <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                              <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                                 <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                              </div></div></div>
+                              
+                            
+                              <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                                <div class="gallery-placeholder">
+                                <div class="pn-grid-bg"></div>
+                                <div class="pn-grid-bg">
+                                <img class="fit"  src="img/galeri/game/artstation_10075112_37912263_Forest Mage.jpg"/></div></div>
+                                <div class="gallery-overlay">
+                                <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                                <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                                   <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                                </div></div></div>
+
+                                
+                            
+                              <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                                <div class="gallery-placeholder">
+                                <div class="pn-grid-bg"></div>
+                                <div class="pn-grid-bg">
+                                <img class="fit"  src="img/galeri/game/artstation_10075056_37872251_Forest Fairy.jpg"/></div></div>
+                                <div class="gallery-overlay">
+                                <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                                <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                                   <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                                </div></div></div>
+
+                                
+                            
+                              <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                                <div class="gallery-placeholder">
+                                <div class="pn-grid-bg"></div>
+                                <div class="pn-grid-bg">
+                                <img class="fit"  src="img/galeri/game/artstation_10075203_37872917_White Doll.jpg"/></div></div>
+                                <div class="gallery-overlay">
+                                <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                                <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                                   <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                                </div></div></div>
+
+                                
+                                    
+                              <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                                <div class="gallery-placeholder">
+                                <div class="pn-grid-bg"></div>
+                                <div class="pn-grid-bg">
+                                <img class="fit"  src="img/galeri/game/artstation_14602177_57437917_Unded Skeleton.jpg"/></div></div>
+                                <div class="gallery-overlay">
+                                <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                                <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                                   <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                                </div></div></div>
+                            
+                              <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                                <div class="gallery-placeholder">
+                                <div class="pn-grid-bg"></div>
+                                <div class="pn-grid-bg">
+                                <img class="fit"  src="img/galeri/gameartstation_14602135_57437528_Cyber-X.jpg"/></div></div>
+                                <div class="gallery-overlay">
+                                <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                                <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                                   <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                                </div></div></div>
+
+                                
+                                
+                        
+  
+
+
+<!-- 3D Environment -->
+
+<div class="gallery-item reveal" data-cat="3d" data-title="">
+  <div class="gallery-placeholder">
+  <div class="pn-grid-bg"></div>
+  <div class="pn-grid-bg">
+  <img class="fill" src="img/galeri/game/artstation_21686497_95078407_U.N. Owen - Scarlet Mansion.jpg"/></div></div>
+  <div class="gallery-overlay">
+  <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+    <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+  <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+  
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+  <div class="gallery-placeholder">
+  <div class="pn-grid-bg"></div>
+  <div class="pn-grid-bg">
+  <img class="fill" src="img/galeri/game/artstation_21686497_95103958_U.N. Owen - Scarlet Mansion.jpg"/></div></div>
+  <div class="gallery-overlay">
+  <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+    <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+  <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+
+  
+<div class="gallery-item reveal" data-cat="3d" data-title="">
+  <div class="gallery-placeholder">
+  <div class="pn-grid-bg"></div>
+  <div class="pn-grid-bg">
+  <img class="fill" src="img/galeri/game/artstation_21686497_95078414_U.N. Owen - Scarlet Mansion.jpg"/></div></div>
+  <div class="gallery-overlay">
+  <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+    <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+  <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+
+  
+<div class="gallery-item reveal" data-cat="3d" data-title="">
+  <div class="gallery-placeholder">
+  <div class="pn-grid-bg"></div>
+  <div class="pn-grid-bg">
+  <img class="fill" src="img/galeri/game/artstation_21686497_95078419_U.N. Owen - Scarlet Mansion.jpg"/></div></div>
+  <div class="gallery-overlay">
+  <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+    <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+  <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+  
+<div class="gallery-item reveal" data-cat="3d" data-title="">
+  <div class="gallery-placeholder">
+  <div class="pn-grid-bg"></div>
+  <div class="pn-grid-bg">
+  <img class="fill" src="img/galeri/game/artstation_21686534_95078629_U.N. Owen - Indoor Mansion.jpg"/></div></div>
+  <div class="gallery-overlay">
+  <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+    <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+  <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+
+  
+<div class="gallery-item reveal" data-cat="3d" data-title="">
+  <div class="gallery-placeholder">
+  <div class="pn-grid-bg"></div>
+  <div class="pn-grid-bg">
+  <img class="fill" src="img/galeri/game/artstation_21686534_95078631_U.N. Owen - Indoor Mansion.jpg"/></div></div>
+  <div class="gallery-overlay">
+  <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+    <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+  <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+
+  
+<div class="gallery-item reveal" data-cat="3d" data-title="">
+  <div class="gallery-placeholder">
+  <div class="pn-grid-bg"></div>
+  <div class="pn-grid-bg">
+  <img class="fill" src="img/galeri/game/artstation_21686534_95104279_U.N. Owen - Indoor Mansion.jpg"/></div></div>
+  <div class="gallery-overlay">
+  <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+    <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+  <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+
+<div class="gallery-item reveal" data-cat="3d" data-title="">
+  <div class="gallery-placeholder">
+  <div class="pn-grid-bg"></div>
+  <div class="pn-grid-bg">
+  <img class="fill" src="img/galeri/game/artstation_21686563_95105528_U.N. Owen - Underground.jpg"/></div></div>
+  <div class="gallery-overlay">
+  <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+    <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+  <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+
+  
+<div class="gallery-item reveal" data-cat="3d" data-title="">
+  <div class="gallery-placeholder">
+  <div class="pn-grid-bg"></div>
+  <div class="pn-grid-bg">
+  <img class="fill" src="img/galeri/game/artstation_21686563_95105555_U.N. Owen - Underground.jpg"/></div></div>
+  <div class="gallery-overlay">
+  <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+    <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+  <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+
+  
+<div class="gallery-item reveal" data-cat="3d" data-title="">
+  <div class="gallery-placeholder">
+  <div class="pn-grid-bg"></div>
+  <div class="pn-grid-bg">
+  <img class="fill" src="img/galeri/game/artstation_21686563_95105590_U.N. Owen - Underground.jpg"/></div></div>
+  <div class="gallery-overlay">
+  <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+    <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+  <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+  
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_21686563_95105600_U.N. Owen - Underground.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+   
+  
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_21691229_95106710_Olympus of The Heavens.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_21691229_95106702_Olympus of The Heavens.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+     
+    <div class="gallery-item reveal" data-cat="3d" data-title="">
+      <div class="gallery-placeholder">
+      <div class="pn-grid-bg"></div>
+      <div class="pn-grid-bg">
+      <img class="fill" src="img/galeri/game/artstation_21691229_95106690_Olympus of The Heavens.jpg"/></div></div>
+      <div class="gallery-overlay">
+      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+        <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+      <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+     
+     
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_21691229_95106725_Olympus of The Heavens.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+   
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_21691229_95106754_Olympus of The Heavens.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+   
+
+   
+
+
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_21912514_96428837_Blood Garden - Level Design.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+   
+
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_21912514_96428842_Blood Garden - Level Design.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+   
+
+
+
+
+
+     
+    <div class="gallery-item reveal" data-cat="3d" data-title="">
+      <div class="gallery-placeholder">
+      <div class="pn-grid-bg"></div>
+      <div class="pn-grid-bg">
+      <img class="fill" src="img/galeri/game/artstation_19348048_81555611_TIME SOUL - Golden Galaxy.jpg"/></div></div>
+      <div class="gallery-overlay">
+      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+        <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+      <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_19348048_81555631_TIME SOUL - Golden Galaxy.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_19348331_81557245_TIME SOUL - Galaxy Map.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+     
+
+
+     
+    <div class="gallery-item reveal" data-cat="3d" data-title="">
+      <div class="gallery-placeholder">
+      <div class="pn-grid-bg"></div>
+      <div class="pn-grid-bg">
+      <img class="fill" src="img/galeri/game/artstation_10120090_38060168_Amara Hotel Room.jpg"/></div></div>
+      <div class="gallery-overlay">
+      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+        <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+      <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_10120095_38060191_Amara Hotel Family Room.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+     
+
+
+    
+    <div class="gallery-item reveal" data-cat="3d" data-title="">
+      <div class="gallery-placeholder">
+      <div class="pn-grid-bg"></div>
+      <div class="pn-grid-bg">
+      <img class="fill" src="img/galeri/game/artstation_10120097_38060223_Nirvana Hotel Room.jpg"/></div></div>
+      <div class="gallery-overlay">
+      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+        <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+      <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_10120101_38060243_Amara Family Room.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+     
+
+
+  
+  
+      
+    <div class="gallery-item reveal" data-cat="3d" data-title="">
+      <div class="gallery-placeholder">
+      <div class="pn-grid-bg"></div>
+      <div class="pn-grid-bg">
+      <img class="fill" src="img/galeri/game/artstation_10120114_38060272_Nirvana Hotel Villa Plan.jpg"/></div></div>
+      <div class="gallery-overlay">
+      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+        <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+      <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_10120114_38060276_Nirvana Hotel Villa Plan.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+     
+
+
+  
+  
+      
+    <div class="gallery-item reveal" data-cat="3d" data-title="">
+      <div class="gallery-placeholder">
+      <div class="pn-grid-bg"></div>
+      <div class="pn-grid-bg">
+      <img class="fill" src="img/galeri/game/artstation_10120114_38060277_Nirvana Hotel Villa Plan.jpg"/></div></div>
+      <div class="gallery-overlay">
+      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+        <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+      <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_10120125_38060347_Assos Yachts & Aviation.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+     
+
+
+  
+  
+      
+    <div class="gallery-item reveal" data-cat="3d" data-title="">
+      <div class="gallery-placeholder">
+      <div class="pn-grid-bg"></div>
+      <div class="pn-grid-bg">
+      <img class="fill" src="img/galeri/game/artstation_10120153_38060458_Paint Shop.jpg"/></div></div>
+      <div class="gallery-overlay">
+      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+        <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+      <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_10120161_38060500_UE4 Village Villa.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+     
+
+
+  
+  
+    
+  
+      
+    <div class="gallery-item reveal" data-cat="3d" data-title="">
+      <div class="gallery-placeholder">
+      <div class="pn-grid-bg"></div>
+      <div class="pn-grid-bg">
+      <img class="fill" src="img/galeri/game/artstation_10120184_38060898_Exhibition Stand Works.jpg"/></div></div>
+      <div class="gallery-overlay">
+      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+        <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+      <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_10120184_38060903_Exhibition Stand Works.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+     
+
+
+    
+  
+      
+   
+     
+  <div class="gallery-item reveal" data-cat="3d" data-title="">
+    <div class="gallery-placeholder">
+    <div class="pn-grid-bg"></div>
+    <div class="pn-grid-bg">
+    <img class="fill" src="img/galeri/game/artstation_10120184_38060915_Exhibition Stand Works.jpg"/></div></div>
+    <div class="gallery-overlay">
+    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+      <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+    <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+  
+  
+  
+    <div class="gallery-item reveal" data-cat="3d" data-title="">
+      <div class="gallery-placeholder">
+      <div class="pn-grid-bg"></div>
+      <div class="pn-grid-bg">
+      <img class="fill" src="img/galeri/game/artstation_10120184_38060913_Exhibition Stand Works.jpg"/></div></div>
+      <div class="gallery-overlay">
+      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+        <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+      <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+  
+      
+  
+      <div class="gallery-item reveal" data-cat="3d" data-title="">
+        <div class="gallery-placeholder">
+        <div class="pn-grid-bg"></div>
+        <div class="pn-grid-bg">
+        <img class="fill" src="img/galeri/game/artstation_10120184_38060907_Exhibition Stand Works.jpg"/></div></div>
+        <div class="gallery-overlay">
+        <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+          <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+        <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+     
+  
+       
+     
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+ 
+<!-- WEB -->
+<div class="gallery-item reveal" data-cat="web" data-title="Crystal Hotels">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fill" src="img/galeri/site/1.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Crystal Hotels</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">PHP</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">HTML</span>
+<span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">MySQL</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="web" data-title="Nirvana Hotels">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fill" src="img/galeri/site/2a.png"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Nirvana Hotels</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">PHP</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">HTML</span>
+<span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">MySQL</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="web" data-title="Amara Hotels">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fill" src="img/galeri/site/3a.png"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Amara Hotels</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">PHP</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">HTML</span>
+<span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">MySQL</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="web" data-title="Amara Hotels">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fill" src="img/galeri/site/7a.png"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Amara Hotels</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">PHP</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">HTML</span>
+<span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">MySQL</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="web" data-title="DAD Mimarlık">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fill" src="img/galeri/site/8.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">DAD Mimarlık</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">React</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">HTML</span>
+<span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">MySQL</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="web" data-title="E-Ticaret Depo">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fill" src="img/galeri/site/9a.png"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">E-Ticaret Depo</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">React</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">HTML</span>
+<span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">MySQL</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="web" data-title="Anka Arge"><div class="gallery-placeholder"><div class="pn-grid-bg"></div><div class="pn-grid-bg">
+<img class="fill" src="img/galeri/site/10a.png"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Anka Arge</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">React</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">HTML</span>
+<span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">MySQL</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="web" data-title="mySET">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fill" src="img/galeri/site/11a.png"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">mySET</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">React</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">HTML</span>
+<span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">MySQL</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="web" data-title="Alpaydın Otel">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fill" src="img/galeri/site/12a.png"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Alpaydın Otel</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">React</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">HTML</span>
+<span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">MySQL</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="web" data-title="Arca İnşaat">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fill" src="img/galeri/site/13.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Arca İnşaat</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">React</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">HTML</span>
+<span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">MySQL</span></div></div></div>
+
+ 
+<!-- DESIGN -->
+<div class="gallery-item reveal" data-cat="design" data-title="Crystal Hotels, Ads">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fill" src="img/galeri/vector/1a.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Crystal Hotels, Ads</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="design" data-title="Amara Hotels, Ads">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fit" src="img/galeri/vector/3a.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Amara Hotels, Ads</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="design" data-title="Amara Hotels, Ads">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fit" src="img/galeri/vector/4.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Amara Hotels, Ads</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="design" data-title="Amara Hotels, Ads">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fill" src="img/galeri/vector/5.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Amara Hotels, Ads</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="design" data-title="Ozan Cons">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fit" src="img/galeri/vector/7a.png"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Ozan Cons</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="design" data-title="Ozan Cons">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fit" src="img/galeri/vector/8.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Ozan Cons</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="design" data-title="Visco Therapy">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fit" src="img/galeri/vector/10.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Visco Therapy</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="design" data-title="Nosa İzolasyon">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fit" src="img/galeri/vector/16a.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Nosa İzolasyon</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="design" data-title="Nirvana Hotel">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="cover" src="img/galeri/vector/18.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Nirvana Hotel</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="design" data-title="Nirvana Hotel">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fit" src="img/galeri/vector/19.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Nirvana Hotel</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="design" data-title="Tahal Kuyumculuk">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fit" src="img/galeri/vector/22.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Tahal Kuyumculuk</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
+ 
+<div class="gallery-item reveal" data-cat="design" data-title="Bade Medya">
+<div class="gallery-placeholder">
+<div class="pn-grid-bg"></div>
+<div class="pn-grid-bg">
+<img class="fit" src="img/galeri/vector/13.jpg"/></div></div>
+<div class="gallery-overlay">
+<div class="go-title">Bade Medya</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
+<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
+ 
+    </div>
+  </div>
+</section>
+ 

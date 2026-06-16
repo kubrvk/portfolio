@@ -29,7 +29,30 @@
   --rednew:#ff5f5f;
 }
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden;
+
+
+
+/* 
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='108' height='108'%3E%3Crect width='108' height='108' fill='none' stroke='rgba(74,158,255,0.04)' stroke-width='0.5'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Crect width='0' height='0' fill='%230a0f1e'/%3E%3Cline x1='18' y1='17.3' x2='18' y2='18.7' stroke='rgba(74,158,255,.11)' stroke-width='2'/%3E%3Cline x1='17.3' y1='18' x2='18.7' y2='18' stroke='rgba(74,158,255,0.11)' stroke-width='0.7'/%3E%3Ccircle cx='18' cy='18' r='1.2' fill='rgba(74,158,255,0.07)'/%3E%3C/svg%3E");
+  background-size: 108px 108px, 36px 36px;
+  background-repeat: repeat;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+*/
+
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='108' height='108'%3E%3Crect width='108' height='108' fill='none' stroke='rgba(74,158,255,0.04)' stroke-width='1'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Crect width='0' height='0' fill='%230a0f1e'/%3E%3Cline x1='18' y1='17.65' x2='18' y2='18.35' stroke='rgba(74,158,255,0.11)' stroke-width='1'/%3E%3Cline x1='17.65' y1='18' x2='18.35' y2='18' stroke='rgba(74,158,255,0.11)' stroke-width='1'/%3E%3Ccircle cx='18' cy='18' r='0.5' fill='rgba(74,158,255,0.09)'/%3E%3C/svg%3E");
+  background-size: 108px 108px, 36px 36px;
+  background-repeat: repeat;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  
+}
  
 #bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
  
@@ -336,36 +359,67 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
   .gallery-grid-mini{columns:2}
   footer{flex-direction:column;gap:8px;text-align:center}
 }
+
+
+
+
+
+
+.portfoliocv{display:none;}
+
+data-lang{
+    display:none;
+}
+
 @media(max-width:520px){
   #skills .skills-grid{grid-template-columns:1fr}
   .gallery-grid{columns:1}
   .gallery-grid-mini{columns:1}
 }
+
+@media print {
+  #bg-svg {
+    position: fixed !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
 </style>
  
-<style>
 
-
-</style>
  
 </head>
 <body>
+
+
+  
+
+
+
+
+
+
+
  
 <div class="cursor" id="cursor"><div class="cursor-ring"></div><div class="cursor-dot"></div></div>
 <canvas id="bg-canvas"></canvas>
- 
+ <button class="hbn-icon" onclick="applyTheme()">.</button>
 <nav>
   <div class="nav-logo">
     <span class="nav-logo-bracket">{</span>Beraat Yetkin<span class="nav-logo-bracket">}</span>
+    <button class="hbn-icon" onclick="changeLanguage('en')"><img src="img/en.png" height="20px"></button>
+    <button class="hbn-icon" onclick="changeLanguage('tr')"><img src="img/tr.png" height="20px"></button>
+    <button class="hbn-icon1" onclick="applyTheme()" style="position: absolute; background-color: transparent; border-radius: 0px; border-color: transparent;">.</button>
   </div>
   <div class="nav-links">
-    <a href="#hero"     class="nav-link active">// home</a>
-    <a href="#about"    class="nav-link">// about</a>
-    <a href="#skills"   class="nav-link">// skills</a>
-    <a href="#projects" class="nav-link">// projects</a>
-    <a href="#gallery"  class="nav-link">// gallery</a>
+    <a href="#hero"     class="nav-link active">//  <span data-lang="en">home</span><span data-lang="tr">anasayfa</span></a>
+    <a href="#about"    class="nav-link">// <span data-lang="en">about</span><span data-lang="tr">hakkımda</span></a>
+    <a href="#skills"   class="nav-link">// <span data-lang="en">skills</span><span data-lang="tr">uzmanlıklar</span></a>
+    <a href="#projects" class="nav-link">// <span data-lang="en">projects</span><span data-lang="tr">projeler</span></a>
+    <a href="#gallery"  class="nav-link">// <span data-lang="en">gallery</span><span data-lang="tr">galeri</span></a>
 
-    <a href="#contact"  class="nav-link">// contact</a>
+    <a href="#contact"  class="nav-link">// <span data-lang="en">contact</span><span data-lang="tr">iletişim</span></a>
   </div>
   <div class="nav-status"><div class="nav-dot"></div><span>ONLINE</span></div>
 </nav>
@@ -379,6 +433,33 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
 
 
 
+  <style>
+    /* Değiştirmek  classlar  
+    
+    <span data-lang="en">PORTFOLIO</span><span data-lang="tr">PORTFOLYO</span>
+    
+    */
+
+    .my-overrides #hero{min-height:auto;display:flex;align-items:center;position:relative;overflow:hidden}
+
+    .my-overrides #gallery{display: none;}
+
+    .my-overrides .portfoliocv{display:block;}
+
+    .my-overrides .portfoliobase{display: none;}
+
+    .my-overrides section{padding:30px 0}
+
+    .my-overrides .footerdis{display: none;}
+  </style>
+  
+  <script>
+    function applyTheme() {
+      document.body.classList.add('my-overrides');
+    }
+
+
+  </script>
 
 
 
@@ -424,9 +505,13 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
 <section id="hero">
   <div class="container">
     <div class="hero-inner">
+
+      
+
+
       <div class="hero-left reveal">
         <div class="hero-eyebrow">Event_BeginPlay()</div>
-        <h1 class="hero-name">Beraat Yetkin<br><div  style="font-size:clamp(32px,2vw,52px)"><span>PORTFOLIO</span></div></h1>
+        <h1 class="hero-name">Beraat Yetkin<br><div  style="font-size:clamp(32px,2vw,52px)"><span data-lang="en">PORTFOLIO</span><span data-lang="tr">PORTFOLYO</span></div></h1>
         <div class="hero-roles">
           <span class="hero-role role-blue">Game Developer</span>
           <span class="hero-role role-orange">Full-Stack Web</span>
@@ -434,13 +519,25 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
           <span class="hero-role role-purple">Designer</span>
         </div>
         <p class="hero-desc">
-          Developer and 3D artist with 9 years of web experience, 7 years in 3D art, and 5 years in Unreal C++.
-          Shipped multiple games. Handles creative and technical tasks in the same pipeline.
+          <span data-lang="en">Developer and 3D artist with 9 years of web experience, 7 years in 3D art, and 5 years in Unreal C++.
+            Shipped multiple games. Handles creative and technical tasks in the same pipeline.</span>
+            <span data-lang="tr">9 yıllık web geliştirme, 7 yıllık 3D sanat ve 5 yıllık C++ deneyimine sahip developer ve 3D tasarımcıyım.
+              Birden fazla uygulama ve oyunu yayınladım. Aynı projede tasarım ve teknik süreçleri yapabiliyorum.</span>
+          
+          
         </p>
         <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary"><i class="bi bi-github"></i>View Projects</a>
-          <a href="#gallery" class="btn btn-ghost"><span><i class="bi bi-brush"></i></span> Art Portfolio</a>
-          <a href="#contact" class="btn btn-ghost"><span><i class="bi bi-telephone"></i></span> Contact</a>
+          <a href="#projects" class="btn btn-primary"><i class="bi bi-github"></i>
+            <span data-lang="en">View Projects</span>
+            <span data-lang="tr">Projeler</span>
+          </a>
+          <a href="https://kubrvk.github.io/portfolio" class="btn btn-ghost portfoliocv" ><span><i class="bi bi-brush"></i></span> Portfolio</a>
+          <a href="#gallery" class="btn btn-ghost portfoliobase"><span><i class="bi bi-brush"></i></span> 
+            <span data-lang="en">Art Portfolio</span>
+            <span data-lang="tr">Çalışmalar</span></a>
+          <a href="#contact" class="btn btn-ghost"><span><i class="bi bi-telephone"></i></span>
+            <span data-lang="en">Contact</span>
+            <span data-lang="tr">İletişim</span></a>
         </div>
       </div>
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -448,7 +545,9 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
         <div class="hero-big-node">
           <div class="hbn-header">
             <div class="hbn-icon"><img src="img/unreal-engine.png" height="20px"></div>
-            <div><div class="hbn-title">CHARACTER_DATA</div></div>
+            <div><div class="hbn-title"><span data-lang="en">CHARACTER_DATA</span>
+              <span data-lang="tr">HAKKIMDA</span>
+              </div></div>
             <span class="hbn-sub">// class Blueprint</span>
           </div>
           <div class="hbn-body">
@@ -463,23 +562,31 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
               <div class="hbn-pin-title">INPUTS</div>
               <div class="pin-row">
                 <div class="pin" style="border-color:var(--blue);background:rgba(74,158,255,.2)"></div>
-                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:6px">Name</span>
+                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:6px">
+                  <span data-lang="en">Name</span>
+                   <span data-lang="tr">Ad/Soyad</span></span>
                 <span class="pin-type" style="background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:2px">Beraat Yetkin</span>
               </div>
               <div class="pin-row" style="margin-top:4px">
                 <div class="pin" style="border-color:var(--orange);background:rgba(255,140,66,.2)"></div>
-                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:6px">Experience</span>
+                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:6px">
+                  <span data-lang="en">Experience</span>
+                   <span data-lang="tr">Deneyim</span></span>
                 <span class="pin-type" style="background:rgba(255,140,66,.1);border:1px solid rgba(255,140,66,.3);color:var(--orange);font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:2px">9yr</span>
               </div>
               <div class="pin-row" style="margin-top:4px">
                 <div class="pin" style="border-color:var(--green);background:rgba(77,219,135,.2)"></div>
-                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:6px">Jobs</span>
-                <span class="pin-type" style="background:rgba(77,219,135,.1);border:1px solid rgba(77,219,135,.3);color:var(--green);font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:2px">100+</span>
+                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:6px">Freelance</span>
+                <span class="pin-type" style="background:rgba(77,219,135,.1);border:1px solid rgba(77,219,135,.3);color:var(--green);font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:2px">99+</span>
               </div>
               <div class="pin-row" style="margin-top:4px">
                 <div class="pin" style="border-color:var(--purple);background:rgba(192,132,252,.2)"></div>
-                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:6px">Shipped</span>
-                <span class="pin-type" style="background:rgba(192,132,252,.1);border:1px solid rgba(192,132,252,.3);color:var(--purple);font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:2px">9 games</span>
+                <span class="pin-label" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:6px">
+                  <span data-lang="en">Shipped</span>
+                   <span data-lang="tr">Yayınlanan</span></span>
+                <span class="pin-type" style="background:rgba(192,132,252,.1);border:1px solid rgba(192,132,252,.3);color:var(--purple);font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:2px">
+                  <span data-lang="en">9+ project</span>
+                   <span data-lang="tr">9+ proje</span></span>
               </div>
             </div>
             <div class="hbn-pin-section">
@@ -500,16 +607,22 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
             <div class="hbn-divider"></div>
             <div class="hbn-stat-row">
               <div class="hbn-stat">
-                <span class="hbn-stat-val" style="color:var(--blue)" id="stat-projects">0</span>
-                <span class="hbn-stat-label">PROJECTS</span>
+                <span class="hbn-stat-val" style="color:var(--blue)" > <span style="color:var(--blue)" id="stat-projects">0</span>+</span>
+                <span class="hbn-stat-label">
+                  <span data-lang="en">PROJECTS</span>
+                   <span data-lang="tr">PROJE</span></span>
               </div>
               <div class="hbn-stat">
-                <span class="hbn-stat-val" style="color:var(--orange)" id="stat-years">0</span>
-                <span class="hbn-stat-label">YEARS</span>
+                <span class="hbn-stat-val" style="color:var(--orange)" > <span style="color:var(--orange)" id="stat-years">0</span>+</span>
+                <span class="hbn-stat-label">
+                  <span data-lang="en">YEARS</span>
+                   <span data-lang="tr">YIL</span></span>
               </div>
               <div class="hbn-stat">
                 <span  class="hbn-stat-val" style="color:var(--green)"> <span style="color:var(--green)" id="stat-skills">0</span>+</span>
-                <span class="hbn-stat-label">WORKS</span>
+                <span class="hbn-stat-label">
+                  <span data-lang="en">WORKS</span>
+                   <span data-lang="tr">ÇALISMA</span></span>
               </div>
             </div>
           </div>
@@ -580,14 +693,24 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
     <div class="section-label reveal">
       <span class="section-label-num">01</span>
       <div class="section-label-line"></div>
-      <span class="section-label-text">// about_node</span>
+      <span class="section-label-text">// 
+        <span data-lang="en">about_node</span>
+         <span data-lang="tr">hakkımda</span></span>
       <div class="section-label-line" style="max-width:60px"></div>
     </div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>Developer and <span>3D artist</span> with 9 years of web development experience, 7 years in 3D art, and 5 years working with <span>Unreal Engine C++</span>.</p>
-        <p>I have shipped multiple games and delivered work across game development, 3D art, and web applications. My background combines <span>programming, technical art, and production work</span>, which allows me to handle both creative and technical tasks in the same project.</p>
-        <p>Open to studio roles, contract work, and long-term collaboration in <span>Unreal Engine, C++, 3D, and web development.</span></p>
+      
+
+<span data-lang="en">  <p>Developer and <span>3D artist</span> with 9 years of web development experience, 7 years in 3D art, and 5 years working with <span>Unreal Engine C++</span>.</p>
+<p>I have shipped multiple games and delivered work across game development, 3D art, and web applications. My background combines <span>programming, technical art, and production work</span>, which allows me to handle both creative and technical tasks in the same project.</p>
+<p>Open to studio roles, contract work, and long-term collaboration in <span>Unreal Engine, C++, 3D, and web development.</span></p></span>
+<span data-lang="tr"><p>9 yıllık web geliştirme, 7 yıllık 3D sanat ve 5 yıllık <span>Unreal Engine C++</span> deneyimine sahip bir geliştirici ve 3D sanatçısıyım.</p>
+
+<p>Birden fazla oyun yayınladım ve oyun geliştirme, 3D sanat ve web uygulamaları alanlarında çalışmalar gerçekleştirdim. Geçmişim <span>programlama, teknik sanat ve prodüksiyon süreçlerini</span> kapsıyor; bu da aynı proje içinde hem yaratıcı hem de teknik görevleri üstlenmemi sağlıyor.</p>
+
+<p><span>Unreal Engine, C++, 3D ve web geliştirme</span> alanlarında stüdyo pozisyonları, proje bazlı işler ve uzun vadeli iş birliklerine açığım.</p></span>
+
         <div class="about-info-list">
           
 
@@ -601,7 +724,9 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
 </a>
 <a href="tel:+905339504487" target="_blank" class="cn-link">
   <div class="cn-link-icon" style="color:var(--blue)"><i class="bi bi-telephone"></i></div>
-  <span class="cn-link-label">// Phone</span>
+  <span class="cn-link-label">// 
+    <span data-lang="en">Phone</span>
+     <span data-lang="tr">Telefon</span></span>
   <span class="cn-link-val" style="color:var(--blue)">+90 533 950 44 87</span>
   <span class="cn-link-arrow">›</span>
 </a>
@@ -616,6 +741,14 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
   <div class="cn-link-icon" style="color:rgb(132, 88, 218)"><i class="bi bi-brush"></i></div>
   <span class="cn-link-label">// artstation</span>
   <span class="cn-link-val" style="color:rgb(132, 88, 218)">artstation.com/Kubrik</span>
+  <span class="cn-link-arrow">›</span>
+</a>
+
+
+<a href="https://kubrvk.github.io/portfolio/" target="_blank" class="cn-link">
+  <div class="cn-link-icon" style="color:rgb(170, 99, 37)"><i class="bi bi-file-earmark-richtext"></i></div>
+  <span class="cn-link-label">// portfolio</span>
+  <span class="cn-link-val" style="color:rgb(171, 98, 50)">kubrvk.github.io/portfolio</span>
   <span class="cn-link-arrow">›</span>
 </a>
 
@@ -647,25 +780,23 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
 
 
 <a href="#" target="_blank" class="cn-link">
-  <div class="cn-link-icon" style="color:rgba(93, 116, 157, 0.7)"><i class="bi bi-geo-alt"></i></div>
-  <span class="cn-link-label">// location</span>
-  <span class="cn-link-val" style="color:rgba(109, 133, 186, 0.7)">Istanbul / Türkiye</span>
-  <span class="cn-link-arrow">›</span>
-</a>
-
-
-<a href="#" target="_blank" class="cn-link">
   <div class="cn-link-icon" style="color:rgba(93, 116, 157, 0.7)"><i class="bi bi-person"></i></div>
-  <span class="cn-link-label">// birthdate</span>
+  <span class="cn-link-label">// 
+    <span data-lang="en">birthdate</span>
+     <span data-lang="tr">tarih</span></span>
   <span class="cn-link-val" style="color:rgba(109, 133, 186, 0.7)">15 / 01 / 1995</span>
   <span class="cn-link-arrow">›</span>
 </a>
 
 
+
+
 <a href="#" target="_blank" class="cn-link">
-  <div class="cn-link-icon" style="color:rgba(93, 116, 157, 0.7)"><i class="bi bi-translate"></i></div>
-  <span class="cn-link-label">// languages</span>
-  <span class="cn-link-val" style="color:rgba(109, 133, 186, 0.7)">TR / EN</span>
+  <div class="cn-link-icon" style="color:rgba(93, 116, 157, 0.7)"><i class="bi bi-geo-alt"></i></div>
+  <span class="cn-link-label">// 
+    <span data-lang="en">location</span>
+     <span data-lang="tr">konum</span></span>
+  <span class="cn-link-val" style="color:rgba(109, 133, 186, 0.7)">Istanbul / Türkiye</span>
   <span class="cn-link-arrow">›</span>
 </a>
 
@@ -682,19 +813,25 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
                 <div class="timeline-category" >
                   <div class="tool-cat-header">
                 
-                    <span class="tool-cat-name" style="color:var(--blue)">EDUCATION</span>
+                    <span class="tool-cat-name" style="color:var(--blue)">
+                      <span data-lang="en">EDUCATION</span>
+                       <span data-lang="tr">Eğitim</span></span>
                   </div>
                   <div class="timeline-list">
                     <div class="timeline-item tl-blue">
                       <div class="tl-head">
-                        <span class="tl-title">AKDENİZ UNIVERSITY</span>
+                        <span class="tl-title">
+                          <span data-lang="en">AKDENİZ UNIVERSITY</span>
+                           <span data-lang="tr">AKDENİZ ÜNİVERSİTESİ</span></span>
                         <span class="tl-period">2012 - 2016</span>
                       </div>
                       <span class="tl-sub" style="color:rgb(76, 128, 196)">Computer Systems Technology</span>
                     </div>
                     <div class="timeline-item tl-orange">
                       <div class="tl-head">
-                        <span class="tl-title">VOCATIONAL SCHOOL</span>
+                        <span class="tl-title">
+                          <span data-lang="en">VOCATIONAL SCHOOL</span>
+                           <span data-lang="tr">AYTEN MESLEK LISESI</span></span>
                         <span class="tl-period">2008 - 2012</span>
                       </div>
                       <span class="tl-sub" style="color:rgb(189, 132, 63)">Web Programming</span>
@@ -707,7 +844,9 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
         <div class="timeline-category" style="margin-top:0px">
           <div class="tool-cat-header">
            
-            <span class="tool-cat-name" style="color:var(--green)">WORK_EXPERIENCE</span>
+            <span class="tool-cat-name" style="color:var(--green)">
+              <span data-lang="en">WORK_EXPERIENCE</span>
+               <span data-lang="tr">İş Deneyimi</span></span>
           </div>
           <div class="timeline-list">
             <div class="timeline-item tl-blue">
@@ -716,7 +855,11 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
                 <span class="tl-period">2022 - 2025</span>
               </div>
               <span class="tl-sub" style="color:rgb(77, 131, 200)">Developer & 3D Artist</span>
-              <p class="tl-desc">Freelance services to studios and clients, offering expertise in software development, 3D design, and web development.</p>
+              <p class="tl-desc">
+                
+<span data-lang="en">Freelance services to studios and clients, offering expertise in software development, 3D design, and web development.</span>
+<span data-lang="tr">Stüdyolara ve müşterilere yazılım geliştirme, 3D tasarım ve web geliştirme alanlarında freelance hizmet sunuyorum.</span>
+              </p>
             </div>
             <div class="timeline-item tl-orange">
               <div class="tl-head">
@@ -724,15 +867,25 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
                 <span class="tl-period">2021 - 2022</span>
               </div>
               <span class="tl-sub" style="color:rgb(177, 121, 68)">3D Artist</span>
-              <p class="tl-desc">Character modeling for the game engine, modeling highpoly characters and topology, texture mapping and import to engine.</p>
+              <p class="tl-desc">
+
+<span data-lang="en">Character modeling for the game engine, modeling highpoly characters and topology, texture mapping and import to engine.</span>
+<span data-lang="tr">Oyun motoru için karakter modelleme, high-poly karakter üretimi, topology düzenleme, texture mapping ve modele motor içine aktarım.</span>
+              </p>
             </div>
             <div class="timeline-item tl-green">
               <div class="tl-head">
-                <span class="tl-title">MYSET INFORMATION SERVICES</span>
+                <span class="tl-title">
+                  <span data-lang="en">MYSET INFORMATION SERVICES</span>
+                   <span data-lang="tr">MYSET BİLGİ HİZMETLERİ</span></span>
                 <span class="tl-period">2018 - 2020</span>
               </div>
               <span class="tl-sub" style="color:rgb(73, 171, 102)">Full-Stack Developer</span>
-              <p class="tl-desc">3D warehouse and product design, e-commerce mobile app, dynamic website development, vector illustrations for logos and banners.</p>
+              <p class="tl-desc">
+<span data-lang="en">3D warehouse and product design, e-commerce mobile app, dynamic website development, vector illustrations for logos and banners.
+</span>
+<span data-lang="tr">3D depo ve ürün tasarımı, e-ticaret mobil uygulama geliştirme, dinamik web sitesi geliştirme ve logo ile bannerlar için vektörel illüstrasyonlar sunuyorum.</span>
+              </p>
             </div>
             <div class="timeline-item tl-purple">
               <div class="tl-head">
@@ -740,23 +893,43 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
                 <span class="tl-period">2017 - 2018</span>
               </div>
               <span class="tl-sub" style="color:rgb(132, 88, 218)">Web Developer & Designer</span>
-              <p class="tl-desc">3D architectural hotel room plan modeling, front-end website development, designing animated banners for advertising.</p>
+              <p class="tl-desc">
+
+<span data-lang="en">3D architectural hotel room plan modeling, front-end website development, designing animated banners for advertising.</span>
+<span data-lang="tr">3D mimari otel odası plan modelleme, front-end web geliştirme ve reklamlar için animasyonlu banner tasarımı yapıyorum.</span>
+              </p>
             </div>
             <div class="timeline-item tl-yellow">
               <div class="tl-head">
-                <span class="tl-title">DAD ARCHITECTURAL DESIGN</span>
+                <span class="tl-title">
+                  <span data-lang="en">DAD ARCHITECTURAL DESIGN</span>
+                   <span data-lang="tr">DAD MİMARLIK TASARIM</span></span>
                 <span class="tl-period">2016 - 2017</span>
               </div>
               <span class="tl-sub" style="color:rgb(178, 171, 83)">3D Designer</span>
-              <p class="tl-desc">3D architectural building modeling, technical drawing, web design.</p>
+              <p class="tl-desc">
+
+<span data-lang="en">3D architectural building modeling, technical drawing, web design.</span>
+<span data-lang="tr">3D mimari bina modelleme, teknik çizim ve web tasarımı.</span>
+              </p>
             </div>
             <div class="timeline-item tl-red">
               <div class="tl-head">
-                <span class="tl-title">VATAN COMPUTER</span>
+                <span class="tl-title">
+                  <span data-lang="en">VATAN COMPUTER</span>
+                   <span data-lang="tr">VATAN BİLGİSAYAR</span></span>
                 <span class="tl-period">2014 - 2016</span>
               </div>
-              <span class="tl-sub" style="color:var(--red)">IT Specialist</span>
-              <p class="tl-desc">Computer repair and parts replacement, network, server and OS setup.</p>
+              <span class="tl-sub" style="color:var(--red)">
+
+<span data-lang="en">IT Specialist</span>
+<span data-lang="tr">IT Uzmanı</span>
+              </span>
+              <p class="tl-desc">
+
+<span data-lang="en">Computer repair and parts replacement, network, server and OS setup.</span>
+<span data-lang="tr">Bilgisayar tamiri ve parça değişimi, ağ, sunucu ve işletim sistemi kurulumu.</span>
+              </p>
             </div>
           </div>
         </div>
@@ -817,7 +990,9 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
     <div class="section-label reveal">
       <span class="section-label-num">02</span>
       <div class="section-label-line"></div>
-      <span class="section-label-text">// skill_nodes</span>
+      <span class="section-label-text">// 
+        <span data-lang="en">skill_nodes</span>
+         <span data-lang="tr">uzmanlıklar</span></span>
       <div class="section-label-line" style="max-width:60px"></div>
     </div>
     <div class="skills-grid">
@@ -853,23 +1028,46 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
         <div class="sn-details">
           <div class="sn-details-inner">
             <div class="sn-block">
-              <p class="sn-block-text">I build gameplay systems in Unreal Engine C++, taking features from demo to shipped production. Work includes gameplay, AI,combat and movement mechanics, RPG systems, UI, multiplayer integration, and optimization for PC and mobile.</p>
-            </div>
+              <p class="sn-block-text">
+                <span data-lang="en">I build gameplay systems in Unreal Engine C++, taking features from demo to shipped production. Work includes gameplay, AI,combat and movement mechanics, RPG systems, UI, multiplayer integration, and optimization for PC and mobile.
+                </span>
+                <span data-lang="tr">Unreal Engine C++ ile oynanış sistemleri ile baştan sona tüm sistemleri geliştiriyorum. Çalışmalarım; oynanış, yapay zekâ, combat ve hareket mekanikleri, RPG sistemleri, UI, online entegrasyon ve PC ile mobil için optimizasyonu kapsıyor.</span>
+                </div>
+              </p>
+            
+
             <div class="sn-block">
               <div class="sn-block-title" style="color:var(--blue)">Combat &amp; Movement</div>
-              <p class="sn-sub">Lock-on targeting, air combos, boss mechanics, hit/damage pipelines, gliding, grappling, flight, physics-based interaction.</p>
+              <p class="sn-sub">
+
+                <span data-lang="en">Lock-on targeting, air combos, boss mechanics, hit/damage pipelines, gliding, grappling, flight, physics-based interaction.</span>
+                 <span data-lang="tr">Lock-on hedefleme, hava komboları, boss mekanikleri, hasar/çarpma işleme sistemleri, süzülme, kanca mekanikleri, uçuş ve fizik tabanlı etkileşimler.</span></p>
             </div>
             <div class="sn-block">
-              <div class="sn-block-title" style="color:var(--blue)">AI &amp; Gameplay Systems</div>
-              <p class="sn-sub">Behavior Trees / Blackboard / EQS, custom controllers, state-driven boss logic, inventory/equipment/crafting, stats and character customization.</p>
+              <div class="sn-block-title" style="color:var(--blue)">
+                <span data-lang="en">AI &amp; Gameplay Systems</span>
+                <span data-lang="tr">AI &amp; Gameplay Sistemleri</span></div>
+              <p class="sn-sub">
+
+<span data-lang="en">Behavior Trees / Blackboard / EQS, custom controllers, state-driven boss logic, inventory/equipment/crafting, stats and character customization.</span>
+<span data-lang="tr">Behavior Trees / Blackboard / EQS, özel AI controller’lar, state tabanlı boss mantığı, envanter/ekipman/crafting sistemleri, istatistikler ve karakter özelleştirme.</span>
+              </p>
             </div>
             <div class="sn-block">
               <div class="sn-block-title" style="color:var(--blue)">Online &amp; Runtime Systems</div>
-              <p class="sn-sub">Replication / co-op networking, Steam &amp; Epic Online Services, procedural generation, pooling, data-driven spawning, save/load &amp; serialization.</p>
+              <p class="sn-sub">
+
+<span data-lang="en">Replication / co-op networking, Steam &amp; Epic Online Services, procedural generation, pooling, data-driven spawning, save/load &amp; serialization.</span>
+<span data-lang="tr">Replication / co-op ağ yapısı, Steam ve Epic Online Services entegrasyonu, procedural sistemleri, object pooling, veri odaklı spawn sistemleri, save sistemi.</span>
+              </p>
             </div>
             <div class="sn-block">
               <div class="sn-block-title" style="color:var(--blue)">Niagara VFX</div>
-              <p class="sn-sub">Particle systems and real-time visual effects, tuned for lighting and performance budgets across PC and mobile.</p>
+              <p class="sn-sub">
+
+<span data-lang="en">Particle systems and real-time visual effects, tuned for lighting and performance budgets across PC and mobile.</span>
+<span data-lang="tr">Particle sistemleri ve gerçek zamanlı görsel efektler; PC ve mobil platformlarda ışıklandırma ve performans bütçelerine göre optimize edilmiş şekilde geliştirme.</span>
+              </p>
             </div>
     
 
@@ -882,7 +1080,8 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
         <div class="sn-head">
           <div class="sn-bar" style="background:var(--orange)"></div>
           <span class="sn-title" style="color:var(--text)">FULLSTACK WEB</span>
-          <span class="sn-badge" style="color:var(--orange);border-color:rgba(255,140,66,.35)">9 YRS</span>
+          <span class="sn-badge" style="color:var(--orange);border-color:rgba(255,140,66,.35)"><span data-lang="en">9 YRS</span>
+          <span data-lang="tr">9 YIL</span></span>
         </div>
         <div class="sn-pins">
           <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--orange)"></div><span class="sn-pin-label">React / Node.js / REST API, JSON </span></div>
@@ -894,12 +1093,11 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
         </div>
         <div class="sn-bar-wrap">
           <div class="sn-bar-top">    <div class="tool-chips1">
-            <span class="tool-chip">React</span>
-            <span class="tool-chip">Node.js</span>
-            <span class="tool-chip">Firebase</span>
-            <span class="tool-chip">MySQL</span>
-            <span class="tool-chip">MSSQL</span>
-            <span class="tool-chip">Kotlin</span>
+            <span class="tool-chip">JavaScript</span>
+            <span class="tool-chip">CSS</span>
+            <span class="tool-chip">HTML</span>
+            <span class="tool-chip">Database</span>
+            <span class="tool-chip">Admin Panel</span>
 
           </div>
 <span style="color:var(--orange)">90%</span></div>
@@ -911,25 +1109,61 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
         <div class="sn-details">
           <div class="sn-details-inner">
             <div class="sn-block">
-              <p class="sn-block-text">I develop full-stack web and mobile applications across the full delivery cycle, from backend APIs and database design to responsive UI, authentication, and store deployment. Focus is on maintainable codebases, and shipping-ready releases.</p>
+              <p class="sn-block-text">
+                
+<span data-lang="en">I develop full-stack web and mobile applications across the full delivery cycle,
+  from backend APIs and database design to responsive UI, authentication, and store deployment. Focus is on maintainable codebases, and shipping-ready releases.</span>
+<span data-lang="tr">Full-stack web ve mobil uygulamalar geliştirilmesi; backend API’lerden veritabanı tasarımına, responsive UI, kimlik doğrulama ve online store oluşturmaya kadar tüm  süreci geliştiriyorum. 
+  </span></p>
             </div>
             <div class="sn-block">
-              <div class="sn-block-title" style="color:var(--orange)">Frontend &amp; Backend  &amp; Mobile Delivery</div>
-              <p class="sn-sub">React, Node.js, REST APIs, Redux/Context, Firebase (auth/services/admin tools). React Native, Android (Kotlin/Jetpack), push notifications, Play Store deployment.</p>
+              <div class="sn-block-title" style="color:var(--orange)">
+<span data-lang="en">Frontend &amp; Backend  &amp; Mobile Delivery</span>
+<span data-lang="tr">Frontend &amp; Backend  &amp; Mobile Geliştirme</span>
+              </div>
+              <p class="sn-sub">
+
+<span data-lang="en">React, Node.js, REST APIs, Redux/Context, Firebase (auth/services/admin tools). React Native, Android (Kotlin/Jetpack), push notifications, Play Store deployment.</span>
+<span data-lang="tr">React, Node.js, REST API, Redux/Context ve Firebase (auth, servisler). React Native, Android (Kotlin/Jetpack), push bildirimleri ve Play Store’a yayınlama süreçleri.</span>
+              </p>
             </div>
 
             <div class="sn-block">
-              <div class="sn-block-title" style="color:var(--orange)">E-Commerce &amp; WordPress</div>
-              <p class="sn-sub">WooCommerce stores, product catalogs, checkout systems, customer account management, WordPress installation, plugin & theme customization &amp; SEO.</p>
+              <div class="sn-block-title" style="color:var(--orange)">
+
+<span data-lang="en">E-Commerce &amp; WordPress</span>
+<span data-lang="tr">E-Ticaret &amp; WordPress</span>
+              </div>
+              <p class="sn-sub">
+
+<span data-lang="en">WooCommerce stores, product catalogs, checkout systems, customer account management, WordPress installation, plugin & theme customization &amp; SEO.</span>
+<span data-lang="tr">WooCommerce mağazaları, ürün katalogları, ödeme sistemleri ve hesap yönetimi sistemleri geliştiriyorum. WordPress kurulum, eklenti ve tema özelleştirme ve SEO.</span>
+              </p>
             </div>
 
             <div class="sn-block">
-              <div class="sn-block-title" style="color:var(--orange)">AI Integration</div>
-              <p class="sn-sub">AI API integration, structured JSON outputs workflows, prompt design, and and automation pipelines into app features and UI.</p>
+              <div class="sn-block-title" style="color:var(--orange)">
+
+<span data-lang="en">AI Integration</span>
+<span data-lang="tr">AI Entegrasyonu</span>
+              </div>
+              <p class="sn-sub">
+
+<span data-lang="en">AI API integration, structured JSON outputs workflows, prompt design, and and automation pipelines into app features and UI.</span>
+<span data-lang="tr">AI API entegrasyonu, JSON çıktı iş akışları, prompt tasarımı ve otomasyon pipeline’larını uygulama özellikleri ve arayüzlerine entegre ediyorum.</span>
+              </p>
             </div>
             <div class="sn-block">
-              <div class="sn-block-title" style="color:rgb(215, 110, 25)">Technical IT & Server Services</div>
-              <p class="sn-sub">Workstation/server/network setup, maintenance, diagnostics, hardware troubleshooting.</p>
+              <div class="sn-block-title" style="color:rgb(215, 110, 25)">
+
+<span data-lang="en">Technical IT & Server Services</span>
+<span data-lang="tr">Teknik IT ve Sunucu Hizmetleri</span>
+              </div>
+              <p class="sn-sub">
+
+<span data-lang="en">Workstation/server/network setup, maintenance, diagnostics, hardware troubleshooting.</span>
+<span data-lang="tr">Workstation istasyonu, sunucu ve ağ kurulumu; bakım, arıza tespiti ve donanım sorun giderme.</span>
+              </p>
             </div>
 
 
@@ -940,8 +1174,16 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
       <div class="skill-node green reveal1">
         <div class="sn-head">
           <div class="sn-bar" style="background:var(--green)"></div>
-          <span class="sn-title" style="color:var(--text)">3D ARTIST</span>
-          <span class="sn-badge" style="color:var(--green);border-color:rgba(77,219,135,.35)">7 YRS</span>
+          <span class="sn-title" style="color:var(--text)">
+
+<span data-lang="en">3D ARTIST</span>
+<span data-lang="tr">3D TASARIM</span>
+          </span>
+          <span class="sn-badge" style="color:var(--green);border-color:rgba(77,219,135,.35)">
+
+<span data-lang="en">7 YRS</span>
+<span data-lang="tr">7 YIL</span>
+          </span>
         </div>
         <div class="sn-pins">
           <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--green)"></div><span class="sn-pin-label">High-poly Sculpt / Retopology, </span></div>
@@ -969,23 +1211,61 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
         <div class="sn-details">
           <div class="sn-details-inner">
             <div class="sn-block">
-              <p class="sn-block-text">I create game-ready characters, creatures, props, and environments from concept through final in-engine import. Complete asset pipeline, with focus on optimization and quality, for both stylized and realistic projects, on PC and mobile.</p>
+              <p class="sn-block-text">
+              
+<span data-lang="en">I create game-ready characters, creatures, props, and environments from concept through final in-engine import. 
+  Complete asset pipeline, with focus on optimization and quality, for both stylized and realistic projects, on PC and mobile.</span>
+<span data-lang="tr">Konsept aşamasından engine import sürecine kadar game-ready characters, creatures, props ve environments üretiyorum. 
+  PC ve mobile için hem stylized hem realistic projelerde optimization ve quality odaklı full asset pipeline yönetiyorum.</span>
+              </p>
             </div>
             <div class="sn-block">
-              <div class="sn-block-title" style="color:var(--green)">Character Art</div>
-              <p class="sn-sub">High-poly sculpting and hard-surface detailing in ZBrush, retopology for animation performance, UV layout, texture baking, and PBR texturing in Substance Painter.</p>
+              <div class="sn-block-title" style="color:var(--green)">
+
+<span data-lang="en">Character Art</span>
+<span data-lang="tr">Karakter Tasarımı</span>
+              </div>
+              <p class="sn-sub">
+
+<span data-lang="en">High-poly sculpting and hard-surface detailing in ZBrush, retopology for animation performance, UV layout, texture baking, and PBR texturing in Substance Painter.</span>
+<span data-lang="tr">High-poly sculpting ve hard-surface detailing (ZBrush), retopology for animation performance, UV layout, texture baking ve Substance Painter içinde PBR texturing.</span>
+              </p>
             </div>
             <div class="sn-block">
-              <div class="sn-block-title" style="color:var(--green)">Rigging &amp; Animation</div>
-              <p class="sn-sub">Character rigging and skinning for game-ready assets, keyframe animation and motion cleanup, physics  animation and pose creation (Cascadeur).</p>
+              <div class="sn-block-title" style="color:var(--green)">
+
+<span data-lang="en">Rigging &amp; Animation</span>
+<span data-lang="tr">Rigging &amp; Animasyon</span>
+              </div>
+              <p class="sn-sub">
+
+<span data-lang="en">Character rigging and skinning for game-ready assets, keyframe animation and motion cleanup, physics  animation and pose creation (Cascadeur).</span>
+<span data-lang="tr">Game-ready assets için character rigging ve skinning, keyframe animation ve motion cleanup, physics-based animation ve pose creation (Cascadeur).</span>
+              </p>
             </div>
             <div class="sn-block">
-              <div class="sn-block-title" style="color:var(--green)">Environment Art</div>
-              <p class="sn-sub">Modular environment kits and asset libraries, trim sheet and tileable textures, optimization through LODs, occlusion culling, lightmaps, and scene organization.</p>
+              <div class="sn-block-title" style="color:var(--green)">
+
+<span data-lang="en">Environment Art</span>
+<span data-lang="tr">Ortam ve Aksesuar Tasarımı</span>
+              </div>
+              <p class="sn-sub">
+
+<span data-lang="en">Modular environment kits and asset libraries, trim sheet and tileable textures, optimization through LODs, occlusion culling, lightmaps, and scene organization.</span>
+<span data-lang="tr">Modular environment kits ve asset library’ler, trim sheet ve tileable texture üretimi, LOD’lar ile optimizasyon, occlusion culling, lightmap kullanımı ve sahne ışıklandırma.</span>
+              </p>
             </div>
             <div class="sn-block">
-              <div class="sn-block-title" style="color:var(--green)">Materials &amp; Pipeline</div>
-              <p class="sn-sub">Shader/material graph creation in Unreal Engine, asset integration, optimization, debugging, and pipeline support. Cloth simulation with Marvelous Designer.</p>
+              <div class="sn-block-title" style="color:var(--green)">
+
+<span data-lang="en">Materials &amp; Pipeline</span>
+<span data-lang="tr">Materyal &amp; Pipeline</span>
+              </div>
+              <p class="sn-sub">
+
+<span data-lang="en">Shader/material graph creation  Unreal Engine, asset integration, optimization, debugging, and pipeline support. Cloth simulation with Marvelous Designer.</span>
+<span data-lang="tr">Shader/material graph oluşturulması, asset ekleme ve optimizasyonu. Cloth simulation (Marvelous Designer) ile garment üretimi ve simülasyon.</span>
+              </p>
             </div>
 
 
@@ -998,13 +1278,28 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
       <div class="skill-node purple reveal1">
         <div class="sn-head">
           <div class="sn-bar" style="background:var(--purple)"></div>
-          <span class="sn-title" style="color:var(--text)">GRAPHIC DESIGN</span>
-          <span class="sn-badge" style="color:var(--purple);border-color:rgba(192,132,252,.35)">9 YRS</span>
+          <span class="sn-title" style="color:var(--text)">
+
+<span data-lang="en">GRAPHIC DESIGN</span>
+<span data-lang="tr">GRAFİK TASARIM</span>
+          </span>
+          <span class="sn-badge" style="color:var(--purple);border-color:rgba(192,132,252,.35)">
+
+<span data-lang="en">9 YRS</span>
+<span data-lang="tr">9 YIL</span>
+          </span>
         </div>
         <div class="sn-pins">
-          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--purple)"></div><span class="sn-pin-label">Logo &amp; Brand Identity</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--purple)"></div><span class="sn-pin-label">
+
+<span data-lang="en">Logo &amp; Brand Identity</span>
+<span data-lang="tr">Logo &amp; Marka Kimliği</span>
+          </span></div>
           <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--purple)"></div><span class="sn-pin-label">Motion Graphics / After Effects</span></div>
-          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--purple)"></div><span class="sn-pin-label">Social Media / Ad Content</span></div>
+          <div class="sn-pin"><div class="sn-pin-dot" style="border-color:var(--purple)"></div><span class="sn-pin-label">
+<span data-lang="en">Social Media / Ads Content</span>
+<span data-lang="tr">Sosyal Medya ve Ads Yönetimi</span>
+          </span></div>
           <div class="sn-divider"></div>
    
          
@@ -1025,24 +1320,62 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
         <div class="sn-details">
           <div class="sn-details-inner">
             <div class="sn-block">
-              <p class="sn-block-text">I produce marketing and presentation assets for games and brands, aligned with platform requirements and release timelines, covering identity systems, video production, and social media deliverables.</p>
+              <p class="sn-block-text">
+
+<span data-lang="en">I produce marketing and presentation assets for games and brands, aligned with platform requirements and release timelines, covering identity systems, video production, and social media deliverables.</span>
+<span data-lang="tr">Markalar için reklam gereksinimleri ve yayına uygun pazarlama ve tanıtım içerikleri üretiyorum. Kimlik tasarımı (identity systems), video prodüksiyonu ve sosyal medya içerikleri dahil olmak üzere tüm görsel materyalleri hazırlıyorum.</span>
+              </p>
             </div>
             <div class="sn-block">
-              <div class="sn-block-title" style="color:var(--purple)">Branding &amp; Design</div>
-              <p class="sn-sub">Logo design, brand identity systems, typography, and visual guidelines using Illustrator and Photoshop.</p>
+              <div class="sn-block-title" style="color:var(--purple)">
+
+<span data-lang="en">Branding &amp; Design</span>
+<span data-lang="tr">Markalaşma ve Tasarım</span>
+              </div>
+              <p class="sn-sub">
+
+<span data-lang="en">Logo design, brand identity systems, typography, and visual guidelines using Illustrator and Photoshop.</span>
+<span data-lang="tr">Logo tasarımı, kurumsal kimlik çalışmaları ve görsel tasarım rehberleri hazırlıyorum (Illustrator ve Photoshop).</span>
+              </p>
             </div>
             <div class="sn-block">
-              <div class="sn-block-title" style="color:var(--purple)">Vector &amp; Digital Design</div>
-              <p class="sn-sub">Scalable vector illustrations, icons, infographics, and custom graphic assets; image editing, compositing, retouching, and promotional artwork.</p>
+              <div class="sn-block-title" style="color:var(--purple)">
+
+<span data-lang="en">Vector &amp; Digital Design</span>
+<span data-lang="tr">Vector &amp; Dijital Tasarım</span>
+              </div>
+              <p class="sn-sub">
+
+<span data-lang="en">Scalable vector illustrations, icons, infographics, and custom graphic assets; image editing, compositing, retouching, and promotional artwork.</span>
+<span data-lang="tr">Vektörel illüstrasyonlar, ikonlar, infografikler ve özel grafik içerikleri hazırlıyorum. Görsel düzenleme, kompozit çalışmaları, rötuş ve tanıtım görselleri tasarlıyorum.</span>
+              </p>
             </div>
             <div class="sn-block">
-              <div class="sn-block-title" style="color:var(--purple)">Video &amp; Motion</div>
-              <p class="sn-sub">Trailers, promos, motion graphics and reels in After Effects/Premiere Pro; animated HTML5/GIF/MP4 banners, social content, and YouTube production.</p>
+              <div class="sn-block-title" style="color:var(--purple)">
+
+<span data-lang="en">Video &amp; Motion</span>
+<span data-lang="tr">Video &amp; Motion</span>
+              </div>
+              <p class="sn-sub">
+
+<span data-lang="en">Trailers, promos, motion graphics and reels in After Effects/Premiere Pro; animated HTML5/GIF/MP4 banners, social content, and YouTube production.</span>
+<span data-lang="tr">After Effects ve Premiere Pro ile trailer, tanıtım videosu ve reel hazırlıyorum. GIF/MP4 animasyonlu bannerlar, sosyal medya ve YouTube video üretiyorum.</span>
+              </p>
             </div>
 
             <div class="sn-block">
-              <div class="sn-block-title" style="color:var(--purple)">Production Support</div>
-              <p class="sn-sub">Independent technical problem solving and coordination using planning/tracking tools and whiteboard workflows.</p>
+              <div class="sn-block-title" style="color:var(--purple)">
+
+                
+<span data-lang="en">Production Support</span>
+<span data-lang="tr">Tasarım Geliştirme Desteği</span>
+              </div>
+              <p class="sn-sub">
+
+                
+<span data-lang="en">Independent technical problem solving and coordination using planning/tracking tools and whiteboard workflows.</span>
+<span data-lang="tr">Teknik problem çözme ve planlama/takip araçları ile koordinasyon; whiteboard akışları kullanarak iş süreçlerini yönetiyorum.</span>
+              </p>
             </div>
 
           </div>
@@ -1146,7 +1479,12 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
     <div class="section-label reveal">
       <span class="section-label-num">04</span>
       <div class="section-label-line"></div>
-      <span class="section-label-text">// project_graph</span>
+      <span class="section-label-text">// 
+
+<span data-lang="en">project_graph</span>
+<span data-lang="tr">projeler</span>
+
+      </span>
       <div class="section-label-line" style="max-width:60px"></div>
     </div>
     <div class="projects-grid">
@@ -1162,7 +1500,11 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
         </div>
         <div class="pn-body">
           <span class="pn-type" style="color:var(--blue);border-color:rgba(74,158,255,.35);background:rgba(74,158,255,.07)">TIME SOUL</span>
-          <div class="pn-desc">Action combat with souls-like mechanics and parkour. Built movement, lock-on targeting, air combos, and character customization.</div>
+          <div class="pn-desc">
+            
+<span data-lang="en">Action combat with souls-like mechanics and parkour. Built movement, lock-on targeting, air combos, and character customization.</span>
+<span data-lang="tr">Souls-like mekaniklere ve parkour sistemine sahip action combat. Movement, targeting, air combo sistemleri ve özelleştirme mekanikleriyle geliştirdim.</span>
+</div>
           <div class="pn-footer">
             <div class="pn-techs">
 <span class="pn-tech">Action</span>
@@ -1232,7 +1574,11 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
         </div>
         <div class="pn-body">
           <span class="pn-type" style="color:var(--red);border-color:rgba(143, 59, 59, 0.35);background:rgba(147, 75, 75, 0.07)">U.N OWEN WAS HER</span>
-          <div class="pn-desc">Third-person action shooter with atmospheric horror. Worked on boss AI, bullet-hell patterns, and the save system.</div>
+          <div class="pn-desc">
+
+<span data-lang="en">Third-person action shooter with atmospheric horror. Worked on boss AI, bullet-hell patterns, and the save system.</span>
+<span data-lang="tr">Atmosferik korku öğeleri içeren üçüncü şahıs action shooter geliştirdim. Boss AI, bullet-hell pattern sistemleri ve save sistemi üzerinde çalıştım.</span>
+          </div>
           <div class="pn-footer">
             <div class="pn-techs"><span class="pn-tech">Horror</span>
 <span class="pn-tech">Shooter</span>
@@ -1302,7 +1648,11 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
         </div>
         <div class="pn-body">
           <span class="pn-type" style="color:var(--yellow);border-color:rgba(255,209,102,.35);background:rgba(255,209,102,.07)">OLYMPUS OF THE HEAVENS</span>
-          <div class="pn-desc">Isometric co-op ARPG with boss rush gameplay. Built equipment, crafting, procedural gen, co-op networking, and random seed systems.</div>
+          <div class="pn-desc">
+
+<span data-lang="en">Isometric co-op ARPG with boss rush gameplay. Built equipment, crafting, procedural gen, co-op networking, and random seed systems.</span>
+<span data-lang="tr">Boss rush izometrik co-op ARPG geliştirdim. Equipment sistemi, crafting, procedural gen, co-op networking ve random seed sistemleri tasarladım.</span>
+          </div>
           <div class="pn-footer">
             <div class="pn-techs"><span class="pn-tech">Co-op</span>
 <span class="pn-tech">ARPG</span>
@@ -1383,7 +1733,14 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
           <span class="pn-type" style="color:var(--red);border-color:rgba(143, 59, 59, 0.35);background:rgba(147, 75, 75, 0.07)">Blood Garden</span>
 
 
-          <div class="pn-desc">Stylized endless runner with runtime procedural level streaming, object pooling, and dynamic difficulty scaling. Play Store.</div>
+          <div class="pn-desc">
+
+<span data-lang="en">Action combat, built around stamina-driven melee combat emphasizing timing and mechanic.
+   Features pattern-based enemy AI, elemental damage type.</span>
+
+<span data-lang="tr">Stamina odaklı melee combat üzerine kurulu action combat geliştirdim. zamanlama ve mekanik kullanımını, enemy AI ve damage type sistemleri.</span>
+
+          </div>
           <div class="pn-footer">
             <div class="pn-techs"><span class="pn-tech">Action</span>
 <span class="pn-tech">Souls-like</span>
@@ -1459,7 +1816,11 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
           <span class="pn-type" style="color:rgba(244, 144, 68, 0.802);border-color:rgba(143, 119, 59, 0.35);background:rgba(147, 113, 75, 0.07)">Nerf This!</span>
 
 
-          <div class="pn-desc">Stylized endless runner with runtime procedural level streaming, object pooling, and dynamic difficulty scaling. Play Store.</div>
+          <div class="pn-desc">
+            
+<span data-lang="en">Third-person combat game that combines real-time action with cards abilities deckbuilding strategy in a roguelike dungeon format. </span>
+<span data-lang="tr">Üçüncü şahıs kombat oyunu; real-time aksiyon ile kart yetenekleri, deck oluşturma stratejisi ve roguelike dungeon yapısılı sisteme sahip.</span>
+            </div>
           <div class="pn-footer">
             <div class="pn-techs"><span class="pn-tech">Roquelike</span>
 <span class="pn-tech">Cards</span>
@@ -1535,7 +1896,12 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
           <span class="pn-type" style="color:rgba(230, 255, 210, 0.597);border-color:rgba(97, 143, 59, 0.35);background:rgba(112, 147, 75, 0.07)">SkySmith Dragons</span>
 
 
-          <div class="pn-desc">Stylized endless runner with runtime procedural level streaming, object pooling, and dynamic difficulty scaling. Play Store.</div>
+          <div class="pn-desc">
+
+<span data-lang="en">Sandbox survival experience focused on dragon taming, crafting, and floating islands exploration. capture and raise wild dragons, gather, and fly. </span>
+<span data-lang="tr">Ejderha evcilleştirme, crafting ve uçan adalar üzerine sandbox survival oyunu. ejderha yakalayıp büyütme, kaynak toplama ve uçma mekanikleri içerir.</span>
+
+          </div>
           <div class="pn-footer">
             <div class="pn-techs"><span class="pn-tech">Survival</span>
 <span class="pn-tech">Sandbox</span>
@@ -1607,7 +1973,11 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
         </div>
         <div class="pn-body">
           <span class="pn-type" style="color:var(--green);border-color:rgba(77,219,135,.35);background:rgba(77,219,135,.07)">Royal Jump</span>
-          <div class="pn-desc">Stylized endless runner with runtime procedural level streaming, object pooling, and dynamic difficulty scaling. Play Store.</div>
+          <div class="pn-desc">
+            
+<span data-lang="en">Mobile platformer targeting Android. vertical levels where momentum and timing determine progress, built around a physics-driven movement model.</span>
+<span data-lang="tr">Android için mobil platformer. Dikey seviyelerden oluşur; ilerleme momentum ve zamanlamaya ve fizik tabanlı bir movement modeli üzerine kuruludur.</span>
+          </div>
           <div class="pn-footer">
             <div class="pn-techs">
 <span class="pn-tech">Platform</span>
@@ -1681,7 +2051,11 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
           <span class="pn-type" style="color:rgba(237, 148, 207, 0.73);border-color:rgba(143, 59, 121, 0.35);background:rgba(147, 75, 123, 0.07)">Real Cat Runner</span>
 
 
-          <div class="pn-desc">Stylized endless runner with runtime procedural level streaming, object pooling, and dynamic difficulty scaling. Play Store.</div>
+          <div class="pn-desc">
+
+            <span data-lang="en">Stylized endless runner with runtime procedural level streaming, object pooling, and dynamic difficulty scaling. Play Store.</span>
+<span data-lang="tr">Stilize endless runner geliştirdim. runtime procedural level, object pooling ve dinamik difficulty scaling sistemleri içeriyor. Play Store’da yayınladım.</span>
+          </div>
           <div class="pn-footer">
             <div class="pn-techs">
 <span class="pn-tech">Platform</span>
@@ -1760,7 +2134,13 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
           <span class="pn-type" style="color:rgba(161, 167, 255, 0.671);border-color:rgba(59, 88, 143, 0.35);background:rgba(75, 100, 147, 0.07)">Monster Girl Wave</span>
 
 
-          <div class="pn-desc">Stylized endless runner with runtime procedural level streaming, object pooling, and dynamic difficulty scaling. Play Store.</div>
+          <div class="pn-desc">
+
+
+<span data-lang="en">Fast-paced top-down survival game for Android. Endless waves of procedurally composed enemies.
+  customize your build from a large weapon pool.</span>
+<span data-lang="tr">Android için hızlı tempolu top-down survival oyunu. Sonsuz dalga gelen düşmanlar içerir. Geniş bir silah havuzundan seçim yaparak build’ini özelleştirne.</span>
+          </div>
           <div class="pn-footer">
             <div class="pn-techs"><span class="pn-tech">WaveRush</span>
 <span class="pn-tech">Android</span></div>
@@ -1898,7 +2278,12 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
     <div class="section-label reveal">
       <span class="section-label-num">03</span>
       <div class="section-label-line"></div>
-      <span class="section-label-text">// gallery_node</span>
+      <span class="section-label-text">// 
+
+<span data-lang="en">gallery_node</span>
+<span data-lang="tr">galeri</span>
+
+      </span>
       <div class="section-label-line" style="max-width:60px"></div>
     </div>
 
@@ -1906,8 +2291,8 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
       <button class="gtab active" data-filter="all">// all</button>
       <button class="gtab" data-filter="game">// 3D Character</button>
       <button class="gtab" data-filter="3d">// 3D Environment</button>
-      <button class="gtab" data-filter="web">// web_app</button>
-      <button class="gtab" data-filter="design">// graphic_design</button>
+      <button class="gtab" data-filter="web">// Web & App</button>
+      <button class="gtab" data-filter="design">// Graphic Design</button>
 
       <a href="https://www.artstation.com/kubrik" target="_blank" class=" cn-link1">
         <div class="cn-link1-icon" style="color:rgb(125, 88, 218)"><i class="bi bi-brush"></i></div>
@@ -3419,7 +3804,11 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
     <div class="section-label reveal">
       <span class="section-label-num">05</span>
       <div class="section-label-line"></div>
-      <span class="section-label-text">// output_pins</span>
+      <span class="section-label-text">// 
+
+<span data-lang="en">output_pins</span>
+<span data-lang="tr">iletişim</span>
+      </span>
       <div class="section-label-line" style="max-width:60px"></div>
     </div>
     <div class="contact-inner">
@@ -3429,11 +3818,22 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
           <div class="pin exec" style="background:#fff"></div>
       
           
-          <span class="cn-title">CONTACT</span>
-          <span class="cn-sub">// open for work</span>
+          <span class="cn-title">
+            <span data-lang="en">CONTACT</span>
+<span data-lang="tr">İLETİŞİM</span>
+          </span>
+          <span class="cn-sub">// 
+
+<span data-lang="en">open for work</span>
+<span data-lang="tr">open for work</span>
+          </span>
         </div>
         <div class="cn-body">
-          <p class="cn-desc">Open to studio roles, contract work, and long-term collaboration in Unreal Engine, C++, 3D art, and web development. Every message is an input pin, connect below.</p>
+          <p class="cn-desc">
+
+<span data-lang="en">Open to studio roles, contract work, and long-term collaboration in App, Game, C++, 3D art, and web development.</span>
+<span data-lang="tr">App, Oyun, C++, 3D ve web geliştirme alanlarında stüdyo, contract işler ve uzun vadeli işlerinde çalışmaya hazırım.</span>
+          </p>
           <div class="cn-links">
             <a href="mailto:beraatyetkin@gmail.com" target="_blank" class="cn-link">
               <div class="cn-link-icon" style="color:var(--blue)"><i class="bi bi-envelope"></i></div>
@@ -3448,10 +3848,13 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
               <span class="cn-link-arrow">›</span>
             </a>
 
+    
+
+
             <a href="https://github.com/kubrvk" target="_blank" class="cn-link">
-              <div class="cn-link-icon" style="color:var(--orange)"><i class="bi bi-github"></i></div>
+              <div class="cn-link-icon" style="color:var(--green)"><i class="bi bi-github"></i></div>
               <span class="cn-link-label">// github</span>
-              <span class="cn-link-val" style="color:var(--orange)">github.com/kubrvk</span>
+              <span class="cn-link-val" style="color:var(--green)">github.com/kubrvk</span>
               <span class="cn-link-arrow">›</span>
             </a>
             <a href="https://www.artstation.com/kubrik" target="_blank" class="cn-link">
@@ -3460,10 +3863,33 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
               <span class="cn-link-val" style="color:rgb(132, 88, 218)">artstation.com/Kubrik</span>
               <span class="cn-link-arrow">›</span>
             </a>
+            
+            
+            <a href="https://kubrvk.github.io/portfolio/" target="_blank" class="cn-link">
+              <div class="cn-link-icon" style="color:rgb(170, 99, 37)"><i class="bi bi-file-earmark-richtext"></i></div>
+              <span class="cn-link-label">// portfolio</span>
+              <span class="cn-link-val" style="color:rgb(171, 98, 50)">kubrvk.github.io/portfolio</span>
+              <span class="cn-link-arrow">›</span>
+            </a>
+            
+
+
+
+
+            <a href="https://www.linkedin.com/in/kubrivk/" target="_blank" class="cn-link">
+              <div class="cn-link-icon" style="color:rgba(133, 182, 211, 0.7)"><i class="bi bi-linkedin"></i> </div>
+              <span class="cn-link-label">// linkedin</span>
+              <span class="cn-link-val" style="color:rgba(124, 175, 204, 0.7)">linkedin.com/in/kubrivk</span>
+              <span class="cn-link-arrow">›</span>
+            </a>
+            
+    
+            
+
             <a href="https://kubrik.itch.io" target="_blank" class="cn-link">
               <div class="cn-link-icon" style="color:var(--red)"><i class="bi bi-controller"></i></div>
               <span class="cn-link-label">// itch.io</span>
-              <span class="cn-link-val" style="color:var(--red)">Kubrick.itch.io</span>
+              <span class="cn-link-val" style="color:var(--red)">kubrick.itch.io</span>
               <span class="cn-link-arrow">›</span>
             </a>
             <a href="https://play.google.com/store/apps/dev?id=6320705170911123485" target="_blank" class="cn-link">
@@ -3491,6 +3917,18 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
               <span class="cn-link-val" style="color:rgba(153, 218, 255, 0.70)">Kubrick</span>
               <span class="cn-link-arrow">›</span>
             </a>
+
+          
+            
+          
+            
+            
+            <a href="#" target="_blank" class="cn-link">
+              <div class="cn-link-icon" style="color:rgba(93, 116, 157, 0.7)"><i class="bi bi-geo-alt"></i></div>
+              <span class="cn-link-label">// location</span>
+              <span class="cn-link-val" style="color:rgba(109, 133, 186, 0.7)">Istanbul / Türkiye</span>
+              <span class="cn-link-arrow">›</span>
+            </a>
           </div>
         </div>
       </div>
@@ -3508,7 +3946,7 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
 
 </main>
  
-<footer>
+<footer class="footerdis">
   <span class="footer-copy">// Kubrick PORTFOLIO, 2026</span>
   <span class="footer-ver">v5.7.4, Unreal Engine</span>
 </footer>
@@ -3537,8 +3975,12 @@ document.querySelectorAll('a,button,.skill-node,.project-node,.gallery-item,.gal
   el.addEventListener('mouseenter',()=>{cursor.style.width='32px';cursor.style.height='32px';});
   el.addEventListener('mouseleave',()=>{cursor.style.width='20px';cursor.style.height='20px';});
 });*/
+
+
+
+
  
-/* BACKGROUND CANVAS */
+/* BACKGROUND CANVAS 
 const bgCanvas = document.getElementById('bg-canvas');
 const bgCtx = bgCanvas.getContext('2d');
 let W, H;
@@ -3567,7 +4009,11 @@ function drawBg(){
   }
 }
 window.addEventListener('resize',()=>{resizeBg();drawBg();});
-resizeBg();drawBg();
+resizeBg();drawBg(); 
+*/
+
+
+
  
 /* ANIMATED WIRE CONNECTORS */
 const wireCanvas=document.createElement('canvas');
@@ -3628,7 +4074,7 @@ const heroIO=new IntersectionObserver(entries=>{
   if(!entries[0].isIntersecting)return;
   setTimeout(()=>countUp(document.getElementById('stat-projects'),9),200);
   setTimeout(()=>countUp(document.getElementById('stat-years'),9),400);
-  setTimeout(()=>countUp(document.getElementById('stat-skills'),100),600);
+  setTimeout(()=>countUp(document.getElementById('stat-skills'),99),600);
   heroIO.disconnect();
 },{threshold:0.3});
 const heroSection=document.getElementById('hero');
@@ -3841,6 +4287,46 @@ function initGallery() {
 window.addEventListener('resize', layoutGallery);
 initGallery();
 
+
+
+    
+function setLanguage(lang){
+
+document.documentElement.lang = lang;
+
+document.querySelectorAll("[data-lang]").forEach(el=>{
+    el.style.display = "none";
+});
+
+document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el=>{
+    el.style.display = "";
+});
+
+}
+
+
+
+
+
+function changeLanguage(lang){
+
+const url = new URL(window.location);
+
+url.searchParams.set("lang", lang);
+
+history.replaceState({}, "", url);
+
+setLanguage(lang);
+
+}
+
+
+
+const params = new URLSearchParams(window.location.search);
+
+setLanguage(
+    params.get("lang") || "tr"
+);
 
 </script>
 
