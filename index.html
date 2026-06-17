@@ -95,11 +95,13 @@ section{padding:80px 0}
  
 /* HERO */
 #hero{min-height:calc(100vh - 56px);display:flex;align-items:center;position:relative;overflow:hidden}
-.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%}
+.hero-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;width:100%}
 .hero-left{position:relative}
 .hero-eyebrow{font-family:var(--mono);font-size:12px;color:var(--blue);letter-spacing:3px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
 .hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--blue)}
-.hero-name{font-family:var(--head);font-size:clamp(32px,4vw,52px);font-weight:700;color:#fff;line-height:1.1;letter-spacing:2px;margin-bottom:8px}
+
+.hero-name{font-family:var(--head);font-size:clamp(32px,4vw,42px);font-weight:600;color:#c7d2ed;line-height:1.1;letter-spacing:2px;margin-bottom:8px}
+
 .hero-name span{color:var(--blue)}
 .hero-roles{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 24px}
 .hero-role{font-family:var(--mono);font-size:12px;padding:5px 12px;border-radius:3px;border:1px solid;letter-spacing:1px}
@@ -119,7 +121,10 @@ section{padding:80px 0}
 .hero-node-wrap{display:flex;justify-content:center;align-items:center;position:relative}
 .hero-big-node{background:var(--panel);border:1px solid var(--blue);border-radius:8px;width:100%;max-width:420px;box-shadow:0 0 40px rgba(74,158,255,.12),inset 0 0 30px rgba(74,158,255,.03);overflow:hidden}
 .hbn-header{background:linear-gradient(90deg,rgba(74,158,255,.15),rgba(74,158,255,.05));border-bottom:1px solid rgba(74,158,255,.3);padding:10px 16px;display:flex;align-items:center;gap:10px}
+
 .hbn-icon{width:28px;height:28px;border-radius:4px;background:rgba(7, 15, 26, 0.446);border:1px solid rgba(74,158,255,.3);display:flex;align-items:center;justify-content:center;font-size:14px}
+
+
 .hbn-title{font-family:var(--head);font-size:14px;font-weight:000;color:#fff;letter-spacing:1px}
 .hbn-sub{font-family:var(--mono);font-size:12px;color:var(--blue);margin-left:auto}
 .hbn-body{padding:16px}
@@ -394,6 +399,20 @@ data-lang{
   }
 }
 
+
+.hbn-icon-avatar{width:110px;height:110px;border-radius:50%;background:rgba(7, 15, 26, 0.446);border:1px solid rgba(74,158,255,.3);
+
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:14px
+}
+
+.hero-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 </style>
  
 
@@ -487,26 +506,6 @@ data-lang{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
 <!-- HERO -->
@@ -519,7 +518,13 @@ data-lang{
 
       <div class="hero-left reveal">
         <div class="hero-eyebrow">Event_BeginPlay()</div>
-        <h1 class="hero-name">Beraat Yetkin<br><div  style="font-size:clamp(32px,2vw,52px)"><span data-lang="en">PORTFOLIO</span><span data-lang="tr">PORTFOLYO</span></div></h1>
+
+        <div class="hero-name-row">
+
+        <div class="hbn-icon-avatar"><img src="img/pp.png" style="height:96px; border-radius: 50%; " ></div>
+        <h1 class="hero-name">Beraat Yetkin<br><div  style="font-size:clamp(22px,2vw,32px); font-weight: 100;"><span data-lang="en">PORTFOLIO</span><span data-lang="tr">PORTFOLYO</span></div></h1>
+    
+      </div>
         <div class="hero-roles">
           <span class="hero-role role-blue">Game Developer</span>
           <span class="hero-role role-orange">Full-Stack Web</span>
