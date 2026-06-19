@@ -115,9 +115,13 @@ section{padding:80px 0}
 .btn{font-family:var(--mono);font-size:12px;padding:10px 24px;border-radius:4px;text-decoration:none;letter-spacing:1px;transition:all .2s;cursor:pointer;display:inline-flex;align-items:center;gap:8px;border:1px solid}
 .btn-primary{background:rgba(74, 158, 255, 0.081);border-color:rgba(74, 158, 255, 0.344);color:var(--blue)}
 .btn-primary:hover{background:rgba(74, 158, 255, 0.151);box-shadow:0 0 20px rgba(74, 158, 255, 0.109)}
+
+
 .btn-ghost{background:transparent;border-color:var(--border-bright);color:var(--text-mid)}
 .btn-ghost:hover{border-color:var(--text-mid);color:var(--text)}
- 
+
+
+
 .hero-node-wrap{display:flex;justify-content:center;align-items:center;position:relative}
 .hero-big-node{background:var(--panel);border:1px solid var(--blue);border-radius:8px;width:100%;max-width:420px;box-shadow:0 0 40px rgba(74,158,255,.12),inset 0 0 30px rgba(74,158,255,.03);overflow:hidden}
 .hbn-header{background:linear-gradient(90deg,rgba(74,158,255,.15),rgba(74,158,255,.05));border-bottom:1px solid rgba(74,158,255,.3);padding:10px 16px;display:flex;align-items:center;gap:10px}
@@ -370,7 +374,7 @@ footer{border-top:1px solid var(--border);padding:20px 40px;display:flex;justify
   .projects-grid{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr}
   .gallery-grid{columns:2}
-  .gallery-grid-mini{columns:2}
+  .gallery-grid-mini{columns:}
   footer{flex-direction:column;gap:8px;text-align:center}
 }
 
@@ -531,6 +535,7 @@ font-size:14px
           <span class="hero-role role-green">3D Artist</span>
           <span class="hero-role role-purple">Designer</span>
         </div>
+     
         <p class="hero-desc">
           <span data-lang="en">Developer and 3D artist with 9 years of web experience, 7 years in 3D art, and 5 years in Unreal C++.
             Shipped multiple games. Handles creative and technical tasks in the same pipeline.</span>
@@ -1500,8 +1505,274 @@ font-size:14px
       </span>
       <div class="section-label-line" style="max-width:60px"></div>
     </div>
-    <div class="projects-grid">
+    
+    <style>
+
+       
+.btn-ghostT{background:transparent;border-color:var(--border-bright);color:var(--text-mid); width: 100%;}
+.btn-ghostT:hover{border-color:var(--text-mid);color:var(--text)}
  
+    </style>
+
+    <a href="#gallery" style="margin-top: 25px; margin-bottom: 10px;
+    color:rgba(82, 225, 189, 0.5);border-color:rgba(39, 181, 150, 0.207);background:rgba(37, 133, 112, 0.07)
+    " class="btn btn-ghostT portfoliobase">
+      <img class="imagecolors" style="filter: invert(54%) sepia(97%) saturate(600%) hue-rotate(140deg) ;" src="img/react.png" height="20px">
+  
+      <span data-lang="en">REACT WEB & APP PROJECTS</span>
+      <span data-lang="tr">REACT WEB & APP ÇALISMALARI</span></a>
+
+  
+        <div class="projects-grid">
+
+  <!--vvvv REACTSs vvvv-->
+
+
+          <div class="project-node reveal" style="border-color:rgba(74, 255, 110, 0.25)">
+            <div class="pn-thumb" style="color:var(--blue)">
+              <div class="pn-grid-bg"></div> 
+              <img class="projectimage" style="  width: 100%; 
+              height: 100%; 
+              object-fit: cover;
+              image-rendering: center;
+              object-position: 50% 40%;" src="img/galeri/a2.PNG"/>
+            </div>
+            <div class="pn-body">
+              <span class="pn-type" style="color:rgba(74, 255, 171, 0.5);border-color:rgba(74, 255, 171, 0.35);background:rgba(54, 198, 140, 0.07)">BARCODE TRACK</span>
+              <div class="pn-desc">
+                
+    <span data-lang="en">Barcode-based product and stock tracking app built with React Native for Android and web.
+      </span>
+    <span data-lang="tr">Souls-like mekaniklere ve parkour sistemine sahip action combat. Movement, targeting, air combo sistemleri ve özelleştirme mekanikleriyle geliştirdim.</span>
+    </div>
+              <div class="pn-footer">
+                <div class="pn-techs">
+    <span class="pn-tech">Android</span>
+    <span class="pn-tech">React</span>
+    </div>
+                <a href="https://github.com/kubrvk/barkodtakip" target="_blank" class="pn-link1">→ Git</a>
+                <a href="https://barkodtakips.web.app/" target="_blank" class="pn-link">→ Live Demo</a>
+              </div>
+    
+             
+    
+            </div>
+            
+            <div class="gallery-grid-mini" style="columns:3;  padding-left: 10px; padding-right: 10px; padding-bottom: 10px;">
+     
+              <!--vvvv WEB Gallery, TIME SOUL vvvv-->
+              <div class="gallery-item-mini reveal" style=" height:90px;"  data-title="TIME SOUL, Combat System" data-tags="UE5,C++,Action">
+              <div class="gallery-placeholder">
+              <div class="pn-grid-bg"></div>
+              <div class="pn-grid-bg">
+              <img class="fill" src="img/galeri/a1.PNG"/></div></div>
+              <div class="gallery-overlay">
+              <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">React</span>
+             </div></div></div>
+              
+              <!--vvvv WEB Gallery, TIME SOUL vvvv-->
+              <div class="gallery-item-mini reveal" style=" height:90px;"  data-title="TIME SOUL, Combat System" data-tags="UE5,C++,Action">
+                <div class="gallery-placeholder">
+                <div class="pn-grid-bg"></div>
+                <div class="pn-grid-bg">
+                <img class="fill"   src="img/galeri/a2.PNG"/></div></div>
+                <div class="gallery-overlay">
+                <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">React</span>
+             </div></div></div>
+                
+                     <!--vvvv WEB Gallery, TIME SOUL vvvv-->
+                     <div class="gallery-item-mini reveal"  style=" height:90px;"  data-title="TIME SOUL, Combat System" data-tags="UE5,C++,Action">
+                      <div class="gallery-placeholder">
+                      <div class="pn-grid-bg"></div>
+                      <div class="pn-grid-bg">
+                      <img class="fill" src="img/galeri/a3.PNG"/></div></div>
+                      <div class="gallery-overlay">
+                      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">React</span>
+                   </div></div></div>
+ 
+            </div>
+          </div>
+    
+
+
+          
+          <div class="project-node reveal" style="border-color:rgba(74, 255, 237, 0.25)">
+            <div class="pn-thumb" style="color:var(--blue)">
+              <div class="pn-grid-bg"></div> 
+              <img class="projectimage" style="  width: 100%; 
+              height: 100%; 
+              object-fit: cover;
+              image-rendering: center;
+              object-position: 50% 50%;" src="img/galeri/hotel1.PNG"/>
+            </div>
+            <div class="pn-body">
+              <span class="pn-type" style="color:rgba(74, 255, 234, 0.35);border-color:rgba(74, 255, 246, 0.35);background:rgba(74, 255, 228, 0.07)">ANTALYA HOTEL SYSTEMS</span>
+              <div class="pn-desc">
+                
+    <span data-lang="en">Hotel management and reservation designed for publishing rooms, managing hotel, and operations.
+      </span>
+    <span data-lang="tr">Souls-like mekaniklere ve parkour sistemine sahip action combat. Movement, targeting, air combo sistemleri ve özelleştirme mekanikleriyle geliştirdim.</span>
+    </div>
+              <div class="pn-footer">
+                <div class="pn-techs">
+    <span class="pn-tech">React</span>
+    <span class="pn-tech">JS</span>
+    </div>
+                <a href="https://github.com/kubrvk/AntalyaHotelSystems" target="_blank" class="pn-link1">→ Git</a>
+                <a href="https://antalyahotelsystems.firebaseapp.com/" target="_blank" class="pn-link">→ Live Demo</a>
+              </div>
+    
+             
+    
+            </div>
+            
+            <div class="gallery-grid-mini" style="columns:2; padding-left: 10px; padding-right: 10px; padding-bottom: 10px;">
+     
+              <!--vvvv WEB Gallery, TIME SOUL vvvv-->
+              <div class="gallery-item-mini reveal" data-title="TIME SOUL, Combat System" data-tags="UE5,C++,Action">
+              <div class="gallery-placeholder">
+              <div class="pn-grid-bg"></div>
+              <div class="pn-grid-bg">
+              <img class="fill" src="img/galeri/hotel1.PNG"/></div></div>
+              <div class="gallery-overlay">
+              <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">React</span>
+             </div></div></div>
+              
+              <!--vvvv WEB Gallery, TIME SOUL vvvv-->
+              <div class="gallery-item-mini reveal" data-title="TIME SOUL, Combat System" data-tags="UE5,C++,Action">
+                <div class="gallery-placeholder">
+                <div class="pn-grid-bg"></div>
+                <div class="pn-grid-bg">
+                <img class="fill" src="img/galeri/hotel2.PNG"/></div></div>
+                <div class="gallery-overlay">
+                <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">React</span>
+             </div></div></div>
+                
+   
+ 
+            </div>
+          </div>
+    
+
+
+
+
+
+          <div class="project-node reveal" style="border-color:rgba(63, 189, 139, 0.25)">
+            <div class="pn-thumb" style="color:var(--blue)">
+              <div class="pn-grid-bg"></div> 
+              <img class="projectimage" style="  width: 100%; 
+              height: 100%; 
+              object-fit: cover;
+              image-rendering: center;
+              object-position: 50% 50%;" src="img/galeri/ticaret1.PNG"/>
+            </div>
+            <div class="pn-body">
+              <span class="pn-type" style="color:rgba(131, 202, 187, 0.558);border-color:rgba(81, 168, 165, 0.35);background:rgba(55, 168, 128, 0.07)">E-Ticaret Depo</span>
+              <div class="pn-desc">
+                
+    <span data-lang="en">E-commerce and warehouse management with both frontend sales features and backend stock control.
+
+     </span>
+    <span data-lang="tr">Souls-like mekaniklere ve parkour sistemine sahip action combat. Movement, targeting, air combo sistemleri ve özelleştirme mekanikleriyle geliştirdim.</span>
+    </div>
+              <div class="pn-footer">
+                <div class="pn-techs">
+    <span class="pn-tech">React</span>
+    <span class="pn-tech">Firebase</span>
+    </div>
+                <a href="https://github.com/kubrvk/eticaretdepo" target="_blank" class="pn-link1">→ Git</a>
+                <a href="https://eticaretdepo.web.app" target="_blank" class="pn-link">→ Live Demo</a>
+              </div>
+    
+             
+    
+            </div>
+            
+            <div class="gallery-grid-mini" style="columns:2; padding-left: 10px; padding-right: 10px; padding-bottom: 10px;">
+     
+              <!--vvvv WEB Gallery, TIME SOUL vvvv-->
+              <div class="gallery-item-mini reveal" data-title="TIME SOUL, Combat System" data-tags="UE5,C++,Action">
+              <div class="gallery-placeholder">
+              <div class="pn-grid-bg"></div>
+              <div class="pn-grid-bg">
+              <img class="fill" src="img/galeri/ticaret1.PNG"/></div></div>
+              <div class="gallery-overlay">
+              <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">React</span>
+             </div></div></div>
+              
+              <!--vvvv WEB Gallery, TIME SOUL vvvv-->
+              <div class="gallery-item-mini reveal" data-title="TIME SOUL, Combat System" data-tags="UE5,C++,Action">
+                <div class="gallery-placeholder">
+                <div class="pn-grid-bg"></div>
+                <div class="pn-grid-bg">
+                <img class="fill" src="img/galeri/ticaret2.PNG"/></div></div>
+                <div class="gallery-overlay">
+                <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">React</span>
+             </div></div></div>
+                
+   
+ 
+            </div>
+          </div>
+    
+
+
+
+
+
+  <!--vvvv REACTSs vvvv-->
+
+        </div>
+
+      <style>
+
+ .imagecolor1s{
+ 
+  filter: invert(54%) sepia(97%) saturate(600%) hue-rotate(170deg) ;
+
+
+}
+
+      </style>
+
+        <a href="#gallery" class="btn btn-ghostT portfoliobase" style="margin-top: 25px; margin-bottom: 10px;
+         color:rgba(74, 167, 255, 0.728);border-color:rgba(74, 134, 255, 0.35);background:rgba(54, 143, 198, 0.07)
+        "><img class="imagecolors" style="filter: invert(54%) sepia(97%) saturate(600%) hue-rotate(170deg) ;" src="img/unreal-engine.png" height="22px">
+          <span data-lang="en">UNREAL GAME PROJECTS</span>
+          <span data-lang="tr">UNREAL OYUN PROJELERI</span></a>
+  
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="projects-grid">
+      
       <div class="project-node reveal" style="border-color:rgba(74,158,255,.25)">
         <div class="pn-thumb" style="color:var(--blue)">
           <div class="pn-grid-bg"></div> 
@@ -1579,6 +1850,13 @@ font-size:14px
         </div>
 
       </div>
+
+
+
+
+
+
+
  
       <div class="project-node reveal" style="border-color:rgba(252, 132, 156, 0.25)">
         <div class="pn-thumb" style="color:var(--purple)">
