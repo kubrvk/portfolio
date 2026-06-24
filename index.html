@@ -74,7 +74,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:16
 }
  
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,13,18,.88);border-bottom:1px solid var(--border);backdrop-filter:blur(14px);padding:0 40px;height:56px;display:flex;align-items:center}
-.nav-logo{font-family:var(--head);font-size:14px;font-weight:500;color:#fff;letter-spacing:2px;margin-right:auto;display:flex;align-items:center;gap:8px}
+.nav-logo{
+  text-decoration: none;
+  font-family:var(--head);font-size:14px;font-weight:500;color:#fff;letter-spacing:2px;margin-right:auto;display:flex;align-items:center;gap:8px}
 .nav-logo-bracket{color:var(--blue);font-size:18px;font-weight:300;}
 .nav-links{display:flex;gap:4px}
 .nav-link{font-family:var(--mono);font-size:12px;color:var(--text-dim);padding:6px 14px;border-radius:3px;text-decoration:none;letter-spacing:1px;transition:color .2s,background .2s;border:1px solid transparent}
@@ -437,8 +439,8 @@ font-size:14px
 <canvas id="bg-canvas"></canvas>
  <button class="hbn-icon" onclick="applyTheme()">.</button>
 <nav>
-  <div class="nav-logo">
-    <span class="nav-logo-bracket">{</span>Beraat Yetkin<span class="nav-logo-bracket">}</span>
+  <div class="nav-logo" >
+    <a href="#hero"     class="nav-logo "> <span  class="nav-logo-bracket">{</span>Beraat Yetkin<span class="nav-logo-bracket">}</span></a>
     <button class="hbn-icon" onclick="changeLanguage('en')"><img src="img/en.png" height="20px"></button>
     <button class="hbn-icon" onclick="changeLanguage('tr')"><img src="img/tr.png" height="20px"></button>
     <button class="hbn-icon1" onclick="applyTheme()" style="position: absolute; background-color: transparent; border-radius: 0px; border-color: transparent;">.</button>
@@ -537,9 +539,9 @@ font-size:14px
         </div>
      
         <p class="hero-desc">
-          <span data-lang="en">Developer and 3D artist with 9 years of web experience, 7 years in 3D art, and 5 years in Unreal C++.
-            Shipped multiple games. Handles creative and technical tasks in the same pipeline.</span>
-            <span data-lang="tr">9 yıllık web geliştirme, 7 yıllık 3D sanat ve 5 yıllık C++ deneyimine sahip developer ve 3D tasarımcıyım.
+          <span data-lang="en">Developer and 3D artist with 9 years of App-Web experience, 7 years in 3D art, and 5 years in Unreal C++.
+            Shipped multiple mobile app and games. Handles creative and technical tasks in the same pipeline.</span>
+            <span data-lang="tr">9 yıllık mobil uygulama ve web geliştirme, 7 yıllık 3D tasarım ve 5 yıllık C++ deneyimine sahip Developer ve 3D tasarımcıyım.
               Birden fazla uygulama ve oyunu yayınladım. Aynı projede tasarım ve teknik süreçleri yapabiliyorum.</span>
           
           
@@ -720,14 +722,16 @@ font-size:14px
       <div class="about-text reveal">
       
 
-<span data-lang="en">  <p>Developer and <span>3D artist</span> with 9 years of web development experience, 7 years in 3D art, and 5 years working with <span>Unreal Engine C++</span>.</p>
-<p>I have shipped multiple games and delivered work across game development, 3D art, and web applications. My background combines <span>programming, technical art, and production work</span>, which allows me to handle both creative and technical tasks in the same project.</p>
-<p>Open to studio roles, contract work, and long-term collaboration in <span>Unreal Engine, C++, 3D, and web development.</span></p></span>
-<span data-lang="tr"><p>9 yıllık web geliştirme, 7 yıllık 3D sanat ve 5 yıllık <span>Unreal Engine C++</span> deneyimine sahip bir geliştirici ve 3D sanatçısıyım.</p>
+<span data-lang="en"><p>Developer and 3D Artist with 9 years of <span>Mobile AppWeb</span> development experience 7 years in <span>3D modeling</span>, and 5 years code working with <span>Unreal Engine C++</span>.</p>
+<p>I have shipped multiple mobile app, games and delivered work across game development, 3D art, and App-Web applications.<br>My background combines <span>programming, technical art, and production</span>, which allows me to handle both creative and technical tasks in the same project.</p>
+<p>Open to studio roles, contract work, and long-term collaboration in <span>Unreal Engine, C++, 3D, and App-Web development.</span></p></span>
 
-<p>Birden fazla oyun yayınladım ve oyun geliştirme, 3D sanat ve web uygulamaları alanlarında çalışmalar gerçekleştirdim. Geçmişim <span>programlama, teknik sanat ve prodüksiyon süreçlerini</span> kapsıyor; bu da aynı proje içinde hem yaratıcı hem de teknik görevleri üstlenmemi sağlıyor.</p>
+<span data-lang="tr"><p>9 yıllık <span>Uygulama ve Web</span> geliştirme, 7 yıllık <span>3D Tasarım</span> ve 5 yıllık <span>Unreal Engine C++</span> deneyimine sahip bir geliştirici ve 3D tasarımcıyım.</p>
 
-<p><span>Unreal Engine, C++, 3D ve web geliştirme</span> alanlarında stüdyo pozisyonları, proje bazlı işler ve uzun vadeli iş birliklerine açığım.</p></span>
+<p>Birden fazla mobil uygulama ve oyun yayınladım. oyun geliştirme, 3D tasarım ve mobil-web uygulamaları alanlarında projeler tamamladım.
+  <br> Geçmişim <span>programlama, teknik sanat ve prodüksiyon süreçlerini</span> kapsıyor, bu da aynı proje içinde hem tasarım hem de teknik görevleri üstlenebiliyorum.</p>
+
+<p><span>Unreal Engine, C++, 3D ve React App-Web geliştirme</span> alanlarında stüdyo pozisyonları, proje bazlı işler ve uzun vadeli iş birliklerine açığım.</p></span>
 
         <div class="about-info-list">
           
@@ -1548,10 +1552,11 @@ font-size:14px
               <div class="pn-footer">
                 <div class="pn-techs">
     <span class="pn-tech">Android</span>
-    <span class="pn-tech">React</span>
+ 
     </div>
                 <a href="https://github.com/kubrvk/barkodtakip" target="_blank" class="pn-link1">→ Git</a>
-                <a href="https://barkodtakips.web.app/" target="_blank" class="pn-link">→ Live Demo</a>
+                <a href="https://barkodtakips.web.app/" target="_blank" class="pn-link">→ Demo</a>
+                <a href="https://play.google.com/store/apps/details?id=com.kubrick.barkodtakip" target="_blank" class="pn-link">→ PlayStore</a>
               </div>
     
              
@@ -2837,17 +2842,16 @@ font-size:14px
                     </div></div></div>
 
                     
-                  
-                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
-                    <div class="gallery-placeholder">
-                    <div class="pn-grid-bg"></div>
-                    <div class="pn-grid-bg">
-                    <img class="fit"  loading="lazy" src="img/galeri/game/artstation_14602165_57437854_Showman.jpg"/></div></div>
-                    <div class="gallery-overlay">
-                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
-                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
-                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
-                    </div></div></div>
+                    <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                      <div class="gallery-placeholder">
+                      <div class="pn-grid-bg"></div>
+                      <div class="pn-grid-bg">
+                      <img class="fit"  loading="lazy" src="img/galeri/game/artstation_10134176_38203633_Vampire Animation.jpg"/></div></div>
+                      <div class="gallery-overlay">
+                      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                      <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                         <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                      </div></div></div>
 
                     
                   
@@ -3327,17 +3331,20 @@ font-size:14px
 
                             
                           
-                          <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
-                            <div class="gallery-placeholder">
-                            <div class="pn-grid-bg"></div>
-                            <div class="pn-grid-bg">
-                            <img class="fit"  loading="lazy" src="img/galeri/game/artstation_10134176_38203633_Vampire Animation.jpg"/></div></div>
-                            <div class="gallery-overlay">
-                            <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
-                            <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
-                               <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
-                            </div></div></div>
+                                  
+                  <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
+                    <div class="gallery-placeholder">
+                    <div class="pn-grid-bg"></div>
+                    <div class="pn-grid-bg">
+                    <img class="fit"  loading="lazy" src="img/galeri/game/artstation_14602165_57437854_Showman.jpg"/></div></div>
+                    <div class="gallery-overlay">
+                    <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+                    <span class="go-tag" style="color:var(--orange);border-color:rgba(255,140,66,.4)">Blender</span>
+                       <span class="go-tag" style="color:rgb(162, 142, 243);border-color:rgba(141, 100, 253, 0.4)">Zbrush</span>
+                    </div></div></div>
 
+
+                         
                             <div class="gallery-item reveal" data-cat="game" data-title="" data-tags="UE5,C++,Action">
                               <div class="gallery-placeholder">
                               <div class="pn-grid-bg"></div>
@@ -4275,16 +4282,6 @@ font-size:14px
 
 
 
-    <div class="gallery-item reveal" data-cat="3d" data-title="">
-      <div class="gallery-placeholder">
-      <div class="pn-grid-bg"></div>
-      <div class="pn-grid-bg">
-      <img class="fill" loading="lazy" src="img/galeri/game/artstation_19348331_81557278_TIME SOUL - Galaxy Map.jpg"/></div></div>
-      <div class="gallery-overlay">
-      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
-        <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
-      <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
-       
   
 
       <div class="gallery-item reveal" data-cat="3d" data-title="">
@@ -4312,6 +4309,16 @@ font-size:14px
       
             
 
+          <div class="gallery-item reveal" data-cat="3d" data-title="">
+            <div class="gallery-placeholder">
+            <div class="pn-grid-bg"></div>
+            <div class="pn-grid-bg">
+            <img class="fill" loading="lazy" src="img/galeri/game/artstation_19348331_81557278_TIME SOUL - Galaxy Map.jpg"/></div></div>
+            <div class="gallery-overlay">
+            <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+              <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+            <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+             
 
 
 
@@ -4422,7 +4429,7 @@ font-size:14px
       <div class="gallery-placeholder">
       <div class="pn-grid-bg"></div>
       <div class="pn-grid-bg">
-      <img class="fill" loading="lazy" src="img/galeri/game/artstation_10120114_38060277_Nirvana Hotel Villa Plan.jpg"/></div></div>
+      <img class="fill" loading="lazy" src="img/galeri/game/artstation_10120114_38060277_Nirvana Hotel Villa Pla1n.jpg"/></div></div>
       <div class="gallery-overlay">
       <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
         <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
@@ -4513,7 +4520,18 @@ font-size:14px
       <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
     <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
   
-  
+    <div class="gallery-item reveal" data-cat="3d" data-title="">
+      <div class="gallery-placeholder">
+      <div class="pn-grid-bg"></div>
+      <div class="pn-grid-bg">
+      <img class="fill" loading="lazy" src="img/galeri/game/artstation_10120184_38060907_Exhibition Stand Works.jpg"/></div></div>
+      <div class="gallery-overlay">
+      <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+        <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+      <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+   
+
+
   
     <div class="gallery-item reveal" data-cat="3d" data-title="">
       <div class="gallery-placeholder">
@@ -4527,18 +4545,7 @@ font-size:14px
   
       
   
-      <div class="gallery-item reveal" data-cat="3d" data-title="">
-        <div class="gallery-placeholder">
-        <div class="pn-grid-bg"></div>
-        <div class="pn-grid-bg">
-        <img class="fill" loading="lazy" src="img/galeri/game/artstation_10120184_38060907_Exhibition Stand Works.jpg"/></div></div>
-        <div class="gallery-overlay">
-        <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
-          <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
-        <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
-     
-  
-
+      
 
 
         
@@ -4590,19 +4597,7 @@ font-size:14px
                 <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
              
     
-        <div class="gallery-item reveal" data-cat="3d" data-title="">
-          <div class="gallery-placeholder">
-          <div class="pn-grid-bg"></div>
-          <div class="pn-grid-bg">
-          <img class="fill" loading="lazy" src="img/galeri/3d/27-5a.jpg"/></div></div>
-          <div class="gallery-overlay">
-          <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
-            <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
-          <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
-       
-                
-    
-
+   
 
 
      
@@ -4617,7 +4612,19 @@ font-size:14px
               <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
             <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
             
-     
+            <div class="gallery-item reveal" data-cat="3d" data-title="">
+              <div class="gallery-placeholder">
+              <div class="pn-grid-bg"></div>
+              <div class="pn-grid-bg">
+              <img class="fill" loading="lazy" src="img/galeri/3d/27-5a.jpg"/></div></div>
+              <div class="gallery-overlay">
+              <div class="go-title"></div><div class="go-tags"><span class="go-tag" style="color:rgb(255,104,104);border-color:rgba(255,74,74,.4)">Blender</span>
+                <span class="go-tag" style="color:var(--blue);border-color:rgba(74,158,255,.4)">UE5</span>
+              <span class="go-tag" style="color:rgb(104,255,152);border-color:rgba(89,219,77,.4)">Substance</span></div></div></div>
+           
+                    
+        
+    
         
         <div class="gallery-item reveal" data-cat="3d" data-title="">
           <div class="gallery-placeholder">
@@ -4827,6 +4834,18 @@ font-size:14px
 <div class="go-title">Nosa İzolasyon</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
 <span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
  
+ 
+<div class="gallery-item reveal" data-cat="design" data-title="Nirvana Hotel">
+  <div class="gallery-placeholder">
+  <div class="pn-grid-bg"></div>
+  <div class="pn-grid-bg">
+  <img class="fit" loading="lazy" src="img/galeri/vector/19a.jpg"/></div></div>
+  <div class="gallery-overlay">
+  <div class="go-title">Nirvana Hotel</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
+  <span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
+   
+
+  
 <div class="gallery-item reveal" data-cat="design" data-title="Nirvana Hotel">
 <div class="gallery-placeholder">
 <div class="pn-grid-bg"></div>
@@ -4835,16 +4854,6 @@ font-size:14px
 <div class="gallery-overlay">
 <div class="go-title">Nirvana Hotel</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
 <span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
- 
-<div class="gallery-item reveal" data-cat="design" data-title="Nirvana Hotel">
-<div class="gallery-placeholder">
-<div class="pn-grid-bg"></div>
-<div class="pn-grid-bg">
-<img class="fit" loading="lazy" src="img/galeri/vector/19a.jpg"/></div></div>
-<div class="gallery-overlay">
-<div class="go-title">Nirvana Hotel</div><div class="go-tags"><span class="go-tag" style="color:rgb(255,197,104);border-color:rgba(255,192,74,.4)">Illustrator</span>
-<span class="go-tag" style="color:rgb(104,169,255);border-color:rgba(66,220,255,.4)">Photoshop</span></div></div></div>
- 
 
  
 
