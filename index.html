@@ -443,7 +443,9 @@ font-size:14px
     <a href="#hero"     class="nav-logo "> <span  class="nav-logo-bracket">{</span>Beraat Yetkin<span class="nav-logo-bracket">}</span></a>
     <button class="hbn-icon" onclick="changeLanguage('en')"><img src="img/en.png" height="20px"></button>
     <button class="hbn-icon" onclick="changeLanguage('tr')"><img src="img/tr.png" height="20px"></button>
-    <button class="hbn-icon1" onclick="applyTheme()" style="position: absolute; background-color: transparent; border-radius: 0px; border-color: transparent;">.</button>
+    <button class="hbn-icon1" onclick="applyTheme()" style="position: absolute; background-color: transparent; border-radius: 0px; border-color: transparent; margin-left: -40px;">.</button>
+    <button class="hbn-icon1" onclick="applyThemeGallery()" style="position: absolute; background-color: transparent; border-radius: 0px; border-color: transparent; margin-left: -20px;">.</button>
+    
   </div>
   <div class="nav-links">
     <a href="#hero"     class="nav-link active">//  <span data-lang="en">home</span><span data-lang="tr">anasayfa</span></a>
@@ -484,11 +486,20 @@ font-size:14px
     .my-overrides section{padding:30px 0}
 
     .my-overrides .footerdis{display: none;}
+
+    .my-overridesgallery #gallery{display: block;}
+
+
   </style>
   
   <script>
     function applyTheme() {
       document.body.classList.add('my-overrides');
+    }
+
+    function applyThemeGallery() {
+      document.body.classList.add('my-overrides');
+      document.body.classList.add('my-overridesgallery');
     }
 
 
