@@ -840,6 +840,12 @@
       border-radius: 3px;
     }
 
+    [data-theme="light"] .timeline-period {
+      background: #e2e8f0;
+      border-color: #cbd5e1;
+      color: #475569;
+    }
+
     .timeline-desc {
       font-size: 15px;
       color: var(--text-mid);
@@ -886,6 +892,12 @@
       border: 1px solid var(--border-bright);
       color: var(--text-dim);
       letter-spacing: 0.5px;
+    }
+
+    [data-theme="light"] .tech-pill {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+      color: #475569;
     }
 
     /* SKILLS */
@@ -1103,6 +1115,12 @@
       text-transform: uppercase;
     }
 
+    [data-theme="light"] .project-category-badge {
+      background: rgba(255, 255, 255, 0.92);
+      border-color: rgba(59, 130, 246, 0.5);
+      color: #1d4ed8;
+    }
+
     .project-card-body {
       padding: 14px 16px;
       display: flex;
@@ -1180,6 +1198,12 @@
       color: var(--text-dim);
     }
 
+    [data-theme="light"] .project-tag {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+      color: #475569;
+    }
+
     .project-card-footer {
       display: flex;
       align-items: center;
@@ -1187,6 +1211,19 @@
       margin-top: auto;
       padding-top: 10px;
       border-top: 1px solid var(--border);
+    }
+
+    .modal-footer {
+      padding: 12px 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    [data-theme="light"] .modal-footer {
+      background: rgba(241, 245, 249, 0.8);
     }
 
     .project-link-btn {
@@ -1205,6 +1242,12 @@
       cursor: pointer;
     }
 
+    [data-theme="light"] .project-link-btn {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+      color: #475569;
+    }
+
     .project-link-btn:hover {
       border-color: var(--blue);
       color: var(--blue);
@@ -1215,6 +1258,12 @@
       background: rgba(74, 158, 255, 0.08);
       border-color: rgba(74, 158, 255, 0.35);
       color: var(--blue);
+    }
+
+    [data-theme="light"] .project-link-btn.primary {
+      background: rgba(59, 130, 246, 0.08);
+      border-color: rgba(59, 130, 246, 0.4);
+      color: #1d4ed8;
     }
 
     .project-link-btn.primary:hover {
@@ -1436,13 +1485,6 @@
       margin-bottom: 12px;
     }
 
-    .modal-footer {
-      padding: 12px 20px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: flex-end;
-      background: rgba(0, 0, 0, 0.3);
-    }
 
     /* FOOTER */
     footer.main-footer {
@@ -1594,6 +1636,52 @@
         font-size: 12.5px;
       }
     }
+
+    @media print {
+      header.main-header,
+      .modal-backdrop {
+        display: none !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      body {
+        padding-top: 0 !important;
+        background: #ffffff !important;
+        color: #0f172a !important;
+      }
+      main {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+      }
+      .hero-section {
+        padding-top: 16px !important;
+      }
+    }
+
+    /* PDF MODE */
+    #pdf-mode-btn {
+      position: fixed;
+      top: 62px;
+      left: 10px;
+      z-index: 9999;
+      width: 32px;
+      height: 32px;
+      background: transparent;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      opacity: 0;
+    }
+    body.pdf-mode #pdf-mode-btn {
+      top: 10px;
+    }
+
+    body.pdf-mode header.main-header {
+      display: none !important;
+    }
   </style>
 </head>
 <body>
@@ -1707,6 +1795,15 @@
               </span>
               <span data-lang="en">
                 Primary competencies center on <strong>React, Next.js, Node.js, and Android Native (Java/Kotlin)</strong> to architect and deliver scalable, high-performance software systems.
+              </span>
+            </p>
+
+            <p>
+              <span data-lang="tr">
+                Bu süreçte kurumsal web platformları ve Android uygulamaları dahil <strong>12 büyük ölçekli proje</strong> tamamladım.
+              </span>
+              <span data-lang="en">
+                Throughout this journey, I have successfully delivered <strong>12 big-scale projects</strong>, including enterprise web platforms and Android applications.
               </span>
             </p>
 
@@ -1907,7 +2004,7 @@
                   <i class="bi bi-briefcase"></i> Upwork &amp; Freelance
                 </div>
               </div>
-              <span class="timeline-period">2022 — Günümüz (Present)</span>
+              <span class="timeline-period">2022 — 2026</span>
             </div>
             <p class="timeline-desc">
               <span data-lang="tr">Müşterilere ve kurumsal projelere full-stack web uygulamaları, React ve Next.js arayüzleri, API servisleri ve veritabanı yönetimi alanlarında çözümler geliştirdim.</span>
@@ -2886,6 +2983,15 @@
               <span class="contact-method-arrow">›</span>
             </a>
 
+            <a href="https://kubrvk.github.io/portfolio/web" target="_blank" rel="noopener noreferrer" class="contact-method-item" title="CV Site">
+              <div class="contact-method-icon"><i class="bi bi-globe"></i></div>
+              <div class="contact-method-text">
+                <div class="method-label">CV Site</div>
+                <div class="method-value">kubrvk.github.io/portfolio/web</div>
+              </div>
+              <span class="contact-method-arrow">›</span>
+            </a>
+
             <div class="contact-method-item" title="Konum">
               <div class="contact-method-icon"><i class="bi bi-geo-alt"></i></div>
               <div class="contact-method-text">
@@ -2926,6 +3032,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <strong>Beraat Yetkin</strong> — Full-Stack &amp; App &amp; Web Developer
+        <button id="pdf-mode-btn" onclick="togglePdfMode()" title="PDF Mode"><i class="bi bi-printer"></i></button>
       </div>
     </div>
   </footer>
@@ -3282,6 +3389,12 @@
       requestAnimationFrame(animWires);
     }
     animWires();
+  </script>
+
+  <script>
+    function togglePdfMode() {
+      document.body.classList.toggle('pdf-mode');
+    }
   </script>
 </body>
 </html>
