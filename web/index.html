@@ -1,0 +1,3287 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kubrvk | Full-Stack & Web Geliştirici | Java & Android</title>
+  <meta name="description" content="kubrvk - Full-Stack Web Geliştirici, Java ve Android Yazılım Geliştirici. 10+ yıllık deneyim, kurumsal web çözümleri ve modern arayüz mimarisi.">
+  <link rel="icon" type="image/x-icon" href="../img/favicon/favicon.ico">
+
+  <!-- Google Fonts (Matching Main Portfolio) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --bg-body: #0b0d12;
+      --bg-surface: rgba(17, 20, 24, 0.78);
+      --bg-card: rgba(22, 27, 36, 0.85);
+      --bg-card-hover: rgba(30, 37, 53, 0.95);
+      --panel: rgba(17, 20, 24, 0.78);
+      --panel2: #161b24;
+      --border: #1e2535;
+      --border-bright: #2a3550;
+      --border-focus: #4a9eff;
+      --text-primary: #ccd6f0;
+      --text-secondary: #8a9ab8;
+      --text-muted: #5a6a88;
+      --primary: #4a9eff;
+      --primary-hover: #3b82f6;
+      --primary-light: rgba(74, 158, 255, 0.08);
+      --primary-border: rgba(74, 158, 255, 0.35);
+      --blue: #4a9eff;
+      --orange: #db7230;
+      --green: #3bb36d;
+      --purple: #aa84fc;
+      --yellow: #ffd166;
+      --red: #ff5f5f;
+      --cyan: #22d3ee;
+      --mono: 'Share Tech Mono', monospace;
+      --head: 'Orbitron', sans-serif;
+      --body: 'Rajdhani', sans-serif;
+      --font-main: 'Rajdhani', sans-serif;
+      --font-mono: 'Share Tech Mono', monospace;
+      --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 10px 30px -5px rgba(0, 0, 0, 0.6);
+      --radius-sm: 4px;
+      --radius-md: 6px;
+      --radius-lg: 6px;
+      --transition: all 0.2s ease-in-out;
+    }
+
+    [data-theme="light"] {
+      --bg: #f3f6fc;
+      --bg-body: #f3f6fc;
+      --bg-surface: rgba(255, 255, 255, 0.92);
+      --bg-card: rgba(241, 245, 249, 0.9);
+      --bg-card-hover: #e2e8f0;
+      --panel: rgba(255, 255, 255, 0.9);
+      --panel2: #e8eef7;
+      --border: #cbd5e1;
+      --border-bright: #94a3b8;
+      --border-focus: #1d4ed8;
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --primary-light: rgba(29, 78, 216, 0.08);
+      --primary-border: rgba(29, 78, 216, 0.3);
+      --blue: #1d4ed8;
+      --orange: #c2410c;
+      --green: #047857;
+      --purple: #7e22ce;
+      --yellow: #b45309;
+      --red: #dc2626;
+      --cyan: #0e7490;
+      --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-primary);
+      font-family: var(--font-main);
+      font-size: 16px;
+      line-height: 1.6;
+      transition: background-color 0.25s ease, color 0.25s ease;
+      overflow-x: hidden;
+
+      /* EXACT SVG BLUEPRINT GRID BACKGROUND FROM MAIN SITE */
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='108' height='108'%3E%3Crect width='108' height='108' fill='none' stroke='rgba(74,158,255,0.04)' stroke-width='1'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Crect width='0' height='0' fill='%230a0f1e'/%3E%3Cline x1='18' y1='17.65' x2='18' y2='18.35' stroke='rgba(74,158,255,0.11)' stroke-width='1'/%3E%3Cline x1='17.65' y1='18' x2='18.35' y2='18' stroke='rgba(74,158,255,0.11)' stroke-width='1'/%3E%3Ccircle cx='18' cy='18' r='0.5' fill='rgba(74,158,255,0.09)'/%3E%3C/svg%3E");
+      background-size: 108px 108px, 36px 36px;
+      background-repeat: repeat;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    [data-theme="light"] body {
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='108' height='108'%3E%3Crect width='108' height='108' fill='none' stroke='rgba(29,78,216,0.04)' stroke-width='1'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Crect width='0' height='0' fill='%23f3f6fc'/%3E%3Cline x1='18' y1='17.65' x2='18' y2='18.35' stroke='rgba(29,78,216,0.11)' stroke-width='1'/%3E%3Cline x1='17.65' y1='18' x2='18.35' y2='18' stroke='rgba(29,78,216,0.11)' stroke-width='1'/%3E%3Ccircle cx='18' cy='18' r='0.5' fill='rgba(29,78,216,0.08)'/%3E%3C/svg%3E");
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* HEADER */
+    header.main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 13, 18, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+      height: 56px;
+    }
+
+    [data-theme="light"] header.main-header {
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom-color: #cbd5e1;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--head);
+      font-weight: 600;
+      font-size: 13.5px;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    [data-theme="light"] .brand-logo {
+      color: #0f172a;
+    }
+
+    .brand-logo .code-bracket {
+      color: var(--blue);
+      font-family: var(--head);
+      font-size: 17px;
+      font-weight: 300;
+    }
+
+    .brand-badge {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background: rgba(74, 158, 255, 0.08);
+      color: var(--blue);
+      border: 1px solid rgba(74, 158, 255, 0.3);
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    /* MOBILE NAV TOGGLE (HIDDEN ON DESKTOP) */
+    .mobile-nav-toggle {
+      display: none;
+      background: rgba(17, 20, 24, 0.7);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      font-size: 1.25rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      line-height: 1;
+      margin-left: auto;
+    }
+
+    [data-theme="light"] .mobile-nav-toggle {
+      background: #f1f5f9;
+      color: #0f172a;
+      border-color: #cbd5e1;
+    }
+
+    .mobile-nav-toggle:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    /* NAV LINKS */
+    nav.nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+
+    .nav-item {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-secondary);
+      padding: 6px 10px;
+      border-radius: 3px;
+      letter-spacing: 0.5px;
+      border: 1px solid transparent;
+      transition: color .2s, background .2s, border-color .2s;
+      white-space: nowrap;
+    }
+
+    [data-theme="light"] .nav-item {
+      color: #475569;
+    }
+
+    .nav-item:hover {
+      color: var(--blue);
+      background: rgba(74, 158, 255, 0.07);
+      border-color: rgba(74, 158, 255, 0.2);
+    }
+
+    /* NAV STATUS */
+    .nav-status {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding: 0 4px;
+    }
+
+    .nav-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.25; }
+    }
+
+    /* HEADER ACTIONS */
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      height: 32px;
+      padding: 0 10px;
+      background: rgba(22, 27, 36, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      color: var(--text-secondary);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.8px;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+      text-decoration: none;
+      user-select: none;
+      box-sizing: border-box;
+    }
+
+    [data-theme="light"] .action-btn {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      color: #475569;
+    }
+
+    .action-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: rgba(74, 158, 255, 0.08);
+    }
+
+    .action-btn.active {
+      color: var(--blue);
+      border-color: rgba(74, 158, 255, 0.6);
+      background: rgba(74, 158, 255, 0.14);
+      font-weight: 700;
+    }
+
+    .action-btn.btn-creative-switch {
+      color: var(--yellow);
+      border-color: rgba(255, 209, 102, 0.35);
+      background: rgba(255, 209, 102, 0.08);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .action-btn.btn-creative-switch:hover {
+      color: #ffffff;
+      border-color: var(--yellow);
+      background: rgba(255, 209, 102, 0.2);
+    }
+
+    [data-theme="light"] .action-btn.btn-creative-switch {
+      background: rgba(217, 119, 6, 0.08);
+      border-color: rgba(217, 119, 6, 0.35);
+      color: #b45309;
+    }
+
+    [data-theme="light"] .action-btn.btn-creative-switch:hover {
+      background: rgba(217, 119, 6, 0.15);
+      color: #78350f;
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+      padding: 30px 0 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: block;
+    }
+
+    .hero-header-row {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin-bottom: 0;
+    }
+
+    .hero-avatar {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(74, 158, 255, 0.45);
+      background: rgba(7, 15, 26, 0.5);
+      box-shadow: 0 0 25px rgba(74, 158, 255, 0.25);
+      flex-shrink: 0;
+    }
+
+    .hero-title-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-title {
+      font-family: var(--head);
+      font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.15;
+      letter-spacing: 1.5px;
+      margin-bottom: 4px;
+    }
+
+    [data-theme="light"] .hero-title {
+      color: #0f172a;
+    }
+
+    .hero-title span.highlight {
+      display: block;
+      font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+      font-weight: 400;
+      color: var(--blue);
+      letter-spacing: 1px;
+      margin-top: 4px;
+      text-shadow: 0 0 15px rgba(74, 158, 255, 0.35);
+    }
+
+    .hero-subtitle {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .hero-desc {
+      font-family: var(--body);
+      font-size: 1.1rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      max-width: 980px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 9px 20px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      transition: var(--transition);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: rgba(74, 158, 255, 0.1);
+      border-color: rgba(74, 158, 255, 0.35);
+      color: var(--blue);
+    }
+
+    .btn-primary:hover {
+      background: rgba(74, 158, 255, 0.2);
+      border-color: var(--blue);
+      box-shadow: 0 0 20px rgba(74, 158, 255, 0.2);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--border-bright);
+      color: var(--text-mid);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--text-mid);
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+
+    .pillar-card.pillar-featured {
+      border-left: 3px solid var(--blue);
+      background: linear-gradient(90deg, rgba(74, 158, 255, 0.08), rgba(0, 0, 0, 0.2));
+    }
+
+    [data-theme="light"] .pillar-card.pillar-featured {
+      background: linear-gradient(90deg, rgba(74, 158, 255, 0.12), rgba(255, 255, 255, 0.7));
+    }
+
+    /* SECTION COMMON */
+    section {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-header {
+      margin-bottom: 22px;
+    }
+
+    .section-eyebrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--blue);
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .section-eyebrow::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border-bright), transparent);
+    }
+
+    .section-title {
+      font-family: var(--head);
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #d2dffe;
+      margin-bottom: 8px;
+    }
+
+    [data-theme="light"] .section-title {
+      color: #0f172a;
+    }
+
+    .section-desc {
+      font-family: var(--body);
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      max-width: 100%;
+      line-height: 1.6;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.85fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .about-article {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 24px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-article p {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .about-article p strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .about-core-pillars {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+      flex: 1;
+    }
+
+    .pillar-card {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 10px 14px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    [data-theme="light"] .pillar-card {
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .pillar-card:hover {
+      border-color: var(--border-bright);
+    }
+
+    .pillar-card-title {
+      font-family: var(--head);
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 0.8px;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    [data-theme="light"] .pillar-card-title {
+      color: #0f172a;
+    }
+
+    .pillar-card-title i {
+      color: var(--blue);
+      font-size: 13.5px;
+    }
+
+    .pillar-card-desc {
+      font-family: var(--body);
+      font-size: 13.5px;
+      color: var(--text-dim);
+      line-height: 1.45;
+    }
+
+    .about-side-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      height: 100%;
+    }
+
+    .edu-card, .contact-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-title {
+      font-family: var(--head);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #ffffff;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+
+    [data-theme="light"] .card-title {
+      color: #0f172a;
+    }
+
+    .card-title i {
+      color: var(--blue);
+    }
+
+    .edu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .edu-item {
+      border-left: 3px solid var(--blue);
+      padding-left: 12px;
+    }
+
+    .edu-school {
+      font-family: var(--head);
+      font-size: 13px;
+      font-weight: 600;
+      color: #b4c6da;
+      letter-spacing: 0.5px;
+    }
+
+    [data-theme="light"] .edu-school {
+      color: #1e293b;
+    }
+
+    .edu-degree {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--blue);
+      margin-top: 2px;
+    }
+
+    .edu-period {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+    }
+
+    .contact-links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .contact-link-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: var(--mono);
+      font-size: 12px;
+      transition: var(--transition);
+    }
+
+    [data-theme="light"] .contact-link-row {
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .contact-link-row:hover {
+      border-color: rgba(74, 158, 255, 0.4);
+      background: rgba(74, 158, 255, 0.06);
+      color: var(--blue);
+    }
+
+    .contact-link-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-dim);
+    }
+
+    .contact-link-val {
+      color: var(--text);
+      font-weight: 500;
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+
+    /* TIMELINE */
+    .timeline-wrapper {
+      position: relative;
+      border-left: 2px solid var(--border-bright);
+      margin-left: 10px;
+      padding-left: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .timeline-entry {
+      position: relative;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 15px 20px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .timeline-entry:hover {
+      border-color: var(--blue);
+      box-shadow: 0 4px 20px rgba(74, 158, 255, 0.12);
+      transform: translateX(3px);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -31px;
+      top: 24px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid var(--blue);
+    }
+
+    .timeline-entry:hover .timeline-dot {
+      background: var(--blue);
+      box-shadow: 0 0 10px var(--blue);
+    }
+
+    .timeline-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .timeline-role {
+      font-family: var(--head);
+      font-size: 14px;
+      font-weight: 600;
+      color: #d2dffe;
+      letter-spacing: 0.5px;
+    }
+
+    [data-theme="light"] .timeline-role {
+      color: #0f172a;
+    }
+
+    .timeline-company {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--blue);
+      letter-spacing: 1px;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .timeline-period {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border);
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+
+    .timeline-desc {
+      font-size: 15px;
+      color: var(--text-mid);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .timeline-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+
+    .timeline-bullets li {
+      font-size: 14px;
+      color: var(--text-mid);
+      position: relative;
+      padding-left: 16px;
+      line-height: 1.5;
+    }
+
+    .timeline-bullets li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .tech-pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tech-pill {
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 3px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-bright);
+      color: var(--text-dim);
+      letter-spacing: 0.5px;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 1100px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .skill-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .skill-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 4px 24px rgba(74, 158, 255, 0.15);
+      transform: translateY(-3px);
+    }
+
+    .skill-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      min-height: 34px;
+    }
+
+    .skill-card-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      margin-bottom: 0;
+      border: 1px solid;
+      flex-shrink: 0;
+    }
+
+    .icon-blue { background: rgba(74, 158, 255, 0.1); color: var(--blue); border-color: rgba(74, 158, 255, 0.35); }
+    .icon-teal { background: rgba(13, 148, 136, 0.1); color: #2dd4bf; border-color: rgba(13, 148, 136, 0.35); }
+    .icon-amber { background: rgba(217, 119, 6, 0.1); color: #fbbf24; border-color: rgba(217, 119, 6, 0.35); }
+    .icon-emerald { background: rgba(5, 150, 105, 0.1); color: #34d399; border-color: rgba(5, 150, 105, 0.35); }
+    .icon-purple { background: rgba(170, 132, 252, 0.1); color: var(--purple); border-color: rgba(170, 132, 252, 0.35); }
+    .icon-rose { background: rgba(244, 63, 94, 0.1); color: #fb7185; border-color: rgba(244, 63, 94, 0.35); }
+    .icon-cyan { background: rgba(34, 211, 238, 0.1); color: var(--cyan); border-color: rgba(34, 211, 238, 0.35); }
+    .icon-orange { background: rgba(219, 114, 48, 0.1); color: var(--orange); border-color: rgba(219, 114, 48, 0.35); }
+
+    [data-theme="light"] .icon-blue { color: #1d4ed8; background: rgba(29, 78, 216, 0.08); border-color: rgba(29, 78, 216, 0.25); }
+    [data-theme="light"] .icon-teal { color: #0f766e; background: rgba(15, 118, 110, 0.08); border-color: rgba(15, 118, 110, 0.25); }
+    [data-theme="light"] .icon-amber { color: #b45309; background: rgba(180, 83, 9, 0.08); border-color: rgba(180, 83, 9, 0.25); }
+    [data-theme="light"] .icon-emerald { color: #047857; background: rgba(4, 120, 87, 0.08); border-color: rgba(4, 120, 87, 0.25); }
+    [data-theme="light"] .icon-purple { color: #7e22ce; background: rgba(126, 34, 206, 0.08); border-color: rgba(126, 34, 206, 0.25); }
+    [data-theme="light"] .icon-rose { color: #be123c; background: rgba(190, 18, 60, 0.08); border-color: rgba(190, 18, 60, 0.25); }
+    [data-theme="light"] .icon-cyan { color: #0e7490; background: rgba(14, 116, 144, 0.08); border-color: rgba(14, 116, 144, 0.25); }
+    [data-theme="light"] .icon-orange { color: #c2410c; background: rgba(194, 65, 12, 0.08); border-color: rgba(194, 65, 12, 0.25); }
+
+    .skill-card-title {
+      font-family: var(--head);
+      font-size: 13px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      margin-bottom: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    [data-theme="light"] .skill-card-title {
+      color: #0f172a;
+    }
+
+    .skill-card-desc {
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+      line-height: 1.5;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .skill-tags-group {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-content: flex-start;
+      min-height: 56px;
+    }
+
+    .skill-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-bright);
+      color: var(--text-mid);
+      letter-spacing: 0.5px;
+      line-height: 1.2;
+    }
+
+    /* PROJECTS */
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .filter-tab {
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 6px 16px;
+      border-radius: 3px;
+      border: 1px solid var(--border-bright);
+      background: transparent;
+      color: var(--text-dim);
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: var(--transition);
+    }
+
+    .filter-tab:hover {
+      color: var(--text);
+      border-color: var(--text-mid);
+    }
+
+    .filter-tab.active {
+      color: var(--blue);
+      border-color: var(--blue);
+      background: rgba(74, 158, 255, 0.08);
+      box-shadow: 0 0 15px rgba(74, 158, 255, 0.1);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 4px 24px rgba(74, 158, 255, 0.15);
+      transform: translateY(-3px);
+    }
+
+    .project-card-thumb {
+      height: 160px;
+      background: var(--panel2);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-card-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover .project-card-thumb img {
+      transform: scale(1.04);
+    }
+
+    .project-category-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 2px;
+      background: rgba(11, 13, 18, 0.9);
+      border: 1px solid rgba(74, 158, 255, 0.35);
+      color: var(--blue);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .project-card-body {
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .project-card-title {
+      font-family: var(--head);
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      line-height: 1.35;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    [data-theme="light"] .project-card-title {
+      color: #0f172a;
+    }
+
+    .project-card-desc {
+      font-family: var(--body);
+      font-size: 14.5px;
+      color: var(--text-dim);
+      line-height: 1.55;
+      margin-bottom: 12px;
+      min-height: 68px;
+    }
+
+    .project-card-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 12px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      min-height: 46px;
+    }
+
+    .project-card-features li {
+      font-family: var(--body);
+      font-size: 14px;
+      color: var(--text-mid);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .project-card-features li i {
+      color: var(--blue);
+      font-size: 12px;
+    }
+
+    .project-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 14px;
+      min-height: 48px;
+      align-content: flex-start;
+    }
+
+    .project-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-bright);
+      color: var(--text-dim);
+    }
+
+    .project-card-footer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+
+    .project-link-btn {
+      font-family: var(--mono);
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 3px;
+      border: 1px solid var(--border-bright);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-mid);
+      letter-spacing: 0.5px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .project-link-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: rgba(74, 158, 255, 0.08);
+    }
+
+    .project-link-btn.primary {
+      background: rgba(74, 158, 255, 0.08);
+      border-color: rgba(74, 158, 255, 0.35);
+      color: var(--blue);
+    }
+
+    .project-link-btn.primary:hover {
+      background: rgba(74, 158, 255, 0.2);
+      border-color: var(--blue);
+      color: #ffffff;
+      box-shadow: 0 0 15px rgba(74, 158, 255, 0.2);
+    }
+
+    /* CONTACT SECTION (NODE STYLE LIKE MAIN SITE) */
+    .contact-container-card {
+      background: var(--panel);
+      border: 1px solid rgba(74, 158, 255, 0.5);
+      border-radius: 6px;
+      padding: 28px;
+      box-shadow: 0 0 40px rgba(74, 158, 255, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .contact-method-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 20px;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      transition: var(--transition);
+      text-decoration: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    [data-theme="light"] .contact-method-item {
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .contact-method-item:hover {
+      border-color: rgba(74, 158, 255, 0.5);
+      background: rgba(74, 158, 255, 0.08);
+      transform: translateX(4px);
+    }
+
+    .contact-method-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 4px;
+      background: rgba(74, 158, 255, 0.08);
+      border: 1px solid rgba(74, 158, 255, 0.3);
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+    .contact-method-text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      gap: 20px;
+      min-width: 0;
+    }
+
+    .contact-method-text .method-label {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .contact-method-text .method-label::before {
+      content: '//';
+      color: var(--blue);
+      opacity: 0.7;
+      margin-right: 4px;
+    }
+
+    .contact-method-text .method-value {
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      letter-spacing: 0.5px;
+      text-align: right;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .contact-method-arrow {
+      color: var(--text-dim);
+      font-size: 20px;
+      line-height: 1;
+      transition: transform 0.2s, color 0.2s;
+      flex-shrink: 0;
+      margin-left: 6px;
+    }
+
+    .contact-method-item:hover .contact-method-arrow {
+      color: var(--blue);
+      transform: translateX(4px);
+    }
+
+    /* MODAL */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 7, 11, 0.9);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop.active {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #0f131a;
+      border: 1px solid rgba(74, 158, 255, 0.4);
+      border-radius: 6px;
+      width: 100%;
+      max-width: 720px;
+      max-height: 85vh;
+      overflow-y: auto;
+      box-shadow: 0 0 50px rgba(74, 158, 255, 0.15);
+      position: relative;
+    }
+
+    [data-theme="light"] .modal-card {
+      background: #ffffff;
+      border-color: var(--border-bright);
+    }
+
+    .modal-header {
+      padding: 14px 20px;
+      background: linear-gradient(90deg, rgba(74, 158, 255, 0.15), rgba(74, 158, 255, 0.04));
+      border-bottom: 1px solid rgba(74, 158, 255, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .modal-title {
+      font-family: var(--head);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #ffffff;
+    }
+
+    [data-theme="light"] .modal-title {
+      color: #0f172a;
+    }
+
+    .modal-close-btn {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: var(--text-dim);
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .modal-close-btn:hover {
+      color: var(--blue);
+    }
+
+    .modal-body {
+      padding: 20px;
+      font-family: var(--body);
+    }
+
+    .modal-thumb {
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .modal-section-title {
+      font-family: var(--head);
+      font-size: 12px;
+      font-weight: 700;
+      margin: 14px 0 6px;
+      color: var(--blue);
+      letter-spacing: 1px;
+    }
+
+    .modal-text {
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .modal-footer {
+      padding: 12px 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: flex-end;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    /* FOOTER */
+    footer.main-footer {
+      padding: 24px 0;
+      background: rgba(11, 13, 18, 0.95);
+      border-top: 1px solid var(--border);
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text-secondary);
+      letter-spacing: 0.5px;
+      transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    }
+
+    footer.main-footer strong {
+      color: var(--text-primary);
+    }
+
+    [data-theme="light"] footer.main-footer {
+      background: rgba(255, 255, 255, 0.95);
+      border-top: 1px solid #cbd5e1;
+      color: var(--text-secondary);
+    }
+
+    [data-theme="light"] footer.main-footer strong {
+      color: var(--text-primary);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .footer-brand {
+      line-height: 1.5;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1160px) {
+      .nav-status {
+        display: none;
+      }
+      .brand-badge {
+        display: none;
+      }
+      .nav-item {
+        padding: 6px 7px;
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .about-side-cards {
+        height: auto;
+      }
+
+      .contact-card {
+        flex: initial;
+      }
+
+      nav.nav-links {
+        display: none;
+      }
+
+      .mobile-nav-toggle {
+        display: inline-flex;
+      }
+
+      nav.nav-links.mobile-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        background: rgba(11, 13, 18, 0.98);
+        border-bottom: 1px solid var(--border);
+        padding: 14px 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        gap: 6px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-method-item {
+        padding: 12px 14px;
+        gap: 12px;
+      }
+
+      .contact-method-text {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+
+      .contact-method-text .method-value {
+        text-align: left;
+        font-size: 13px;
+      }
+
+      .contact-method-arrow {
+        display: none;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-core-pillars {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-status {
+        display: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .action-btn.btn-creative-switch span {
+        display: none;
+      }
+      .action-btn {
+        padding: 0 6px;
+      }
+      .brand-logo {
+        font-size: 12.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-logo">
+        <span class="code-bracket">{</span>
+        <span>kubrvk</span>
+        <span class="code-bracket">}</span>
+      </a>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Menü">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-item">
+          <span data-lang="tr">Anasayfa</span>
+          <span data-lang="en">Home</span>
+        </a>
+        <a href="#about" class="nav-item">
+          <span data-lang="tr">Hakkında</span>
+          <span data-lang="en">About</span>
+        </a>
+        <a href="#experience" class="nav-item">
+          <span data-lang="tr">Deneyim</span>
+          <span data-lang="en">Experience</span>
+        </a>
+        <a href="#skills" class="nav-item">
+          <span data-lang="tr">Uzmanlıklar</span>
+          <span data-lang="en">Skills</span>
+        </a>
+        <a href="#projects" class="nav-item">
+          <span data-lang="tr">Projeler</span>
+          <span data-lang="en">Projects</span>
+        </a>
+        <a href="#contact" class="nav-item">
+          <span data-lang="tr">İletişim</span>
+          <span data-lang="en">Contact</span>
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button class="action-btn" id="themeToggleBtn" title="Tema">
+          <i class="bi bi-moon-stars" id="themeIcon"></i>
+        </button>
+
+        <!-- Language Switch -->
+        <button class="action-btn lang-btn active" id="langTrBtn" onclick="changeLanguage('tr')">TR</button>
+        <button class="action-btn lang-btn" id="langEnBtn" onclick="changeLanguage('en')">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-header-row">
+            <img src="../img/pp.png" alt="kubrvk" class="hero-avatar">
+            <div class="hero-title-group">
+              <h1 class="hero-title">
+                kubrvk
+                <span class="highlight">
+                  <span data-lang="tr">Full-Stack &amp; App &amp; Web Developer</span>
+                  <span data-lang="en">Full-Stack &amp; App &amp; Web Developer</span>
+                </span>
+              </h1>
+              <div class="hero-subtitle">
+                <span data-lang="tr">JavaScript, React, C++, Java, Android, HTML, CSS</span>
+                <span data-lang="en">JavaScript, React, C++, Java, Android, HTML, CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & EDUCATION SECTION -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span data-lang="tr">01. Profil</span>
+            <span data-lang="en">01. Profile</span>
+          </div>
+          <h2 class="section-title">
+            <span data-lang="tr">Hakkında &amp; Teknik Profil</span>
+            <span data-lang="en">About &amp; Technical Profile</span>
+          </h2>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-article">
+            <p>
+              <span data-lang="tr">
+                Yazılım ile başlayan geliştirme sürecimde; web platformları ve mobil sistemler üzerine 10 yılı aşkın çalışma geçmişim bulunmaktadır.
+              </span>
+              <span data-lang="en">
+                With a software engineering background spanning over a decade, hands-on experience covers web platforms and mobile systems.
+              </span>
+            </p>
+
+            <p>
+              <span data-lang="tr">
+                Çalışmalarımda ağırlıklı olarak <strong>React, Next.js, Node.js ve Android Native (Java/Kotlin)</strong> teknolojilerine odaklanarak ölçeklenebilir ve yüksek performanslı yazılım sistemleri geliştiriyorum.
+              </span>
+              <span data-lang="en">
+                Primary competencies center on <strong>React, Next.js, Node.js, and Android Native (Java/Kotlin)</strong> to architect and deliver scalable, high-performance software systems.
+              </span>
+            </p>
+
+            <div class="about-core-pillars">
+              <div class="pillar-card">
+                <div class="pillar-card-title">
+                  <i class="bi bi-code-slash"></i>
+                  <span data-lang="tr">Frontend &amp; Modern Web</span>
+                  <span data-lang="en">Frontend &amp; Modern Web</span>
+                </div>
+                <div class="pillar-card-desc">
+                  <span data-lang="tr">React ve Next.js ile modern, responsive ve SEO uyumlu web arayüzleri geliştiriyorum.</span>
+                  <span data-lang="en">Engineering modern, responsive, and SEO-compliant web interfaces using React and Next.js.</span>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-card-title">
+                  <i class="bi bi-terminal"></i>
+                  <span data-lang="tr">Backend &amp; Servis Mimarisi</span>
+                  <span data-lang="en">Backend &amp; Service Architecture</span>
+                </div>
+                <div class="pillar-card-desc">
+                  <span data-lang="tr">Node.js ve Java altyapısıyla ölçeklenebilir API servisleri, mikroservisler ve veri akışları inşa ediyorum.</span>
+                  <span data-lang="en">Building scalable backend APIs, microservices, and structured data pipelines with Node.js and Java.</span>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-card-title">
+                  <i class="bi bi-phone"></i>
+                  <span data-lang="tr">Mobil &amp; Android Çözümleri</span>
+                  <span data-lang="en">Mobile &amp; Android Solutions</span>
+                </div>
+                <div class="pillar-card-desc">
+                  <span data-lang="tr">Android Native (Java/Kotlin) ve React Native ile SQLite/Room tabanlı çalışan mobil saha uygulamaları geliştiriyorum.</span>
+                  <span data-lang="en">Developing native mobile apps, SQLite/Room database applications, and field tools with Android Native and React Native.</span>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-card-title">
+                  <i class="bi bi-database-check"></i>
+                  <span data-lang="tr">Veritabanı &amp; Veri Mimarisi</span>
+                  <span data-lang="en">Database &amp; Data Architecture</span>
+                </div>
+                <div class="pillar-card-desc">
+                  <span data-lang="tr">PostgreSQL, MySQL ve MSSQL veri modellemesi, indeks optimizasyonu ve Redis önbellekleme uyguluyorum.</span>
+                  <span data-lang="en">Designing database schemas, query indexing, data integrity, and Redis caching across SQL databases.</span>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-card-title">
+                  <i class="bi bi-palette"></i>
+                  <span data-lang="tr">Grafik, 3D &amp; Tasarım</span>
+                  <span data-lang="en">Graphics, 3D &amp; Design</span>
+                </div>
+                <div class="pillar-card-desc">
+                  <span data-lang="tr">Figma, Photoshop, 3ds Max, Blender ve AutoCAD ile arayüz tasarımları, 3D görselleştirme ve teknik çizimler hazırlıyorum.</span>
+                  <span data-lang="en">Designing UI layouts, 3D visual assets, and technical drafting with Figma, 3ds Max, Blender, and AutoCAD.</span>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-card-title">
+                  <i class="bi bi-hdd-network"></i>
+                  <span data-lang="tr">IT, Sunucu &amp; Altyapı</span>
+                  <span data-lang="en">IT, Systems &amp; Infrastructure</span>
+                </div>
+                <div class="pillar-card-desc">
+                  <span data-lang="tr">Teknik servis, donanım tamiri, Windows/Linux sunucu yönetimi, kurumsal LAN/WAN ve veri yedekleme yürütüyorum.</span>
+                  <span data-lang="en">Technical service, hardware repair, Windows/Linux servers, corporate LAN/WAN, and data backup.</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <aside class="about-side-cards">
+            <!-- Education Card -->
+            <div class="edu-card">
+              <h3 class="card-title">
+                <i class="bi bi-mortarboard"></i>
+                <span data-lang="tr">Eğitim &amp; Yabancı Dil</span>
+                <span data-lang="en">Education &amp; Languages</span>
+              </h3>
+              <div class="edu-list">
+                <div class="edu-item">
+                  <div class="edu-school">
+                    <span data-lang="tr">Akdeniz Üniversitesi</span>
+                    <span data-lang="en">Akdeniz University</span>
+                  </div>
+                  <div class="edu-degree">
+                    <span data-lang="tr">Bilgisayar Sistemleri Teknolojisi</span>
+                    <span data-lang="en">Computer Systems Technology</span>
+                  </div>
+                  <div class="edu-period">2012 — 2016</div>
+                </div>
+
+                <div class="edu-item" style="border-left-color: var(--accent-amber);">
+                  <div class="edu-school">
+                    <span data-lang="tr">Ayten Meslek Lisesi</span>
+                    <span data-lang="en">Ayten Vocational High School</span>
+                  </div>
+                  <div class="edu-degree">
+                    <span data-lang="tr">Web Programlama</span>
+                    <span data-lang="en">Web Programming</span>
+                  </div>
+                  <div class="edu-period">2008 — 2012</div>
+                </div>
+
+                <div class="edu-item" style="border-left-color: var(--cyan);">
+                  <div class="edu-school">
+                    <span data-lang="tr">İngilizce</span>
+                    <span data-lang="en">English</span>
+                  </div>
+                  <div class="edu-degree">
+                    <span data-lang="tr">Intermediate</span>
+                    <span data-lang="en">Intermediate</span>
+                  </div>
+                  <div class="edu-period">
+                    <span data-lang="tr">Mesleki &amp; Teknik İletişim</span>
+                    <span data-lang="en">Professional &amp; Technical Communication</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact / Channels Card -->
+            <div class="contact-card">
+              <h3 class="card-title">
+                <i class="bi bi-person-lines-fill"></i>
+                <span data-lang="tr">İletişim</span>
+                <span data-lang="en">Contact</span>
+              </h3>
+              <div class="contact-links-list">
+                <a href="mailto:kubrvk@users.noreply.github.com" class="contact-link-row">
+                  <span class="contact-link-label"><i class="bi bi-envelope"></i> <span data-lang="tr">E-Posta</span><span data-lang="en">Email</span></span>
+                  <span class="contact-link-val">kubrvk@users.noreply.github.com</span>
+                </a>
+                <a href="tel:+905339504487" class="contact-link-row">
+                  <span class="contact-link-label"><i class="bi bi-telephone"></i> <span data-lang="tr">Telefon</span><span data-lang="en">Phone</span></span>
+                  <span class="contact-link-val">+90 533 950 44 87</span>
+                </a>
+                <a href="https://github.com/kubrvk" target="_blank" rel="noopener noreferrer" class="contact-link-row">
+                  <span class="contact-link-label"><i class="bi bi-github"></i> GitHub</span>
+                  <span class="contact-link-val">github.com/kubrvk</span>
+                </a>
+                <a href="https://www.linkedin.com/in/kubrivk/" target="_blank" rel="noopener noreferrer" class="contact-link-row">
+                  <span class="contact-link-label"><i class="bi bi-linkedin"></i> LinkedIn</span>
+                  <span class="contact-link-val">linkedin.com/in/kubrivk</span>
+                </a>
+                <div class="contact-link-row">
+                  <span class="contact-link-label"><i class="bi bi-geo-alt"></i> <span data-lang="tr">Konum</span><span data-lang="en">Location</span></span>
+                  <span class="contact-link-val"><span data-lang="tr">İstanbul, Türkiye</span><span data-lang="en">Istanbul, Turkey</span></span>
+                </div>
+                <div class="contact-link-row">
+                  <span class="contact-link-label"><i class="bi bi-calendar-event"></i> <span data-lang="tr">Doğum Tarihi</span><span data-lang="en">Date of Birth</span></span>
+                  <span class="contact-link-val">15.01.1995</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span data-lang="tr">02. Kariyer Geçmişi</span>
+            <span data-lang="en">02. Career Timeline</span>
+          </div>
+          <h2 class="section-title">
+            <span data-lang="tr">İş &amp; Proje Deneyimleri</span>
+            <span data-lang="en">Work &amp; Project Experience</span>
+          </h2>
+          <p class="section-desc">
+            <span data-lang="tr">Yazılım şirketleri, e-ticaret platformları ve teknoloji stüdyolarında gerçekleştirdiğim mühendislik çalışmaları ve üstlendiğim roller.</span>
+            <span data-lang="en">Software engineering roles across tech studios, hospitality booking platforms, and e-commerce systems.</span>
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+
+          <!-- Experience 1 -->
+          <div class="timeline-entry">
+            <div class="timeline-dot"></div>
+            <div class="timeline-head">
+              <div>
+                <h3 class="timeline-role">
+                  <span data-lang="tr">Full-Stack &amp; Web Geliştirici</span>
+                  <span data-lang="en">Full-Stack &amp; Web Developer</span>
+                </h3>
+                <div class="timeline-company">
+                  <i class="bi bi-briefcase"></i> Upwork &amp; Freelance
+                </div>
+              </div>
+              <span class="timeline-period">2022 — Günümüz (Present)</span>
+            </div>
+            <p class="timeline-desc">
+              <span data-lang="tr">Müşterilere ve kurumsal projelere full-stack web uygulamaları, React ve Next.js arayüzleri, API servisleri ve veritabanı yönetimi alanlarında çözümler geliştirdim.</span>
+              <span data-lang="en">Developed full-stack web applications, React and Next.js interfaces, API services, and database management solutions for clients.</span>
+            </p>
+            <ul class="timeline-bullets">
+              <li>
+                <span data-lang="tr">React ve Next.js tabanlı modern, hızlı ve SEO uyumlu web portalları geliştirdim.</span>
+                <span data-lang="en">Developed modern, fast, and SEO-compliant web portals using React and Next.js.</span>
+              </li>
+              <li>
+                <span data-lang="tr">Node.js ve Java servisleri ile kullanıcı kimlik doğrulama ve yetkilendirme sistemleri entegre ettim.</span>
+                <span data-lang="en">Integrated user authentication and access control systems with Node.js and Java backends.</span>
+              </li>
+              <li>
+                <span data-lang="tr">PostgreSQL veritabanı şemalarını modelledim ve veri optimizasyonları gerçekleştirdim.</span>
+                <span data-lang="en">Modeled PostgreSQL database schemas and optimized data queries.</span>
+              </li>
+            </ul>
+            <div class="tech-pill-list">
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Next.js</span>
+              <span class="tech-pill">Node.js</span>
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">PostgreSQL</span>
+              <span class="tech-pill">WordPress</span>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline-entry">
+            <div class="timeline-dot" style="border-color: var(--accent-teal);"></div>
+            <div class="timeline-head">
+              <div>
+                <h3 class="timeline-role">
+                  <span data-lang="tr">Frontend &amp; Web Arayüz Geliştirici</span>
+                  <span data-lang="en">Frontend &amp; Web UI Developer</span>
+                </h3>
+                <div class="timeline-company">
+                  <i class="bi bi-buildings"></i> Cyberfox Studio
+                </div>
+              </div>
+              <span class="timeline-period">2021 — 2022</span>
+            </div>
+            <p class="timeline-desc">
+              <span data-lang="tr">Web tabanlı kullanıcı arayüzleri, 3D ürün görselleştirme modülleri ve performans odaklı web çözümleri ürettim.</span>
+              <span data-lang="en">Developed web user interfaces, 3D product visualizers, and performance-focused web solutions.</span>
+            </p>
+            <ul class="timeline-bullets">
+              <li>
+                <span data-lang="tr">3ds Max ve Blender ile hazırlanan 3D modelleri WebGL ile tarayıcıda çalışan ürün konfigüratörüne dönüştürdüm.</span>
+                <span data-lang="en">Integrated 3D models created with 3ds Max and Blender into browser-based configurators using WebGL.</span>
+              </li>
+              <li>
+                <span data-lang="tr">Farklı cihazlar ve tarayıcılar için hız ve arayüz uyumluluğu optimizasyonları yaptım.</span>
+                <span data-lang="en">Optimized cross-device responsiveness and browser performance.</span>
+              </li>
+            </ul>
+            <div class="tech-pill-list">
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">WebGL</span>
+              <span class="tech-pill">3ds Max</span>
+              <span class="tech-pill">Blender</span>
+            </div>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="timeline-entry">
+            <div class="timeline-dot" style="border-color: var(--accent-emerald);"></div>
+            <div class="timeline-head">
+              <div>
+                <h3 class="timeline-role">
+                  <span data-lang="tr">Full-Stack Web &amp; Mobil Geliştirici</span>
+                  <span data-lang="en">Full-Stack Web &amp; Mobile Developer</span>
+                </h3>
+                <div class="timeline-company">
+                  <i class="bi bi-buildings"></i> mySET Bilgi Hizmetleri
+                </div>
+              </div>
+              <span class="timeline-period">2018 — 2020</span>
+            </div>
+            <p class="timeline-desc">
+              <span data-lang="tr">E-ticaret platformu altyapısı, depo stok takip otomasyonu, Android mobil barkod uygulaması, MySQL veritabanı ve API servisleri geliştirdim.</span>
+              <span data-lang="en">Developed e-commerce platforms, warehouse inventory automation, Android barcode mobile application, MySQL database, and API services.</span>
+            </p>
+            <ul class="timeline-bullets">
+              <li>
+                <span data-lang="tr">Depo stok sayımı ve takibi için Android mobil barkod uygulamasını geliştirdim.</span>
+                <span data-lang="en">Developed an Android barcode application for warehouse stock counting and tracking.</span>
+              </li>
+              <li>
+                <span data-lang="tr">Sipariş ve ürün yönetim panelini React ve API entegrasyonu ile hazırladım.</span>
+                <span data-lang="en">Engineered order and inventory management portals integrated with React and APIs.</span>
+              </li>
+            </ul>
+            <div class="tech-pill-list">
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">Android</span>
+              <span class="tech-pill">Node.js</span>
+              <span class="tech-pill">MySQL</span>
+              <span class="tech-pill">APIs</span>
+            </div>
+          </div>
+
+          <!-- Experience 4 -->
+          <div class="timeline-entry">
+            <div class="timeline-dot" style="border-color: var(--accent-amber);"></div>
+            <div class="timeline-head">
+              <div>
+                <h3 class="timeline-role">
+                  <span data-lang="tr">Web Yazılım Geliştirici &amp; UI Uzmanı</span>
+                  <span data-lang="en">Web Developer &amp; UI Specialist</span>
+                </h3>
+                <div class="timeline-company">
+                  <i class="bi bi-buildings"></i> Kilit Hospitality Group
+                </div>
+              </div>
+              <span class="timeline-period">2017 — 2018</span>
+            </div>
+            <p class="timeline-desc">
+              <span data-lang="tr">Nirvana Hotels, Crystal Hotels ve Amara Hotels için online rezervasyon motoru arayüzleri, otel yönetim sistemleri ve oda/villa tanıtım platformları geliştirdim.</span>
+              <span data-lang="en">Developed online booking engine interfaces, hotel management systems, and room/villa showcase portals for Nirvana, Crystal, and Amara Hotels.</span>
+            </p>
+            <ul class="timeline-bullets">
+              <li>
+                <span data-lang="tr">Otel zincirleri için rezervasyon, müsaitlik sorgulama ve oda yönetim web sistemlerini kodlayıp yayına aldım.</span>
+                <span data-lang="en">Engineered and deployed hotel booking engines, room availability, and rate management web systems.</span>
+              </li>
+              <li>
+                <span data-lang="tr">Otel odası mimari kat planları, interaktif tanıtım modülleri ve kampanya altyapılarını sisteme entegre ettim.</span>
+                <span data-lang="en">Integrated architectural room layouts, interactive presentation modules, and promotional campaigns into the web UI.</span>
+              </li>
+            </ul>
+            <div class="tech-pill-list">
+              <span class="tech-pill">PHP</span>
+              <span class="tech-pill">MySQL</span>
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">HTML/CSS</span>
+              <span class="tech-pill">Bootstrap</span>
+            </div>
+          </div>
+
+          <!-- Experience 5 -->
+          <div class="timeline-entry">
+            <div class="timeline-dot"></div>
+            <div class="timeline-head">
+              <div>
+                <h3 class="timeline-role">
+                  <span data-lang="tr">Web &amp; Dijital Sistemler Geliştirici</span>
+                  <span data-lang="en">Web &amp; Digital Systems Developer</span>
+                </h3>
+                <div class="timeline-company">
+                  <i class="bi bi-buildings"></i> DAD Mimarlık Tasarım
+                </div>
+              </div>
+              <span class="timeline-period">2016 — 2017</span>
+            </div>
+            <p class="timeline-desc">
+              <span data-lang="tr">Kurumsal web siteleri, mimari proje tanıtım portalları ve teknik dokümantasyon arşivleme web altyapısını tasarlayıp geliştirdim.</span>
+              <span data-lang="en">Engineered corporate web systems, architectural project showcase portals, and technical documentation archives.</span>
+            </p>
+            <ul class="timeline-bullets">
+              <li>
+                <span data-lang="tr">Mimari proje tanıtım portalları ve teknik dokümantasyon arşiv web sistemlerini geliştirdim.</span>
+                <span data-lang="en">Developed architectural project presentation portals and digital documentation archives.</span>
+              </li>
+              <li>
+                <span data-lang="tr">AutoCAD ile mimari teknik çizim, 3ds Max ve Blender ile 3D modelleme çalışmalarını web ortamında görselleştirdim.</span>
+                <span data-lang="en">Visualized architectural technical drafting with AutoCAD and 3D modeling with 3ds Max and Blender for web presentations.</span>
+              </li>
+            </ul>
+            <div class="tech-pill-list">
+              <span class="tech-pill">AutoCAD</span>
+              <span class="tech-pill">3ds Max</span>
+              <span class="tech-pill">Blender</span>
+              <span class="tech-pill">WordPress</span>
+              <span class="tech-pill"><span data-lang="tr">Teknik Çizim</span><span data-lang="en">Technical Drafting</span></span>
+              <span class="tech-pill"><span data-lang="tr">Web Geliştirme</span><span data-lang="en">Web Development</span></span>
+            </div>
+          </div>
+
+          <!-- Experience 6 -->
+          <div class="timeline-entry">
+            <div class="timeline-dot"></div>
+            <div class="timeline-head">
+              <div>
+                <h3 class="timeline-role">
+                  <span data-lang="tr">Bilgi İşlem &amp; Ağ Sistemleri Uzmanı</span>
+                  <span data-lang="en">IT Systems &amp; Network Specialist</span>
+                </h3>
+                <div class="timeline-company">
+                  <i class="bi bi-buildings"></i> Vatan Bilgisayar
+                </div>
+              </div>
+              <span class="timeline-period">2014 — 2016</span>
+            </div>
+            <p class="timeline-desc">
+              <span data-lang="tr">Kurumsal yerel ağ (LAN/WAN) yönetimi, Windows Server ve Linux kurulumları, teknik servis, donanım tamiri ve veri yedekleme operasyonlarını yürüttüm.</span>
+              <span data-lang="en">Corporate network administration (LAN/WAN), Windows Server &amp; Linux server deployments, technical service, hardware repair, and data backup operations.</span>
+            </p>
+            <ul class="timeline-bullets">
+              <li>
+                <span data-lang="tr">Kurumsal yerel ağ (LAN/WAN) yönetimi, Windows Server ve Linux kurulumları ile veri yedekleme operasyonlarını yürüttüm.</span>
+                <span data-lang="en">Managed corporate LAN/WAN networks, deployed Windows &amp; Linux servers, and maintained automated backup operations.</span>
+              </li>
+              <li>
+                <span data-lang="tr">Teknik servis süreçleri, bilgisayar donanım arıza tespiti, parça tamiri ve bileşen onarımı gerçekleştirdim.</span>
+                <span data-lang="en">Executed technical service operations, hardware troubleshooting, component repairs, and maintenance.</span>
+              </li>
+            </ul>
+            <div class="tech-pill-list">
+              <span class="tech-pill"><span data-lang="tr">Teknik Servis</span><span data-lang="en">Technical Service</span></span>
+              <span class="tech-pill"><span data-lang="tr">Donanım Tamiri</span><span data-lang="en">Hardware Repair</span></span>
+              <span class="tech-pill">Windows Server</span>
+              <span class="tech-pill">Linux</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span data-lang="tr">03. Yetkinlikler</span>
+            <span data-lang="en">03. Technical Competencies</span>
+          </div>
+          <h2 class="section-title">
+            <span data-lang="tr">Teknik Uzmanlık Alanları</span>
+            <span data-lang="en">Technical Specializations</span>
+          </h2>
+          <p class="section-desc">
+            <span data-lang="tr">Frontend, Backend servisleri, Java, Android, C++/Python betikleme, oyun teknolojileri, grafik/3D ve IT altyapısı alanlarındaki yetkinlik ve uzmanlıklarım.</span>
+            <span data-lang="en">Technical specializations across frontend, backend, Java, Android, C++/Python scripting, game technologies, graphics/3D, and IT systems.</span>
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Skill 1: Frontend -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-blue">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <h3 class="skill-card-title">
+                <span data-lang="tr">Frontend Mimarisi</span>
+                <span data-lang="en">Frontend Architecture</span>
+              </h3>
+            </div>
+            <p class="skill-card-desc">
+              <span data-lang="tr">Modern, responsive ve performans odaklı web kullanıcı arayüzleri.</span>
+              <span data-lang="en">Modern, responsive, and performance-focused web user interfaces.</span>
+            </p>
+            <div class="skill-tags-group">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">HTML / CSS</span>
+              <span class="skill-tag">WordPress</span>
+            </div>
+          </div>
+
+          <!-- Skill 2: Backend & Java -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-teal">
+                <i class="bi bi-server"></i>
+              </div>
+              <h3 class="skill-card-title">
+                <span data-lang="tr">Backend &amp; Java</span>
+                <span data-lang="en">Backend &amp; Java</span>
+              </h3>
+            </div>
+            <p class="skill-card-desc">
+              <span data-lang="tr">Ölçeklenebilir web servisleri, API mimarisi ve sunucu tarafı çözümleri.</span>
+              <span data-lang="en">Scalable web services, API architecture, and server-side solutions.</span>
+            </p>
+            <div class="skill-tags-group">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Spring Boot</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">REST API</span>
+            </div>
+          </div>
+
+          <!-- Skill 3: Mobile & Android -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-emerald">
+                <i class="bi bi-phone"></i>
+              </div>
+              <h3 class="skill-card-title">
+                <span data-lang="tr">Mobil &amp; Android</span>
+                <span data-lang="en">Mobile &amp; Android</span>
+              </h3>
+            </div>
+            <p class="skill-card-desc">
+              <span data-lang="tr">Mobil cihazlar için yerel ve hibrit saha ve envanter uygulamaları.</span>
+              <span data-lang="en">Native and hybrid mobile applications for field and inventory.</span>
+            </p>
+            <div class="skill-tags-group">
+              <span class="skill-tag">Android Native</span>
+              <span class="skill-tag">Kotlin</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">React Native</span>
+              <span class="skill-tag">SQLite / Room</span>
+            </div>
+          </div>
+
+          <!-- Skill 4: Database & DevOps -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-amber">
+                <i class="bi bi-database"></i>
+              </div>
+              <h3 class="skill-card-title">
+                <span data-lang="tr">Veritabanı &amp; Altyapı</span>
+                <span data-lang="en">Databases &amp; Infrastructure</span>
+              </h3>
+            </div>
+            <p class="skill-card-desc">
+              <span data-lang="tr">Veritabanı modellemesi, veri optimizasyonu ve sunucu yönetimi.</span>
+              <span data-lang="en">Database modeling, query optimization, and server admin.</span>
+            </p>
+            <div class="skill-tags-group">
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">MSSQL</span>
+              <span class="skill-tag">Firebase</span>
+              <span class="skill-tag">Redis</span>
+              <span class="skill-tag">Docker</span>
+            </div>
+          </div>
+
+          <!-- Skill 5: C++, Python & Game Development -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-rose">
+                <i class="bi bi-controller"></i>
+              </div>
+              <h3 class="skill-card-title">
+                <span data-lang="tr">C++, Python &amp; Oyun</span>
+                <span data-lang="en">C++, Python &amp; Game Dev</span>
+              </h3>
+            </div>
+            <p class="skill-card-desc">
+              <span data-lang="tr">Nesne yönelimli sistem mimarisi, otomasyon betikleri ve oyun geliştirme.</span>
+              <span data-lang="en">Object-oriented architecture, automation scripts, and game dev.</span>
+            </p>
+            <div class="skill-tags-group">
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Unreal Engine</span>
+              <span class="skill-tag">Blueprints</span>
+              <span class="skill-tag">Git</span>
+            </div>
+          </div>
+
+          <!-- Skill 6: Graphic Design & UI/UX -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-purple">
+                <i class="bi bi-palette"></i>
+              </div>
+              <h3 class="skill-card-title">
+                <span data-lang="tr">Grafik &amp; UI/UX Tasarım</span>
+                <span data-lang="en">Graphic &amp; UI/UX Design</span>
+              </h3>
+            </div>
+            <p class="skill-card-desc">
+              <span data-lang="tr">Web ve mobil kullanıcı arayüzleri, vektörel çizimler ve görsel tasarım.</span>
+              <span data-lang="en">Web and mobile user interfaces, vector graphics, and visual design.</span>
+            </p>
+            <div class="skill-tags-group">
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Photoshop</span>
+              <span class="skill-tag">Illustrator</span>
+              <span class="skill-tag"><span data-lang="tr">UI/UX Tasarım</span><span data-lang="en">UI/UX Design</span></span>
+              <span class="skill-tag"><span data-lang="tr">Prototipleme</span><span data-lang="en">Prototyping</span></span>
+            </div>
+          </div>
+
+          <!-- Skill 7: 3D Modeling & CAD -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-cyan">
+                <i class="bi bi-box-seam"></i>
+              </div>
+              <h3 class="skill-card-title">
+                <span data-lang="tr">3D Modelleme &amp; CAD</span>
+                <span data-lang="en">3D Modeling &amp; CAD</span>
+              </h3>
+            </div>
+            <p class="skill-card-desc">
+              <span data-lang="tr">3D varlık modelleme, mimari CAD teknik çizimi ve WebGL görselleştirme.</span>
+              <span data-lang="en">3D asset modeling, architectural CAD drafting, and WebGL visuals.</span>
+            </p>
+            <div class="skill-tags-group">
+              <span class="skill-tag">3ds Max</span>
+              <span class="skill-tag">Blender</span>
+              <span class="skill-tag">AutoCAD</span>
+              <span class="skill-tag"><span data-lang="tr">Teknik Çizim</span><span data-lang="en">Technical Drafting</span></span>
+              <span class="skill-tag">WebGL</span>
+            </div>
+          </div>
+
+          <!-- Skill 8: IT & Hardware -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-orange">
+                <i class="bi bi-hdd-rack"></i>
+              </div>
+              <h3 class="skill-card-title">
+                <span data-lang="tr">IT &amp; Donanım</span>
+                <span data-lang="en">IT &amp; Hardware</span>
+              </h3>
+            </div>
+            <p class="skill-card-desc">
+              <span data-lang="tr">Teknik servis, donanım tamiri ve Windows / Linux sistem yönetimi.</span>
+              <span data-lang="en">Technical service, hardware repair, and Windows / Linux systems admin.</span>
+            </p>
+            <div class="skill-tags-group">
+              <span class="skill-tag"><span data-lang="tr">Teknik Servis</span><span data-lang="en">Technical Service</span></span>
+              <span class="skill-tag"><span data-lang="tr">Donanım Tamiri</span><span data-lang="en">Hardware Repair</span></span>
+              <span class="skill-tag">Windows Server</span>
+              <span class="skill-tag">Linux</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS PORTFOLIO (12 PROJECTS WITH FILTER) -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span data-lang="tr">04. Projeler</span>
+            <span data-lang="en">04. Projects</span>
+          </div>
+          <h2 class="section-title">
+            <span data-lang="tr">Web &amp; Mobil Projeler</span>
+            <span data-lang="en">Web &amp; Mobile Projects</span>
+          </h2>
+          <p class="section-desc">
+            <span data-lang="tr">Otel ve e-ticaret platformlarından, backend sistemleri ve Android mobil uygulamalara kadar geliştirdiğim ve mimarisini kurduğum çalışmalar.</span>
+            <span data-lang="en">Portfolio spanning hotel platforms, backend systems, and Android mobile applications.</span>
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">
+            <span data-lang="tr">Tümü (12)</span>
+            <span data-lang="en">All (12)</span>
+          </button>
+          <button class="filter-tab" data-filter="fullstack">
+            <span data-lang="tr">Full-Stack</span>
+            <span data-lang="en">Full-Stack</span>
+          </button>
+          <button class="filter-tab" data-filter="frontend">
+            <span data-lang="tr">Frontend</span>
+            <span data-lang="en">Frontend</span>
+          </button>
+          <button class="filter-tab" data-filter="backend">
+            <span data-lang="tr">Backend &amp; Java</span>
+            <span data-lang="en">Backend &amp; Java</span>
+          </button>
+          <button class="filter-tab" data-filter="mobile">
+            <span data-lang="tr">Mobil &amp; Android</span>
+            <span data-lang="en">Mobile &amp; Android</span>
+          </button>
+          <button class="filter-tab" data-filter="hospitality">
+            <span data-lang="tr">Otel &amp; Web Sistemleri</span>
+            <span data-lang="en">Hotel &amp; Web Systems</span>
+          </button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project 1: BarkodTakip -->
+          <article class="project-card" data-cat="mobile fullstack">
+            <div class="project-card-thumb">
+              <span class="project-category-badge"><span data-lang="tr">Android &amp; Web</span><span data-lang="en">Android &amp; Web</span></span>
+              <img src="../img/galeri/barkodtakip7.jpg" alt="BarkodTakip Uygulaması" loading="lazy" style="object-position: center 30%;">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <span data-lang="tr">BarkodTakip (Stok &amp; Envanter)</span>
+                <span data-lang="en">BarkodTakip (Stock &amp; Inventory)</span>
+              </h3>
+              <p class="project-card-desc">
+                <span data-lang="tr">İşletmeler ve depolar için kamera ve barkod tabanlı ürün arama, stok giriş-çıkış ve anlık envanter yönetimi mobil uygulaması geliştirdim.</span>
+                <span data-lang="en">Barcode-based product and inventory tracking application built for Android and web with real-time sync.</span>
+              </p>
+              <ul class="project-card-features">
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Kamera ile anlık barkod &amp; QR tarama</span><span data-lang="en">Real-time camera barcode &amp; QR scanning</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Firebase Realtime DB ile bulut senkronizasyonu</span><span data-lang="en">Firebase Realtime DB cloud sync</span></li>
+              </ul>
+              <div class="project-card-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Android</span>
+                <span class="project-tag">Firebase</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://barkodtakips.web.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                  <i class="bi bi-box-arrow-up-right"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                </a>
+                <a href="https://github.com/kubrvk/barkodtakip" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="bi bi-github"></i> Git
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Antalya Hotel Systems -->
+          <article class="project-card" data-cat="fullstack hospitality">
+            <div class="project-card-thumb">
+              <span class="project-category-badge"><span data-lang="tr">Otel Portalı</span><span data-lang="en">Hotel Portal</span></span>
+              <img src="../img/galeri/antalyahotel2.jpg" alt="Antalya Hotel Systems" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <span data-lang="tr">Antalya Hotel Systems (Rezervasyon)</span>
+                <span data-lang="en">Antalya Hotel Systems (Booking)</span>
+              </h3>
+              <p class="project-card-desc">
+                <span data-lang="tr">Otel işletmeleri için oda yönetimi, online rezervasyon, müsaitlik takvimi ve süreç yönetimini tek ekranda toplayan web yönetim platformu geliştirdim.</span>
+                <span data-lang="en">Comprehensive hotel management and reservation web platform designed for publishing rooms, rates, and guest operations.</span>
+              </p>
+              <ul class="project-card-features">
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Oda tipleri, fiyatlandırma ve takvim yönetimi</span><span data-lang="en">Room tiers, seasonal pricing &amp; calendar management</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Responsive kullanıcı arayüzü ve rezervasyon formu</span><span data-lang="en">Responsive guest booking engine and dashboard</span></li>
+              </ul>
+              <div class="project-card-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Firebase</span>
+                <span class="project-tag">Admin Panel</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://antalyahotelsystems.firebaseapp.com/" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                  <i class="bi bi-box-arrow-up-right"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                </a>
+                <a href="https://github.com/kubrvk/AntalyaHotelSystems" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="bi bi-github"></i> Git
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: E-Ticaret Depo -->
+          <article class="project-card" data-cat="fullstack">
+            <div class="project-card-thumb">
+              <span class="project-category-badge"><span data-lang="tr">E-Ticaret &amp; ERP</span><span data-lang="en">E-Commerce &amp; ERP</span></span>
+              <img src="../img/galeri/eticaret2.jpg" alt="E-Ticaret Depo Sistemi" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <span data-lang="tr">E-Ticaret Depo (Stok &amp; Satış)</span>
+                <span data-lang="en">E-Commerce Warehouse (Stock &amp; Sales)</span>
+              </h3>
+              <p class="project-card-desc">
+                <span data-lang="tr">Frontend tarafında müşteri ürün kataloğu ve sepet özellikleri; backend tarafında ise depo stok seviyeleri ve sipariş karşılama altyapısı inşa ettim.</span>
+                <span data-lang="en">E-commerce storefront integrated with an administrative warehouse control and inventory management backend.</span>
+              </p>
+              <ul class="project-card-features">
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Dinamik sepet, kategori filtreleme ve stok düşümü</span><span data-lang="en">Cart management, category filtering &amp; stock deduction</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Depo sevkiyat ve sipariş durum takibi paneli</span><span data-lang="en">Warehouse fulfillment &amp; order status dashboard</span></li>
+              </ul>
+              <div class="project-card-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Firebase</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">CSS</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://eticaretdepo.web.app" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                  <i class="bi bi-box-arrow-up-right"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                </a>
+                <a href="https://github.com/kubrvk/eticaretdepo" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="bi bi-github"></i> Git
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Nirvana Hotels Portal -->
+          <article class="project-card" data-cat="hospitality frontend">
+            <div class="project-card-thumb">
+              <span class="project-category-badge"><span data-lang="tr">Otel Portalı</span><span data-lang="en">Hotel Portal</span></span>
+              <img src="../img/galeri/site/2a.jpg" alt="Nirvana Hotels Web Sitesi" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <span data-lang="tr">Nirvana Hotels (Web Portalı)</span>
+                <span data-lang="en">Nirvana Hotels (Web Portal)</span>
+              </h3>
+              <p class="project-card-desc">
+                <span data-lang="tr">Nirvana Hotels için çok dilli web platformu, oda/villa tanıtım vitrini ve online rezervasyon entegrasyonu gerçekleştirdim.</span>
+                <span data-lang="en">Multilingual web portal and villa showcase developed for Nirvana Hotels.</span>
+              </p>
+              <ul class="project-card-features">
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">3D mimari oda ve villa planları ile zenginleştirilmiş sunum</span><span data-lang="en">3D architectural villa plans and room showcases</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Çok dilli (TR, EN, RU, DE) içerik yönetim mimarisi</span><span data-lang="en">Multilingual content delivery and booking gateway</span></li>
+              </ul>
+              <div class="project-card-tags">
+                <span class="project-tag">PHP</span>
+                <span class="project-tag">MySQL</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">HTML / CSS</span>
+              </div>
+              <div class="project-card-footer">
+                <button class="project-link-btn primary" onclick="openProjectModal('nirvana')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                </button>
+                <a href="https://github.com/kubrvk/NirvanaHotels" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="bi bi-github"></i> Git
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Crystal Hotels Portal -->
+          <article class="project-card" data-cat="hospitality frontend">
+            <div class="project-card-thumb">
+              <span class="project-category-badge"><span data-lang="tr">Otel Portalı</span><span data-lang="en">Hotel Portal</span></span>
+              <img src="../img/galeri/site/1.jpg" alt="Crystal Hotels Web Sitesi" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <span data-lang="tr">Crystal Hotels (Web Portalı)</span>
+                <span data-lang="en">Crystal Hotels (Web Portal)</span>
+              </h3>
+              <p class="project-card-desc">
+                <span data-lang="tr">Crystal Hotels zinciri için tesis tanıtımları, sezonluk fiyatlandırma motoru ve kampanya entegrasyonu geliştirdim.</span>
+                <span data-lang="en">Multi-property resort chain web portal, seasonal pricing engine, and promotional integration.</span>
+              </p>
+              <ul class="project-card-features">
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Çoklu tesis seçimi ve anlık müsaitlik yönlendirmesi</span><span data-lang="en">Multi-resort property selector &amp; live room queries</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Tanıtım materyalleri ve kampanya banner entegrasyonları</span><span data-lang="en">Promotional campaign banner integrations</span></li>
+              </ul>
+              <div class="project-card-tags">
+                <span class="project-tag">PHP</span>
+                <span class="project-tag">MySQL</span>
+                <span class="project-tag">Bootstrap</span>
+                <span class="project-tag">Illustrator</span>
+              </div>
+              <div class="project-card-footer">
+                <button class="project-link-btn primary" onclick="openProjectModal('crystal')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                </button>
+                <a href="https://github.com/kubrvk/CrystalHotels" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="bi bi-github"></i> Git
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Amara World Hotels -->
+          <article class="project-card" data-cat="hospitality frontend">
+            <div class="project-card-thumb">
+              <span class="project-category-badge"><span data-lang="tr">Otel Portalı</span><span data-lang="en">Hotel Portal</span></span>
+              <img src="../img/galeri/site/3a.jpg" alt="Amara Hotels Web Sitesi" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <span data-lang="tr">Amara World Hotels (Web Portalı)</span>
+                <span data-lang="en">Amara World Hotels (Web Portal)</span>
+              </h3>
+              <p class="project-card-desc">
+                <span data-lang="tr">Amara World Hotels için oda rezervasyon modülleri, tanıtım bannerları ve çok dilli içerik yönetim altyapısı kurdum.</span>
+                <span data-lang="en">Interactive resort portal, multi-property room reservation module, and promo campaign system for Amara Hotels.</span>
+              </p>
+              <ul class="project-card-features">
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Aile ve suit odaları için interaktif galeri ve plan görünümü</span><span data-lang="en">Interactive room gallery and architectural layouts</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Hızlı yükleme ve mobil uyumluluk optimizasyonu</span><span data-lang="en">Fast loading performance and responsive mobile design</span></li>
+              </ul>
+              <div class="project-card-tags">
+                <span class="project-tag">PHP</span>
+                <span class="project-tag">MySQL</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">UI Design</span>
+              </div>
+              <div class="project-card-footer">
+                <button class="project-link-btn primary" onclick="openProjectModal('amara')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                </button>
+                <a href="https://github.com/kubrvk/AmaraWorldHotels" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="bi bi-github"></i> Git
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: TaskFlow (Personel & Görev Yönetimi) -->
+          <article class="project-card" data-cat="backend fullstack">
+            <div class="project-card-thumb">
+              <span class="project-category-badge"><span data-lang="tr">Yönetim Platformu</span><span data-lang="en">Management Platform</span></span>
+              <img src="../img/galeri/site/10a.jpg" alt="TaskFlow Personel Sistemi" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <span data-lang="tr">TaskFlow (Personel &amp; Görev)</span>
+                <span data-lang="en">TaskFlow (HR &amp; Task System)</span>
+              </h3>
+              <p class="project-card-desc">
+                <span data-lang="tr">Organizasyonlar ve ekipler için rol tabanlı yetkilendirme, hiyerarşik izin ve görev onay mekanizmaları, denetim günlüğü altyapısı tasarladım ve kodladım.</span>
+                <span data-lang="en">Personnel and task tracking platform with hierarchical approvals, role-based authorization, and immutable audit logs.</span>
+              </p>
+              <ul class="project-card-features">
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Spring Security &amp; JWT ile rol yetkilendirmesi</span><span data-lang="en">Role authorization with Spring Security &amp; JWT</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">PostgreSQL üzerinde aktivite ve denetim loglama</span><span data-lang="en">PostgreSQL audit logging and activity tracking</span></li>
+              </ul>
+              <div class="project-card-tags">
+                <span class="project-tag">Java</span>
+                <span class="project-tag">Spring Boot</span>
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">React</span>
+                <span class="project-tag">Docker</span>
+              </div>
+              <div class="project-card-footer">
+                <button class="project-link-btn primary" onclick="openProjectModal('taskflow')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                </button>
+                <a href="https://github.com/kubrvk/TaskFlow" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="bi bi-github"></i> Git
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 8: ServisPort (Online Başvuru & Randevu) -->
+          <article class="project-card" data-cat="frontend fullstack">
+            <div class="project-card-thumb">
+              <span class="project-category-badge"><span data-lang="tr">Web Portalı</span><span data-lang="en">Web Portal</span></span>
+              <img src="../img/galeri/site/11a.jpg" alt="ServisPort Randevu Portalı" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <span data-lang="tr">ServisPort (Başvuru &amp; Randevu)</span>
+                <span data-lang="en">ServisPort (Application &amp; Booking)</span>
+              </h3>
+              <p class="project-card-desc">
+                <span data-lang="tr">Kullanıcıların online başvuru yapabildiği, randevu planlayabildiği, evrak doğrulama ve bildirim servisleri içeren erişilebilir web portalı geliştirdim.</span>
+                <span data-lang="en">Service application and appointment portal with digital document submission, SMS alerts, and responsive accessibility.</span>
+              </p>
+              <ul class="project-card-features">
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Erişilebilirlik standartlarına (a11y) uyumlu arayüz</span><span data-lang="en">Full compliance with web accessibility standards</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Redis önbellekleme ile yüksek trafik yönetimi</span><span data-lang="en">High-concurrency appointment booking powered by Redis</span></li>
+              </ul>
+              <div class="project-card-tags">
+                <span class="project-tag">Next.js</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">Redis</span>
+                <span class="project-tag">CSS</span>
+              </div>
+              <div class="project-card-footer">
+                <button class="project-link-btn primary" onclick="openProjectModal('servisport')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                </button>
+                <a href="https://github.com/kubrvk/ServisPort" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="bi bi-github"></i> Git
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 9: FinFlow ERP -->
+          <article class="project-card" data-cat="backend fullstack">
+            <div class="project-card-thumb">
+              <span class="project-category-badge"><span data-lang="tr">Finans &amp; ERP</span><span data-lang="en">Finance &amp; ERP</span></span>
+              <img src="../img/galeri/site/9a.jpg" alt="FinFlow ERP Sistemi" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <span data-lang="tr">FinFlow ERP (Finans &amp; E-Fatura)</span>
+                <span data-lang="en">FinFlow ERP (Finance &amp; E-Invoice)</span>
+              </h3>
+              <p class="project-card-desc">
+                <span data-lang="tr">E-fatura ve e-arşiv standartlarında XML üretimi ve doğrulama, cari hesap bakiye mutabakatı ve muhasebe raporlama servisi geliştirdim.</span>
+                <span data-lang="en">Corporate accounting platform featuring e-invoice XML generation, ledger reconciliation, and financial analytics.</span>
+              </p>
+              <ul class="project-card-features">
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">UBL XML şema işleme ve doğrulama altyapısı</span><span data-lang="en">UBL XML parsing and schema validation engine</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Java Spring Boot ve MSSQL ile finansal mutabakat mimarisi</span><span data-lang="en">Spring Boot and MSSQL financial accounting ledger</span></li>
+              </ul>
+              <div class="project-card-tags">
+                <span class="project-tag">Java</span>
+                <span class="project-tag">Spring Boot</span>
+                <span class="project-tag">Hibernate</span>
+                <span class="project-tag">MSSQL</span>
+                <span class="project-tag">REST API</span>
+              </div>
+              <div class="project-card-footer">
+                <button class="project-link-btn primary" onclick="openProjectModal('finflow')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                </button>
+                <a href="https://github.com/kubrvk/FinFlow-ERP" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="bi bi-github"></i> Git
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 10: Android FieldOps -->
+          <article class="project-card" data-cat="mobile">
+            <div class="project-card-thumb">
+              <span class="project-category-badge"><span data-lang="tr">Android Native</span><span data-lang="en">Android Native</span></span>
+              <img src="../img/galeri/barkodtakip1.jpg" alt="Android FieldOps Saha Uygulaması" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <span data-lang="tr">FieldOps (Android Saha &amp; Sayım)</span>
+                <span data-lang="en">FieldOps (Mobile Field Audit)</span>
+              </h3>
+              <p class="project-card-desc">
+                <span data-lang="tr">Saha ekipleri için internet bağlantısı olmadığında dahi kesintisiz çalışan, barkod/QR okuma ve konum doğrulamalı denetim uygulaması geliştirdim.</span>
+                <span data-lang="en">Offline-capable native Android field inventory audit and barcode scanning app with GPS validation.</span>
+              </p>
+              <ul class="project-card-features">
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Room / SQLite ile offline veri kaydı ve senkronizasyon</span><span data-lang="en">Room / SQLite offline data and synchronization</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">ZXing kütüphanesi ile hızlı barkod okuma</span><span data-lang="en">High-speed barcode scanning via ZXing</span></li>
+              </ul>
+              <div class="project-card-tags">
+                <span class="project-tag">Android Native</span>
+                <span class="project-tag">Kotlin</span>
+                <span class="project-tag">Java</span>
+                <span class="project-tag">Room / SQLite</span>
+              </div>
+              <div class="project-card-footer">
+                <button class="project-link-btn primary" onclick="openProjectModal('fieldops')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                </button>
+                <a href="https://github.com/kubrvk/FieldOps" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="bi bi-github"></i> Git
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 11: DocVault DMS -->
+          <article class="project-card" data-cat="backend fullstack">
+            <div class="project-card-thumb">
+              <span class="project-category-badge"><span data-lang="tr">Doküman Yönetimi</span><span data-lang="en">Document Management</span></span>
+              <img src="../img/galeri/site/8.jpg" alt="DocVault Doküman Sistemi" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <span data-lang="tr">DocVault DMS (Doküman &amp; Arşiv)</span>
+                <span data-lang="en">DocVault DMS (Document &amp; Archive)</span>
+              </h3>
+              <p class="project-card-desc">
+                <span data-lang="tr">Evrak akışı, versiyon kontrolü, kategori bazlı indeksleme, PDF önizleme ve güvenli erişim izinleri sunan doküman yönetim sistemi geliştirdim.</span>
+                <span data-lang="en">Document management system (DMS) with versioning, full-text indexing, and secure access permissions.</span>
+              </p>
+              <ul class="project-card-features">
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">S3 uyumlu depolama ve güvenli dosya linkleri</span><span data-lang="en">S3-compatible object storage with signed download links</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Metin içi arama (Full-Text Search) ve etiketleme</span><span data-lang="en">Full-text search indexing and document tagging</span></li>
+              </ul>
+              <div class="project-card-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">MinIO / S3</span>
+                <span class="project-tag">JWT</span>
+              </div>
+              <div class="project-card-footer">
+                <button class="project-link-btn primary" onclick="openProjectModal('docvault')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                </button>
+                <a href="https://github.com/kubrvk/DocVault-DMS" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="bi bi-github"></i> Git
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 12: 3DInteractJS Web Konfigüratör -->
+          <article class="project-card" data-cat="frontend">
+            <div class="project-card-thumb">
+              <span class="project-category-badge"><span data-lang="tr">WebGL &amp; 3D</span><span data-lang="en">WebGL &amp; 3D</span></span>
+              <img src="../img/galeri/site/13.jpg" alt="3DInteractJS Web Konfigüratör" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <span data-lang="tr">3DInteractJS (3D Konfigüratör)</span>
+                <span data-lang="en">3DInteractJS (3D Configurator)</span>
+              </h3>
+              <p class="project-card-desc">
+                <span data-lang="tr">3ds Max ve Blender ortamından aktarılan mimari modelleri ve ürünleri tarayıcıda 360 derece inceleme ve materyal değiştirme JavaScript aracı geliştirdim.</span>
+                <span data-lang="en">Browser-based 3D configurator script built with WebGL to showcase 3ds Max &amp; Blender models with interactive material controls.</span>
+              </p>
+              <ul class="project-card-features">
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">WebGL ile gerçek zamanlı ışık ve materyal değişimi</span><span data-lang="en">Real-time shader and material variations via WebGL</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Mobil ve masaüstü tarayıcılarda optimize FPS performansı</span><span data-lang="en">Smooth performance across mobile and desktop devices</span></li>
+              </ul>
+              <div class="project-card-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">WebGL</span>
+                <span class="project-tag">3ds Max</span>
+                <span class="project-tag">Blender</span>
+              </div>
+              <div class="project-card-footer">
+                <button class="project-link-btn primary" onclick="openProjectModal('3dinteract')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                </button>
+                <a href="https://github.com/kubrvk/3DInteractJsScript" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="bi bi-github"></i> Git
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (CLEAN & DIRECT) -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-container-card">
+          <div class="section-eyebrow">
+            <span data-lang="tr">05. İletişim</span>
+            <span data-lang="en">05. Contact</span>
+          </div>
+          <h2 class="section-title">
+            <span data-lang="tr">İletişim Bilgileri</span>
+            <span data-lang="en">Contact Information</span>
+          </h2>
+
+          <div class="contact-grid">
+            <a href="mailto:kubrvk@users.noreply.github.com" class="contact-method-item" title="E-Posta Gönder">
+              <div class="contact-method-icon"><i class="bi bi-envelope-at"></i></div>
+              <div class="contact-method-text">
+                <div class="method-label"><span data-lang="tr">E-Posta</span><span data-lang="en">Email</span></div>
+                <div class="method-value">kubrvk@users.noreply.github.com</div>
+              </div>
+              <span class="contact-method-arrow">›</span>
+            </a>
+
+            <a href="tel:+905339504487" class="contact-method-item" title="Telefon / WhatsApp ile İletişim">
+              <div class="contact-method-icon"><i class="bi bi-telephone-outbound"></i></div>
+              <div class="contact-method-text">
+                <div class="method-label"><span data-lang="tr">Telefon / WhatsApp</span><span data-lang="en">Phone / WhatsApp</span></div>
+                <div class="method-value">+90 533 950 44 87</div>
+              </div>
+              <span class="contact-method-arrow">›</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/kubrivk/" target="_blank" rel="noopener noreferrer" class="contact-method-item" title="LinkedIn Profilini İncele">
+              <div class="contact-method-icon"><i class="bi bi-linkedin"></i></div>
+              <div class="contact-method-text">
+                <div class="method-label">LinkedIn</div>
+                <div class="method-value">linkedin.com/in/kubrivk</div>
+              </div>
+              <span class="contact-method-arrow">›</span>
+            </a>
+
+            <a href="https://github.com/kubrvk" target="_blank" rel="noopener noreferrer" class="contact-method-item" title="GitHub Profilini İncele">
+              <div class="contact-method-icon"><i class="bi bi-github"></i></div>
+              <div class="contact-method-text">
+                <div class="method-label">GitHub</div>
+                <div class="method-value">github.com/kubrvk</div>
+              </div>
+              <span class="contact-method-arrow">›</span>
+            </a>
+
+            <div class="contact-method-item" title="Konum">
+              <div class="contact-method-icon"><i class="bi bi-geo-alt"></i></div>
+              <div class="contact-method-text">
+                <div class="method-label"><span data-lang="tr">Konum</span><span data-lang="en">Location</span></div>
+                <div class="method-value"><span data-lang="tr">İstanbul, Türkiye</span><span data-lang="en">Istanbul, Turkey</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- DETAIL MODAL -->
+  <div class="modal-backdrop" id="projectModal" onclick="closeProjectModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle"><span data-lang="tr">Proje Detayları</span><span data-lang="en">Project Details</span></h3>
+        <button class="modal-close-btn" onclick="closeProjectModal()" aria-label="Kapat">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="" alt="Proje Önizleme" class="modal-thumb" id="modalThumb">
+        <div id="modalContent"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="project-link-btn" id="modalGitBtn" style="display:none;">
+          <i class="bi bi-github"></i> Git
+        </a>
+        <button class="action-btn" onclick="closeProjectModal()"><span data-lang="tr">Kapat</span><span data-lang="en">Close</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>kubrvk</strong> — Full-Stack &amp; App &amp; Web Developer
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+    // Theme
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const htmlElement = document.documentElement;
+
+    function setTheme(theme) {
+      htmlElement.setAttribute('data-theme', theme);
+      localStorage.setItem('cv_theme', theme);
+      if (theme === 'light') {
+        themeIcon.classList.remove('bi-moon-stars');
+        themeIcon.classList.add('bi-sun');
+      } else {
+        themeIcon.classList.remove('bi-sun');
+        themeIcon.classList.add('bi-moon-stars');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('cv_theme') || 'dark';
+    setTheme(savedTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
+      setTheme(nextTheme);
+    });
+
+    // Language
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      localStorage.setItem('cv_lang', lang);
+
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = 'none';
+      });
+
+      document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+        el.style.display = '';
+      });
+
+      document.getElementById('langTrBtn').classList.toggle('active', lang === 'tr');
+      document.getElementById('langEnBtn').classList.toggle('active', lang === 'en');
+    }
+
+    function changeLanguage(lang) {
+      setLanguage(lang);
+      const url = new URL(window.location);
+      url.searchParams.set('lang', lang);
+      history.replaceState({}, '', url);
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialLang = urlParams.get('lang') || localStorage.getItem('cv_lang') || 'tr';
+    setLanguage(initialLang);
+
+    // Mobile Nav
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileNavToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('mobile-active');
+    });
+
+    document.querySelectorAll('.nav-item').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('mobile-active');
+      });
+    });
+
+    // Project Filter
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.getAttribute('data-filter');
+        projectCards.forEach(card => {
+          const categories = card.getAttribute('data-cat') || '';
+          if (filter === 'all' || categories.includes(filter)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Project Details Data
+    const projectDetailsData = {
+      nirvana: {
+        titleTr: "Nirvana Hotels (Web Portalı)",
+        titleEn: "Nirvana Hotels (Web Portal)",
+        thumb: "../img/galeri/site/2a.jpg",
+        github: "https://github.com/kubrvk/NirvanaHotels",
+        contentTr: `
+          <div class="modal-section-title">Proje Kapsamı</div>
+          <p class="modal-text">Nirvana Hotels için çok dilli (Türkçe, İngilizce, Rusça, Almanca) web platformu ve online rezervasyon yönlendirme altyapısı geliştirdim.</p>
+          <div class="modal-section-title">Teknik Mimari</div>
+          <p class="modal-text">PHP ve MySQL mimarisi üzerinde oda tipleri ve villa konseptlerinin sunumu, görsel optimizasyonu ve oda içi mimari planların incelenebildiği modüller geliştirdim.</p>
+        `,
+        contentEn: `
+          <div class="modal-section-title">Project Scope</div>
+          <p class="modal-text">Multilingual (TR, EN, RU, DE) web portal and room booking system developed for Nirvana Hotels.</p>
+          <div class="modal-section-title">Technical Architecture</div>
+          <p class="modal-text">Engineered with PHP and MySQL, integrating responsive room layout views and optimized content delivery.</p>
+        `
+      },
+      crystal: {
+        titleTr: "Crystal Hotels (Web Portalı)",
+        titleEn: "Crystal Hotels (Web Portal)",
+        thumb: "../img/galeri/site/1.jpg",
+        github: "https://github.com/kubrvk/CrystalHotels",
+        contentTr: `
+          <div class="modal-section-title">Proje Kapsamı</div>
+          <p class="modal-text">Crystal Hotels zinciri için merkezi tesis seçimi, sezonluk fiyatlandırma motoru ve dinamik kampanya sayfaları hazırladım.</p>
+          <div class="modal-section-title">Teknik Detaylar</div>
+          <p class="modal-text">Bootstrap ve JavaScript ile mobil uyumlu esnek ızgara sistemi kurdum; dijital reklam kampanyalarını web standartlarına göre optimize ettim.</p>
+        `,
+        contentEn: `
+          <div class="modal-section-title">Scope &amp; Details</div>
+          <p class="modal-text">Multi-property portal featuring dynamic pricing tiers, amenity filtering, and responsive campaign landing pages.</p>
+        `
+      },
+      amara: {
+        titleTr: "Amara World Hotels (Web Portalı)",
+        titleEn: "Amara World Hotels (Web Portal)",
+        thumb: "../img/galeri/site/3a.jpg",
+        github: "https://github.com/kubrvk/AmaraWorldHotels",
+        contentTr: `
+          <div class="modal-section-title">Proje Kapsamı</div>
+          <p class="modal-text">Amara World Hotels bünyesindeki tesislerin tanıtımı, oda tiplerinin görselleştirilmesi ve müşteri yönlendirme modülleri için otel platformu geliştirdim.</p>
+          <div class="modal-section-title">Özellikler</div>
+          <p class="modal-text">Çok dilli içerik yönetimi, aile odaları ve süitler için galeri navigasyonu, responsive arayüz mimarisi kurdum.</p>
+        `,
+        contentEn: `
+          <div class="modal-section-title">Overview</div>
+          <p class="modal-text">Hospitality showcase platform featuring multilingual CMS integration and room catalog views.</p>
+        `
+      },
+      taskflow: {
+        titleTr: "TaskFlow (Personel & Görev)",
+        titleEn: "TaskFlow (HR & Task System)",
+        thumb: "../img/galeri/site/10a.jpg",
+        github: "https://github.com/kubrvk/TaskFlow",
+        contentTr: `
+          <div class="modal-section-title">Sistem Mimarisi</div>
+          <p class="modal-text">Organizasyonlarda personel izinleri, görevlendirmeler ve hiyerarşik onay süreçlerinin yönetilmesi için geliştirdim.</p>
+          <div class="modal-section-title">Teknoloji &amp; Güvenlik</div>
+          <p class="modal-text">Java 17 ve Spring Boot ile REST API servisleri, Spring Security ve JWT ile rol tabanlı yetkilendirme, PostgreSQL üzerinde denetim logu ve React frontend arayüzü inşa ettim.</p>
+        `,
+        contentEn: `
+          <div class="modal-section-title">Architecture</div>
+          <p class="modal-text">Engineered for organizations requiring hierarchical approval workflows, employee mission tracking, and structured auditing.</p>
+          <div class="modal-section-title">Stack</div>
+          <p class="modal-text">Java 17 Spring Boot backend with Spring Security JWT, PostgreSQL audit logging, and React frontend interface.</p>
+        `
+      },
+      servisport: {
+        titleTr: "ServisPort (Başvuru & Randevu)",
+        titleEn: "ServisPort (Application & Booking)",
+        thumb: "../img/galeri/site/11a.jpg",
+        github: "https://github.com/kubrvk/ServisPort",
+        contentTr: `
+          <div class="modal-section-title">Hizmet Mimarisi</div>
+          <p class="modal-text">Kullanıcıların online başvuru yapabildiği, randevu oluşturabildiği ve evrak yükleyebildiği servis portalı geliştirdim.</p>
+          <div class="modal-section-title">Teknik Detaylar</div>
+          <p class="modal-text">Next.js 14 App Router ve Node.js ile inşa ettim. Erişilebilirlik standartlarına uyumlu arayüz ve Redis tabanlı randevu kilit mekanizması entegre ettim.</p>
+        `,
+        contentEn: `
+          <div class="modal-section-title">Service Architecture</div>
+          <p class="modal-text">Built with Next.js 14, Node.js, and Redis caching to handle online appointments, applications, and document uploads.</p>
+        `
+      },
+      finflow: {
+        titleTr: "FinFlow ERP (Finans & E-Fatura)",
+        titleEn: "FinFlow ERP (Finance & E-Invoice)",
+        thumb: "../img/galeri/site/9a.jpg",
+        github: "https://github.com/kubrvk/FinFlow-ERP",
+        contentTr: `
+          <div class="modal-section-title">Finansal Entegrasyon</div>
+          <p class="modal-text">E-fatura ve e-arşiv standartlarında XML (UBL) oluşturulması, şematron doğrulama ve cari hesap bakiye takibi sağlayan muhasebe modülü geliştirdim.</p>
+          <div class="modal-section-title">Teknik Çözüm</div>
+          <p class="modal-text">Java Spring Boot, Hibernate ORM ve MSSQL altyapısı ile finansal işlem mimarisi ve React raporlama paneli inşa ettim.</p>
+        `,
+        contentEn: `
+          <div class="modal-section-title">Financial Engine</div>
+          <p class="modal-text">Spring Boot and MSSQL architecture handling regulatory UBL XML e-invoice generation, ledger reconciliation, and analytics.</p>
+        `
+      },
+      fieldops: {
+        titleTr: "FieldOps (Android Saha & Sayım)",
+        titleEn: "FieldOps (Mobile Field Audit)",
+        thumb: "../img/galeri/barkodtakip1.jpg",
+        github: "https://github.com/kubrvk/FieldOps",
+        contentTr: `
+          <div class="modal-section-title">Saha Operasyonları &amp; Yerel Mimari</div>
+          <p class="modal-text">Saha denetçilerinin internet bağlantısı olmadığında yerel veritabanıyla kesintisiz stok sayımı yapabilmesi için yerel Android uygulaması geliştirdim.</p>
+          <div class="modal-section-title">Teknik Mimari</div>
+          <p class="modal-text">Android SDK (Java &amp; Kotlin), Room Database (SQLite) ile offline veri kaydı, ZXing ile hızlı barkod/QR okuma ve otomatik senkronizasyon altyapısı kurdum.</p>
+        `,
+        contentEn: `
+          <div class="modal-section-title">Mobile Architecture</div>
+          <p class="modal-text">Native Android app built with Room/SQLite for offline-first operation. Features ZXing barcode reading and automated sync.</p>
+        `
+      },
+      docvault: {
+        titleTr: "DocVault DMS (Doküman & Arşiv)",
+        titleEn: "DocVault DMS (Document & Archive)",
+        thumb: "../img/galeri/site/8.jpg",
+        github: "https://github.com/kubrvk/DocVault-DMS",
+        contentTr: `
+          <div class="modal-section-title">Doküman Akışı</div>
+          <p class="modal-text">Dijital evrakların arşivlenmesi, versiyon takibi ve yetkilendirilmiş personel tarafından incelenmesi için doküman yönetim sistemi geliştirdim.</p>
+          <div class="modal-section-title">Teknik Özellikler</div>
+          <p class="modal-text">S3 uyumlu nesne depolama, PostgreSQL üzerinde Full-Text Search (metin içi arama), PDF tarayıcı önizlemesi ve JWT tabanlı indirme linkleri entegre ettim.</p>
+        `,
+        contentEn: `
+          <div class="modal-section-title">Document Workflow</div>
+          <p class="modal-text">Node.js and PostgreSQL DMS featuring S3-compatible object storage, full-text indexing, and browser-based PDF previewing.</p>
+        `
+      },
+      '3dinteract': {
+        titleTr: "3DInteractJS (3D Konfigüratör)",
+        titleEn: "3DInteractJS (3D Configurator)",
+        thumb: "../img/galeri/site/13.jpg",
+        github: "https://github.com/kubrvk/3DInteractJsScript",
+        contentTr: `
+          <div class="modal-section-title">3D Web Motoru &amp; Görselleştirme</div>
+          <p class="modal-text">3ds Max ve Blender ortamından aktarılan mimari modelleri ve ürünleri WebGL ile tarayıcıda 360 derece inceleme ve gerçek zamanlı materyal değiştirme aracı geliştirdim.</p>
+          <div class="modal-section-title">Teknik Mimari</div>
+          <p class="modal-text">PBR shader gölgelendiricileri, dinamik kamera yörünge kontrolleri, ışıklandırma modülleri ve tüm tarayıcılarda 60 FPS performans optimizasyonu inşa ettim.</p>
+        `,
+        contentEn: `
+          <div class="modal-section-title">3D Engine &amp; WebGL</div>
+          <p class="modal-text">Browser-based 3D configurator built with WebGL to showcase 3ds Max and Blender assets with interactive material and light controls.</p>
+          <div class="modal-section-title">Technical Architecture</div>
+          <p class="modal-text">Engineered custom PBR shaders, dynamic orbit camera controls, and cross-platform 60 FPS performance optimizations.</p>
+        `
+      }
+    };
+
+    const projectModal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalThumb = document.getElementById('modalThumb');
+    const modalContent = document.getElementById('modalContent');
+    const modalGitBtn = document.getElementById('modalGitBtn');
+
+    function openProjectModal(projectId) {
+      const data = projectDetailsData[projectId];
+      if (!data) return;
+
+      const currentLang = document.documentElement.lang || 'tr';
+      modalTitle.textContent = currentLang === 'tr' ? data.titleTr : data.titleEn;
+      modalThumb.src = data.thumb;
+      modalContent.innerHTML = currentLang === 'tr' ? data.contentTr : data.contentEn;
+
+      if (modalGitBtn) {
+        if (data.github) {
+          modalGitBtn.href = data.github;
+          modalGitBtn.style.display = 'inline-flex';
+        } else {
+          modalGitBtn.style.display = 'none';
+        }
+      }
+
+      projectModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      projectModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && projectModal.classList.contains('active')) {
+        closeProjectModal();
+      }
+    });
+
+    /* ANIMATED WIRE CONNECTORS (CIRCUIT BACKGROUND) */
+    const wireCanvas = document.createElement('canvas');
+    wireCanvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0';
+    document.body.insertBefore(wireCanvas, document.body.firstChild);
+    const wCtx = wireCanvas.getContext('2d');
+    function resizeWire() {
+      wireCanvas.width = window.innerWidth;
+      wireCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeWire);
+    resizeWire();
+    const WIRE_COLORS = ['#4a9eff', '#ff8c42', '#4ddb87', '#c084fc', '#ffd166'];
+    const wires = [];
+    function makeWire() {
+      const x1 = Math.random() * window.innerWidth;
+      const y1 = Math.random() * window.innerHeight;
+      const dx = (Math.random() - 0.5) * 500;
+      const dy = (Math.random() - 0.5) * 350;
+      return {
+        x1, y1,
+        x2: x1 + dx,
+        y2: y1 + dy,
+        color: WIRE_COLORS[Math.floor(Math.random() * WIRE_COLORS.length)],
+        progress: Math.random(),
+        speed: 0.0015 + Math.random() * 0.003,
+        alpha: 0.04 + Math.random() * 0.06,
+        lw: 0.5 + Math.random() * 0.7
+      };
+    }
+    for (let i = 0; i < 24; i++) wires.push(makeWire());
+    function drawWire(c, x1, y1, x2, y2, p, color, alpha, lw) {
+      const mx = (x1 + x2) / 2;
+      const steps = 50;
+      const pts = [];
+      for (let i = 0; i <= steps; i++) {
+        const t = i / steps;
+        pts.push({
+          x: (1 - t) * (1 - t) * x1 + 2 * (1 - t) * t * mx + t * t * x2,
+          y: (1 - t) * (1 - t) * y1 + 2 * (1 - t) * t * y1 + t * t * y2
+        });
+      }
+      const end = Math.max(1, Math.floor(p * steps));
+      c.save();
+      c.globalAlpha = alpha;
+      c.strokeStyle = color;
+      c.lineWidth = lw;
+      c.beginPath();
+      c.moveTo(pts[0].x, pts[0].y);
+      for (let i = 1; i <= end; i++) c.lineTo(pts[i].x, pts[i].y);
+      c.stroke();
+      const h = pts[end];
+      c.beginPath();
+      c.arc(h.x, h.y, 2, 0, Math.PI * 2);
+      c.fillStyle = color;
+      c.globalAlpha = alpha * 2.5;
+      c.fill();
+      c.restore();
+    }
+    function animWires() {
+      wCtx.clearRect(0, 0, wireCanvas.width, wireCanvas.height);
+      wires.forEach(w => {
+        w.progress += w.speed;
+        if (w.progress > 1.4) Object.assign(w, makeWire(), { progress: 0 });
+        drawWire(wCtx, w.x1, w.y1, w.x2, w.y2, Math.min(w.progress, 1), w.color, w.alpha, w.lw);
+      });
+      requestAnimationFrame(animWires);
+    }
+    animWires();
+  </script>
+</body>
+</html>
