@@ -2736,8 +2736,11 @@
                 <span class="project-tag">Docker</span>
               </div>
               <div class="project-card-footer">
-                <button class="project-link-btn primary" onclick="openProjectModal('taskflow')">
-                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                <a href="https://taskflowops.web.app" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                  <i class="bi bi-box-arrow-up-right"></i> <span data-lang="tr">Canlı Demo</span><span data-lang="en">Live Demo</span>
+                </a>
+                <button class="project-link-btn" onclick="openProjectModal('taskflow')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detay</span><span data-lang="en">Details</span>
                 </button>
                 <a href="https://github.com/kubrvk/TaskFlow" target="_blank" rel="noopener noreferrer" class="project-link-btn">
                   <i class="bi bi-github"></i> Git
@@ -2773,8 +2776,11 @@
                 <span class="project-tag">CSS</span>
               </div>
               <div class="project-card-footer">
-                <button class="project-link-btn primary" onclick="openProjectModal('servisport')">
-                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                <a href="https://servisport.web.app" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                  <i class="bi bi-box-arrow-up-right"></i> <span data-lang="tr">Canlı Demo</span><span data-lang="en">Live Demo</span>
+                </a>
+                <button class="project-link-btn" onclick="openProjectModal('servisport')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detay</span><span data-lang="en">Details</span>
                 </button>
                 <a href="https://github.com/kubrvk/ServisPort" target="_blank" rel="noopener noreferrer" class="project-link-btn">
                   <i class="bi bi-github"></i> Git
@@ -2810,8 +2816,11 @@
                 <span class="project-tag">REST API</span>
               </div>
               <div class="project-card-footer">
-                <button class="project-link-btn primary" onclick="openProjectModal('finflow')">
-                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                <a href="https://finflow-erp.web.app" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                  <i class="bi bi-box-arrow-up-right"></i> <span data-lang="tr">Canlı Demo</span><span data-lang="en">Live Demo</span>
+                </a>
+                <button class="project-link-btn" onclick="openProjectModal('finflow')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detay</span><span data-lang="en">Details</span>
                 </button>
                 <a href="https://github.com/kubrvk/FinFlow-ERP" target="_blank" rel="noopener noreferrer" class="project-link-btn">
                   <i class="bi bi-github"></i> Git
@@ -2823,31 +2832,35 @@
           <!-- Project 10: Android FieldOps -->
           <article class="project-card" data-cat="mobile">
             <div class="project-card-thumb">
-              <span class="project-category-badge"><span data-lang="tr">Android Native</span><span data-lang="en">Android Native</span></span>
+              <span class="project-category-badge"><span data-lang="tr">Saha Operasyonları</span><span data-lang="en">Field Operations</span></span>
               <img src="../img/galeri/barkodtakip1.jpg" alt="Android FieldOps Saha Uygulaması" loading="lazy">
             </div>
             <div class="project-card-body">
               <h3 class="project-card-title">
-                <span data-lang="tr">FieldOps (Android Saha &amp; Sayım)</span>
-                <span data-lang="en">FieldOps (Mobile Field Audit)</span>
+                <span data-lang="tr">FieldOps (Mobil Saha &amp; İş Emri)</span>
+                <span data-lang="en">FieldOps (Field Operations &amp; Dispatch)</span>
               </h3>
               <p class="project-card-desc">
-                <span data-lang="tr">Saha ekipleri için internet bağlantısı olmadığında dahi kesintisiz çalışan, barkod/QR okuma ve konum doğrulamalı denetim uygulaması geliştirdim.</span>
-                <span data-lang="en">Offline-capable native Android field inventory audit and barcode scanning app with GPS validation.</span>
+                <span data-lang="tr">Saha teknisyenleri ve denetim ekipleri için çevrimdışı çalışabilen iş emri yönetimi, GPS konum doğrulamalı denetim kontrol listeleri ve anlık operasyon raporlama mobil platformu geliştirdim.</span>
+                <span data-lang="en">Offline-first native mobile platform for field service engineers: task dispatching, GPS-verified inspection checklists, photo evidence logging, and automated background cloud sync.</span>
               </p>
               <ul class="project-card-features">
-                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Room / SQLite ile offline veri kaydı ve senkronizasyon</span><span data-lang="en">Room / SQLite offline data and synchronization</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">ZXing kütüphanesi ile hızlı barkod okuma</span><span data-lang="en">High-speed barcode scanning via ZXing</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">GPS konum doğrulamalı saha kontrol listeleri &amp; arıza bildirimi</span><span data-lang="en">GPS-verified inspection checklists &amp; incident reporting</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span data-lang="tr">Room / SQLite ile offline-first veri kaydı ve WorkManager senkronizasyonu</span><span data-lang="en">Offline-first Room/SQLite persistence with WorkManager cloud sync</span></li>
               </ul>
               <div class="project-card-tags">
                 <span class="project-tag">Android Native</span>
                 <span class="project-tag">Kotlin</span>
-                <span class="project-tag">Java</span>
-                <span class="project-tag">Room / SQLite</span>
+                <span class="project-tag">Jetpack Compose</span>
+                <span class="project-tag">Offline-First</span>
+                <span class="project-tag">WorkManager</span>
               </div>
               <div class="project-card-footer">
-                <button class="project-link-btn primary" onclick="openProjectModal('fieldops')">
-                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                <a href="https://fieldopsapp.web.app" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                  <i class="bi bi-box-arrow-up-right"></i> <span data-lang="tr">Canlı Demo</span><span data-lang="en">Live Demo</span>
+                </a>
+                <button class="project-link-btn" onclick="openProjectModal('fieldops')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detay</span><span data-lang="en">Details</span>
                 </button>
                 <a href="https://github.com/kubrvk/FieldOps" target="_blank" rel="noopener noreferrer" class="project-link-btn">
                   <i class="bi bi-github"></i> Git
@@ -2883,8 +2896,11 @@
                 <span class="project-tag">JWT</span>
               </div>
               <div class="project-card-footer">
-                <button class="project-link-btn primary" onclick="openProjectModal('docvault')">
-                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                <a href="https://docvaultdms.web.app" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                  <i class="bi bi-box-arrow-up-right"></i> <span data-lang="tr">Canlı Demo</span><span data-lang="en">Live Demo</span>
+                </a>
+                <button class="project-link-btn" onclick="openProjectModal('docvault')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detay</span><span data-lang="en">Details</span>
                 </button>
                 <a href="https://github.com/kubrvk/DocVault-DMS" target="_blank" rel="noopener noreferrer" class="project-link-btn">
                   <i class="bi bi-github"></i> Git
@@ -2919,8 +2935,11 @@
                 <span class="project-tag">Blender</span>
               </div>
               <div class="project-card-footer">
-                <button class="project-link-btn primary" onclick="openProjectModal('3dinteract')">
-                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detayları Gör</span><span data-lang="en">View Details</span>
+                <a href="https://3dinteract.web.app" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                  <i class="bi bi-box-arrow-up-right"></i> <span data-lang="tr">Canlı Demo</span><span data-lang="en">Live Demo</span>
+                </a>
+                <button class="project-link-btn" onclick="openProjectModal('3dinteract')">
+                  <i class="bi bi-info-circle"></i> <span data-lang="tr">Detay</span><span data-lang="en">Details</span>
                 </button>
                 <a href="https://github.com/kubrvk/3DInteractJsScript" target="_blank" rel="noopener noreferrer" class="project-link-btn">
                   <i class="bi bi-github"></i> Git
@@ -3019,6 +3038,9 @@
         <div id="modalContent"></div>
       </div>
       <div class="modal-footer">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="project-link-btn primary" id="modalDemoBtn" style="display:none;">
+          <i class="bi bi-box-arrow-up-right"></i> <span data-lang="tr">Canlı Demo</span><span data-lang="en">Live Demo</span>
+        </a>
         <a href="#" target="_blank" rel="noopener noreferrer" class="project-link-btn" id="modalGitBtn" style="display:none;">
           <i class="bi bi-github"></i> Git
         </a>
@@ -3184,6 +3206,7 @@
         titleTr: "TaskFlow (Personel & Görev)",
         titleEn: "TaskFlow (HR & Task System)",
         thumb: "../img/galeri/site/10a.jpg",
+        demo: "https://taskflowops.web.app",
         github: "https://github.com/kubrvk/TaskFlow",
         contentTr: `
           <div class="modal-section-title">Sistem Mimarisi</div>
@@ -3202,6 +3225,7 @@
         titleTr: "ServisPort (Başvuru & Randevu)",
         titleEn: "ServisPort (Application & Booking)",
         thumb: "../img/galeri/site/11a.jpg",
+        demo: "https://servisport.web.app",
         github: "https://github.com/kubrvk/ServisPort",
         contentTr: `
           <div class="modal-section-title">Hizmet Mimarisi</div>
@@ -3218,6 +3242,7 @@
         titleTr: "FinFlow ERP (Finans & E-Fatura)",
         titleEn: "FinFlow ERP (Finance & E-Invoice)",
         thumb: "../img/galeri/site/finflow_erp.jpg",
+        demo: "https://finflow-erp.web.app",
         github: "https://github.com/kubrvk/FinFlow-ERP",
         contentTr: `
           <div class="modal-section-title">Finansal Entegrasyon</div>
@@ -3231,25 +3256,29 @@
         `
       },
       fieldops: {
-        titleTr: "FieldOps (Android Saha & Sayım)",
-        titleEn: "FieldOps (Mobile Field Audit)",
+        titleTr: "FieldOps (Mobil Saha & İş Emri)",
+        titleEn: "FieldOps (Field Operations & Dispatch)",
         thumb: "../img/galeri/barkodtakip1.jpg",
+        demo: "https://fieldopsapp.web.app",
         github: "https://github.com/kubrvk/FieldOps",
         contentTr: `
-          <div class="modal-section-title">Saha Operasyonları &amp; Yerel Mimari</div>
-          <p class="modal-text">Saha denetçilerinin internet bağlantısı olmadığında yerel veritabanıyla kesintisiz stok sayımı yapabilmesi için yerel Android uygulaması geliştirdim.</p>
+          <div class="modal-section-title">Saha Operasyonları &amp; Görev Dağıtımı</div>
+          <p class="modal-text">Saha teknisyenleri ve denetim ekiplerinin internet bağlantısı olmadığında dahi kesintisiz iş emri yürütebilmesi, GPS konum doğrulamalı kontrol listeleri doldurabilmesi ve fotoğraflı arıza bildirimi yapabilmesi için yerel Android uygulaması geliştirdim.</p>
           <div class="modal-section-title">Teknik Mimari</div>
-          <p class="modal-text">Android SDK (Java &amp; Kotlin), Room Database (SQLite) ile offline veri kaydı, ZXing ile hızlı barkod/QR okuma ve otomatik senkronizasyon altyapısı kurdum.</p>
+          <p class="modal-text">Android SDK (Kotlin &amp; Java), Room Database (SQLite) ile çevrimdışı veri kaydı, Fused Location Provider ile GPS konum doğrulama ve WorkManager ile otomatik arka plan bulut senkronizasyonu inşa ettim.</p>
         `,
         contentEn: `
-          <div class="modal-section-title">Mobile Architecture</div>
-          <p class="modal-text">Native Android app built with Room/SQLite for offline-first operation. Features ZXing barcode reading and automated sync.</p>
+          <div class="modal-section-title">Field Operations Architecture</div>
+          <p class="modal-text">Engineered for field engineers executing work orders, GPS-verified site inspections, and sensor telemetry in remote, connectivity-denied industrial zones.</p>
+          <div class="modal-section-title">Mobile Architecture &amp; Stack</div>
+          <p class="modal-text">Native Android app built with Kotlin, Jetpack Compose, and Room/SQLite offline-first database. Features WorkManager background synchronization and anti-tamper GPS geolocation verification.</p>
         `
       },
       docvault: {
         titleTr: "DocVault DMS (Doküman & Arşiv)",
         titleEn: "DocVault DMS (Document & Archive)",
         thumb: "../img/galeri/site/docvault_dms.jpg",
+        demo: "https://docvaultdms.web.app",
         github: "https://github.com/kubrvk/DocVault-DMS",
         contentTr: `
           <div class="modal-section-title">Doküman Akışı</div>
@@ -3266,6 +3295,7 @@
         titleTr: "3DInteractJS (3D Konfigüratör)",
         titleEn: "3DInteractJS (3D Configurator)",
         thumb: "../img/galeri/site/13.jpg",
+        demo: "https://3dinteract.web.app",
         github: "https://github.com/kubrvk/3DInteractJsScript",
         contentTr: `
           <div class="modal-section-title">3D Web Motoru &amp; Görselleştirme</div>
@@ -3286,6 +3316,7 @@
     const modalTitle = document.getElementById('modalTitle');
     const modalThumb = document.getElementById('modalThumb');
     const modalContent = document.getElementById('modalContent');
+    const modalDemoBtn = document.getElementById('modalDemoBtn');
     const modalGitBtn = document.getElementById('modalGitBtn');
 
     function openProjectModal(projectId) {
@@ -3296,6 +3327,15 @@
       modalTitle.textContent = currentLang === 'tr' ? data.titleTr : data.titleEn;
       modalThumb.src = data.thumb;
       modalContent.innerHTML = currentLang === 'tr' ? data.contentTr : data.contentEn;
+
+      if (modalDemoBtn) {
+        if (data.demo) {
+          modalDemoBtn.href = data.demo;
+          modalDemoBtn.style.display = 'inline-flex';
+        } else {
+          modalDemoBtn.style.display = 'none';
+        }
+      }
 
       if (modalGitBtn) {
         if (data.github) {
